@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Device Security Essentials - Digital Guardians</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6; color: #333; max-width: 800px;
+            margin: 0 auto; padding: 20px;
+        }
+        @media print {
+            body { padding: 0; max-width: 100%; }
+            .no-print { display: none; }
+            a { color: #333; text-decoration: none; }
+            h1, h2, h3 { page-break-after: avoid; }
+        }
+        .header {
+            text-align: center; border-bottom: 3px solid #3b82f6;
+            padding-bottom: 20px; margin-bottom: 30px;
+        }
+        .header h1 { color: #3b82f6; font-size: 2.5em; margin-bottom: 10px; }
+        .age-badge {
+            display: inline-block; background: #3b82f6; color: white;
+            padding: 5px 15px; border-radius: 20px; margin: 10px 0; font-weight: bold;
+        }
+        .section { margin: 30px 0; }
+        h2 {
+            color: #3b82f6; font-size: 1.8em; margin: 25px 0 15px 0;
+            border-left: 5px solid #3b82f6; padding-left: 15px;
+        }
+        h3 { color: #2563eb; font-size: 1.3em; margin: 20px 0 10px 0; }
+        p { margin: 10px 0; }
+        ul, ol { margin: 15px 0 15px 30px; }
+        li { margin: 8px 0; }
+        .tip-box {
+            background: #fef3c7; border-left: 4px solid #f59e0b;
+            padding: 15px; margin: 20px 0;
+        }
+        .tip-box h4 { color: #d97706; margin-bottom: 10px; }
+        .warning-box {
+            background: #fee2e2; border-left: 4px solid #dc2626;
+            padding: 15px; margin: 20px 0;
+        }
+        .warning-box h4 { color: #dc2626; margin-bottom: 10px; }
+        .info-box {
+            background: #dbeafe; border-left: 4px solid #3b82f6;
+            padding: 15px; margin: 20px 0;
+        }
+        .info-box h4 { color: #2563eb; margin-bottom: 10px; }
+        .checklist { list-style: none; margin: 15px 0; }
+        .checklist li:before { content: "☐ "; font-weight: bold; margin-right: 10px; }
+        .footer {
+            margin-top: 50px; padding-top: 20px; border-top: 2px solid #e5e7eb;
+            text-align: center; color: #666; font-size: 0.9em;
+        }
+        .btn-group { text-align: center; margin: 30px 0; }
+        .btn {
+            display: inline-block; padding: 10px 20px; margin: 5px;
+            background: #3b82f6; color: white; text-decoration: none;
+            border-radius: 5px; border: none; cursor: pointer; font-size: 1em;
+        }
+        .btn:hover { background: #2563eb; }
+        .btn-secondary { background: #6b7280; }
+        .btn-secondary:hover { background: #4b5563; }
+        table {
+            width: 100%; border-collapse: collapse; margin: 20px 0;
+        }
+        th, td { border: 1px solid #e5e7eb; padding: 12px; text-align: left; }
+        th { background: #f3f4f6; font-weight: bold; color: #1f2937; }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Device Security Essentials</h1>
+        <p class="subtitle">Protecting Your Devices and Data</p>
+        <span class="age-badge">Parents & Families</span>
+        <p style="margin-top: 10px; color: #666;">Digital Guardians • 10 Pages</p>
+    </div>
+
+    <div class="btn-group no-print">
+        <button class="btn" onclick="window.print()">📥 Download PDF</button>
+        <button class="btn" onclick="window.print()">🖨️ Print Guide</button>
+        <a href="../guides.html" class="btn btn-secondary">← Back to Guides</a>
+    </div>
+
+    <div class="section">
+        <h2>Introduction</h2>
+        <p>Our devices contain sensitive personal information, financial data, photos, and communications. Securing them properly is essential to protecting your family's privacy and safety. This guide provides practical steps to secure all your family's devices.</p>
+        
+        <div class="info-box">
+            <h4>📱 What You'll Learn</h4>
+            <ul>
+                <li>Operating system security for Windows, Mac, iOS, and Android</li>
+                <li>Managing app permissions effectively</li>
+                <li>Protecting against malware and viruses</li>
+                <li>Backup and recovery strategies</li>
+                <li>Network security at home</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Computer Security (Windows & Mac)</h2>
+        
+        <h3>Essential Security Settings</h3>
+        
+        <h4>Windows 10/11 Security Checklist</h4>
+        <ul class="checklist">
+            <li>Enable Windows Defender/Microsoft Defender</li>
+            <li>Turn on Windows Firewall</li>
+            <li>Enable automatic Windows Updates</li>
+            <li>Create separate user accounts for each family member</li>
+            <li>Use strong passwords or PINs for all accounts</li>
+            <li>Enable BitLocker encryption (on supported systems)</li>
+            <li>Turn on Find My Device feature</li>
+            <li>Set screen lock after 5 minutes of inactivity</li>
+            <li>Disable unused services and features</li>
+            <li>Review app permissions regularly</li>
+        </ul>
+        
+        <h4>macOS Security Checklist</h4>
+        <ul class="checklist">
+            <li>Keep macOS updated to latest version</li>
+            <li>Enable FileVault disk encryption</li>
+            <li>Turn on Firewall in System Preferences → Security & Privacy</li>
+            <li>Use strong passwords for user accounts</li>
+            <li>Enable Find My Mac</li>
+            <li>Turn on automatic app updates</li>
+            <li>Only download apps from App Store or trusted sources</li>
+            <li>Enable screen lock with password</li>
+            <li>Review Security & Privacy settings regularly</li>
+            <li>Use Touch ID or Apple Watch for authentication when available</li>
+        </ul>
+        
+        <h3>User Account Management</h3>
+        <table>
+            <tr>
+                <th>Account Type</th>
+                <th>Use For</th>
+                <th>Permissions</th>
+            </tr>
+            <tr>
+                <td>Administrator</td>
+                <td>Parents only</td>
+                <td>Can install software, change settings</td>
+            </tr>
+            <tr>
+                <td>Standard User</td>
+                <td>Children, teens</td>
+                <td>Limited system changes, needs admin approval for installations</td>
+            </tr>
+            <tr>
+                <td>Guest</td>
+                <td>Visitors</td>
+                <td>No permanent changes, no access to files</td>
+            </tr>
+        </table>
+        
+        <div class="tip-box">
+            <h4>💡 Pro Tip: Don't Use Admin Account Daily</h4>
+            <p>Even parents should use a standard user account for daily activities and only switch to administrator when needed. This limits damage from malware infections.</p>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Mobile Device Security</h2>
+        
+        <h3>iOS (iPhone/iPad) Security</h3>
+        
+        <h4>Essential Settings</h4>
+        <ul class="checklist">
+            <li>Settings → Face ID/Touch ID & Passcode → Set strong passcode (6+ digits)</li>
+            <li>Settings → Privacy → Review all app permissions</li>
+            <li>Settings → Apple ID → Find My → Enable Find My iPhone</li>
+            <li>Settings → Screen Time → Set app limits and downtime</li>
+            <li>Settings → General → Software Update → Enable automatic updates</li>
+            <li>Settings → Cellular → Review which apps can use cellular data</li>
+            <li>Settings → Privacy → Location Services → Set to "While Using App" for most apps</li>
+            <li>Settings → App Store → Require password for purchases</li>
+            <li>Only download apps from official App Store</li>
+            <li>Enable two-factor authentication for Apple ID</li>
+        </ul>
+        
+        <h4>For Children's Devices</h4>
+        <ul>
+            <li>Use Family Sharing with parental controls</li>
+            <li>Enable Ask to Buy for app purchases</li>
+            <li>Set Screen Time limits with specific app restrictions</li>
+            <li>Restrict adult content and explicit content</li>
+            <li>Disable in-app purchases or require password</li>
+            <li>Review Communication Limits</li>
+        </ul>
+        
+        <h3>Android Security</h3>
+        
+        <h4>Essential Settings</h4>
+        <ul class="checklist">
+            <li>Settings → Security → Screen lock → Set PIN, pattern, or password</li>
+            <li>Settings → Security → Find My Device → Enable</li>
+            <li>Settings → System → System update → Enable automatic updates</li>
+            <li>Settings → Apps → Permissions → Review all app permissions</li>
+            <li>Settings → Location → Set app location permissions carefully</li>
+            <li>Settings → Google → Security → Turn on 2-Step Verification</li>
+            <li>Settings → Google → Ads → Opt out of personalization</li>
+            <li>Only download apps from Google Play Store</li>
+            <li>Settings → Security → Play Protect → Keep enabled</li>
+            <li>Disable "Install unknown apps" for all sources</li>
+        </ul>
+        
+        <h4>For Children's Devices</h4>
+        <ul>
+            <li>Set up Family Link for parental controls</li>
+            <li>Approve all app downloads and purchases</li>
+            <li>Set screen time limits</li>
+            <li>Filter inappropriate content</li>
+            <li>Monitor app usage and activity</li>
+            <li>Set device bedtime hours</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>App Permissions Management</h2>
+        
+        <h3>Understanding Permissions</h3>
+        <p>Apps request permissions to access device features. Review these carefully:</p>
+        
+        <table>
+            <tr>
+                <th>Permission</th>
+                <th>Why Apps Need It</th>
+                <th>When to Allow</th>
+            </tr>
+            <tr>
+                <td>Camera</td>
+                <td>Take photos/videos</td>
+                <td>Photo apps, video calls, social media</td>
+            </tr>
+            <tr>
+                <td>Microphone</td>
+                <td>Record audio</td>
+                <td>Voice calls, voice assistants, recording apps</td>
+            </tr>
+            <tr>
+                <td>Location</td>
+                <td>GPS tracking, local services</td>
+                <td>Maps, weather, delivery apps (only while using)</td>
+            </tr>
+            <tr>
+                <td>Contacts</td>
+                <td>Access phone numbers</td>
+                <td>Messaging apps, social media (with caution)</td>
+            </tr>
+            <tr>
+                <td>Photos</td>
+                <td>Access stored images</td>
+                <td>Photo editing, social media, cloud backup</td>
+            </tr>
+            <tr>
+                <td>Storage</td>
+                <td>Save files</td>
+                <td>Most apps that create or store data</td>
+            </tr>
+        </table>
+        
+        <h3>Permission Best Practices</h3>
+        <ul>
+            <li><strong>Principle of least privilege:</strong> Only grant permissions that are necessary</li>
+            <li><strong>Review regularly:</strong> Check permissions monthly</li>
+            <li><strong>Location: "While Using":</strong> Prefer this over "Always"</li>
+            <li><strong>Question unnecessary requests:</strong> Why does a flashlight app need your contacts?</li>
+            <li><strong>Revoke unused permissions:</strong> Remove permissions from apps you rarely use</li>
+        </ul>
+        
+        <div class="warning-box">
+            <h4>⚠️ Red Flags</h4>
+            <p>Be suspicious of apps that request permissions unrelated to their function (e.g., a calculator wanting your contacts and location). This could indicate malware or data harvesting.</p>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Malware Protection</h2>
+        
+        <h3>What is Malware?</h3>
+        <p>Malware (malicious software) includes viruses, trojans, spyware, ransomware, and adware designed to harm your device or steal data.</p>
+        
+        <h3>Protection Strategies</h3>
+        
+        <h4>For Windows</h4>
+        <ul>
+            <li>Use Windows Defender (built-in, free, and effective)</li>
+            <li>Keep Windows and all software updated</li>
+            <li>Only download from official sources</li>
+            <li>Be cautious with email attachments</li>
+            <li>Don't click suspicious links</li>
+            <li>Use standard user account for daily use</li>
+            <li>Enable controlled folder access (ransomware protection)</li>
+        </ul>
+        
+        <h4>For Mac</h4>
+        <ul>
+            <li>macOS has built-in security (XProtect, Gatekeeper)</li>
+            <li>Keep macOS updated</li>
+            <li>Only install apps from App Store or identified developers</li>
+            <li>Don't disable Gatekeeper unless absolutely necessary</li>
+            <li>Be cautious with downloads</li>
+            <li>Consider third-party antivirus for extra protection (optional)</li>
+        </ul>
+        
+        <h4>For Mobile Devices</h4>
+        <ul>
+            <li>iOS: Generally secure, but keep updated and only use App Store</li>
+            <li>Android: Keep Play Protect enabled, update regularly</li>
+            <li>Don't jailbreak/root devices (removes security protections)</li>
+            <li>Review app permissions carefully</li>
+            <li>Uninstall apps you don't use</li>
+        </ul>
+        
+        <h3>Signs of Malware Infection</h3>
+        <ul>
+            <li>Device running slowly or overheating</li>
+            <li>Unexpected pop-ups or ads</li>
+            <li>Apps crashing frequently</li>
+            <li>Battery draining quickly</li>
+            <li>Unknown apps installed</li>
+            <li>Unusual network activity</li>
+            <li>Browser redirects to strange websites</li>
+            <li>Contacts receiving spam from your accounts</li>
+        </ul>
+        
+        <h3>If You Suspect Malware</h3>
+        <ol>
+            <li>Disconnect from internet</li>
+            <li>Run full antivirus scan</li>
+            <li>Remove any suspicious apps</li>
+            <li>Change important passwords from clean device</li>
+            <li>Check for unauthorized charges/purchases</li>
+            <li>Consider professional help for serious infections</li>
+            <li>Factory reset as last resort (backup important data first)</li>
+        </ol>
+    </div>
+
+    <div class="section">
+        <h2>Backup and Recovery</h2>
+        
+        <h3>The 3-2-1 Backup Rule</h3>
+        <ul>
+            <li><strong>3 copies</strong> of your data (original + 2 backups)</li>
+            <li><strong>2 different media types</strong> (external drive, cloud, etc.)</li>
+            <li><strong>1 copy off-site</strong> (cloud or physical location away from home)</li>
+        </ul>
+        
+        <h3>Windows Backup</h3>
+        <ul class="checklist">
+            <li>Enable File History for automatic backups</li>
+            <li>Use OneDrive for cloud backup of important files</li>
+            <li>Create system image periodically</li>
+            <li>Test restore process to ensure backups work</li>
+        </ul>
+        
+        <h3>Mac Backup</h3>
+        <ul class="checklist">
+            <li>Enable Time Machine with external drive</li>
+            <li>Use iCloud for documents and photos</li>
+            <li>Consider additional cloud backup (Backblaze, CrashPlan)</li>
+            <li>Test restoring files periodically</li>
+        </ul>
+        
+        <h3>Mobile Backup</h3>
+        <ul class="checklist">
+            <li>iOS: Enable iCloud Backup (Settings → Apple ID → iCloud → iCloud Backup)</li>
+            <li>Android: Enable Google Drive backup (Settings → Google → Backup)</li>
+            <li>Back up photos to cloud service</li>
+            <li>Export important contacts and data</li>
+        </ul>
+        
+        <div class="tip-box">
+            <h4>💡 Automate Your Backups</h4>
+            <p>Set up automatic backups so you don't have to remember. Manual backups often don't happen when you need them most.</p>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Home Network Security</h2>
+        
+        <h3>Router Security Checklist</h3>
+        <ul class="checklist">
+            <li>Change default admin username and password</li>
+            <li>Update router firmware regularly</li>
+            <li>Use WPA3 or WPA2 encryption (not WEP)</li>
+            <li>Create strong WiFi password (16+ characters)</li>
+            <li>Change default network name (SSID)</li>
+            <li>Disable WPS (WiFi Protected Setup)</li>
+            <li>Enable router firewall</li>
+            <li>Disable remote management unless needed</li>
+            <li>Create guest network for visitors</li>
+            <li>Review connected devices regularly</li>
+        </ul>
+        
+        <h3>WiFi Best Practices</h3>
+        <ul>
+            <li><strong>Home network:</strong> Use strong password, enable encryption</li>
+            <li><strong>Public WiFi:</strong> Use VPN, avoid sensitive transactions</li>
+            <li><strong>Guest network:</strong> Isolate visitors from main network</li>
+            <li><strong>IoT devices:</strong> Put smart devices on separate network if possible</li>
+        </ul>
+        
+        <h3>Using VPN (Virtual Private Network)</h3>
+        <p><strong>When to use VPN:</strong></p>
+        <ul>
+            <li>On public WiFi networks</li>
+            <li>When traveling</li>
+            <li>For additional privacy at home</li>
+            <li>To access region-restricted content safely</li>
+        </ul>
+        
+        <p><strong>Choosing a VPN:</strong></p>
+        <ul>
+            <li>Research reputation and privacy policy</li>
+            <li>Avoid free VPNs (often sell your data)</li>
+            <li>Look for no-logs policy</li>
+            <li>Consider: NordVPN, ExpressVPN, ProtonVPN</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Physical Security</h2>
+        
+        <h3>Protecting Physical Access</h3>
+        <ul>
+            <li>Always lock devices when leaving them</li>
+            <li>Don't leave devices unattended in public</li>
+            <li>Use privacy screens in public places</li>
+            <li>Be aware of shoulder surfers</li>
+            <li>Store devices securely at home</li>
+            <li>Use cable locks for laptops in public spaces</li>
+        </ul>
+        
+        <h3>Lost or Stolen Device Protocol</h3>
+        
+        <h4>Immediate Actions</h4>
+        <ol>
+            <li>Use Find My Device feature to locate</li>
+            <li>Lock device remotely</li>
+            <li>Display contact message on lock screen</li>
+            <li>Change passwords from another device</li>
+            <li>Contact your carrier to suspend service</li>
+            <li>Report to police if stolen</li>
+            <li>Erase device remotely if recovery unlikely</li>
+        </ol>
+        
+        <h4>Prevention</h4>
+        <ul class="checklist">
+            <li>Enable Find My Device before loss occurs</li>
+            <li>Write down device serial numbers</li>
+            <li>Consider device insurance</li>
+            <li>Use lock screen with password/biometric</li>
+            <li>Don't store passwords in plain text</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Smart Device Security (IoT)</h2>
+        
+        <h3>Securing Smart Home Devices</h3>
+        <ul>
+            <li>Change default passwords immediately</li>
+            <li>Keep firmware updated</li>
+            <li>Use separate network for IoT devices</li>
+            <li>Disable unnecessary features</li>
+            <li>Review privacy settings</li>
+            <li>Research security before buying</li>
+            <li>Only buy from reputable manufacturers</li>
+        </ul>
+        
+        <h3>Common Smart Devices to Secure</h3>
+        <ul>
+            <li>Smart speakers (Alexa, Google Home)</li>
+            <li>Security cameras</li>
+            <li>Smart TVs</li>
+            <li>Smart thermostats</li>
+            <li>Smart locks</li>
+            <li>Baby monitors</li>
+            <li>Smart appliances</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Device Security Schedule</h2>
+        
+        <h3>Weekly Tasks</h3>
+        <ul class="checklist">
+            <li>Review recent account activity for anomalies</li>
+            <li>Update apps that require manual updates</li>
+            <li>Clear browser cache and cookies</li>
+        </ul>
+        
+        <h3>Monthly Tasks</h3>
+        <ul class="checklist">
+            <li>Review app permissions on mobile devices</li>
+            <li>Check for operating system updates</li>
+            <li>Review connected devices on network</li>
+            <li>Test backups by restoring a file</li>
+            <li>Clear unnecessary files and apps</li>
+        </ul>
+        
+        <h3>Quarterly Tasks</h3>
+        <ul class="checklist">
+            <li>Change important passwords</li>
+            <li>Review security settings on all devices</li>
+            <li>Update router firmware</li>
+            <li>Audit installed apps and remove unused ones</li>
+            <li>Review privacy settings on online accounts</li>
+        </ul>
+        
+        <h3>Annually Tasks</h3>
+        <ul class="checklist">
+            <li>Complete security assessment of all devices</li>
+            <li>Review and update family technology rules</li>
+            <li>Research new security threats</li>
+            <li>Consider hardware upgrades for old devices</li>
+            <li>Properly dispose of old devices (wipe data first)</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Quick Reference: Security Checklist</h2>
+        
+        <h3>Essential Security for All Devices</h3>
+        <ul class="checklist">
+            <li>✅ Strong password/PIN protection</li>
+            <li>✅ Automatic updates enabled</li>
+            <li>✅ Device encryption enabled</li>
+            <li>✅ Find My Device activated</li>
+            <li>✅ Regular backups configured</li>
+            <li>✅ Firewall enabled</li>
+            <li>✅ Antivirus/security software active</li>
+            <li>✅ Screen lock after inactivity</li>
+            <li>✅ App permissions reviewed</li>
+            <li>✅ Two-factor authentication on accounts</li>
+        </ul>
+    </div>
+
+    <div class="footer">
+        <p><strong>Digital Guardians</strong> - Empowering Families for a Safer Online Future</p>
+        <p>Device security is an ongoing process, not a one-time task. Stay vigilant!</p>
+        <p style="margin-top: 10px; font-size: 0.8em;">© 2025 Digital Guardians. This guide may be reproduced for educational purposes.</p>
+    </div>
+
+    <div class="btn-group no-print" style="margin-top: 30px;">
+        <button class="btn" onclick="window.print()">📥 Download PDF</button>
+        <button class="btn" onclick="window.print()">🖨️ Print Guide</button>
+        <a href="../guides.html" class="btn btn-secondary">← Back to Guides</a>
+    </div>
+</body>
+</html>
