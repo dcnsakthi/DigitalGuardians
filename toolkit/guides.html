@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Printable Guides - Digital Guardians</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .toolkit-detail {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 3rem 20px;
+        }
+        .guide-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        .guide-card {
+            background: white;
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            overflow: hidden;
+            transition: var(--transition);
+        }
+        .guide-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+        }
+        .guide-header {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 2rem;
+            text-align: center;
+        }
+        .guide-header i {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        .guide-content {
+            padding: 1.5rem;
+        }
+        .guide-content h3 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+        .guide-meta {
+            display: flex;
+            justify-content: space-between;
+            padding: 1rem 1.5rem;
+            background: var(--light-color);
+            border-top: 1px solid #e2e8f0;
+            font-size: 0.9rem;
+            color: var(--gray-color);
+        }
+        .guide-actions {
+            display: flex;
+            gap: 0.5rem;
+            padding: 1rem 1.5rem;
+            border-top: 1px solid #e2e8f0;
+        }
+        .guide-actions .btn {
+            flex: 1;
+            text-align: center;
+            font-size: 0.9rem;
+        }
+        .print-note {
+            background: #fef3c7;
+            padding: 1rem;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+            border-left: 4px solid var(--accent-color);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="container">
+                <div class="logo">
+                    <i class="fas fa-shield-alt"></i>
+                    <h1>Digital Guardians</h1>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="../index.html#home">Home</a></li>
+                    <li><a href="../index.html#workshops">Workshops</a></li>
+                    <li><a href="../index.html#toolkit">Safety Toolkit</a></li>
+                    <li><a href="../index.html#learning">Learning Portal</a></li>
+                    <li><a href="../index.html#ambassadors">Ambassadors</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="toolkit-detail">
+            <div style="text-align: center; margin-bottom: 3rem;">
+                <h1>Printable Guides</h1>
+                <p>Comprehensive resources covering various digital safety topics</p>
+            </div>
+
+            <div class="print-note">
+                <h4><i class="fas fa-print"></i> Print-Ready Resources</h4>
+                <p>All guides are optimized for printing. Click "Download PDF" to get a printer-friendly version, or use your browser's print function (Ctrl+P / Cmd+P) to print directly.</p>
+            </div>
+
+            <div class="guide-grid">
+                <!-- Internet Safety Basics Guide -->
+                <div class="guide-card">
+                    <div class="guide-header">
+                        <i class="fas fa-globe"></i>
+                        <h3>Internet Safety Basics</h3>
+                    </div>
+                    <div class="guide-content">
+                        <p>A comprehensive introduction to online safety for families. Covers essential topics including safe browsing, privacy protection, and recognizing online threats.</p>
+                        <ul>
+                            <li>Understanding online risks</li>
+                            <li>Creating strong passwords</li>
+                            <li>Privacy settings overview</li>
+                            <li>Safe communication practices</li>
+                        </ul>
+                    </div>
+                    <div class="guide-meta">
+                        <span><i class="fas fa-file-pdf"></i> 12 pages</span>
+                        <span><i class="fas fa-users"></i> All Ages</span>
+                    </div>
+                    <div class="guide-actions">
+                        <button class="btn btn-primary" onclick="window.print()"><i class="fas fa-download"></i> Download PDF</button>
+                        <button class="btn btn-outline" onclick="window.print()"><i class="fas fa-print"></i> Print</button>
+                    </div>
+                </div>
+
+                <!-- Social Media Safety Guide -->
+                <div class="guide-card">
+                    <div class="guide-header">
+                        <i class="fas fa-share-alt"></i>
+                        <h3>Social Media Safety</h3>
+                    </div>
+                    <div class="guide-content">
+                        <p>Navigate social media platforms safely. Learn about privacy settings, appropriate sharing, digital footprint management, and handling online relationships.</p>
+                        <ul>
+                            <li>Platform-specific safety tips</li>
+                            <li>Privacy configuration guides</li>
+                            <li>Digital reputation management</li>
+                            <li>Dealing with online drama</li>
+                        </ul>
+                    </div>
+                    <div class="guide-meta">
+                        <span><i class="fas fa-file-pdf"></i> 16 pages</span>
+                        <span><i class="fas fa-users"></i> Ages 10+</span>
+                    </div>
+                    <div class="guide-actions">
+                        <button class="btn btn-primary" onclick="window.print()"><i class="fas fa-download"></i> Download PDF</button>
+                        <button class="btn btn-outline" onclick="window.print()"><i class="fas fa-print"></i> Print</button>
+                    </div>
+                </div>
+
+                <!-- Cyberbullying Prevention Guide -->
+                <div class="guide-card">
+                    <div class="guide-header">
+                        <i class="fas fa-hand-paper"></i>
+                        <h3>Cyberbullying Prevention & Response</h3>
+                    </div>
+                    <div class="guide-content">
+                        <p>Comprehensive guide on recognizing, preventing, and responding to cyberbullying. Includes support resources and reporting procedures.</p>
+                        <ul>
+                            <li>Identifying cyberbullying</li>
+                            <li>Prevention strategies</li>
+                            <li>Reporting and documentation</li>
+                            <li>Support and recovery</li>
+                        </ul>
+                    </div>
+                    <div class="guide-meta">
+                        <span><i class="fas fa-file-pdf"></i> 14 pages</span>
+                        <span><i class="fas fa-users"></i> All Ages</span>
+                    </div>
+                    <div class="guide-actions">
+                        <button class="btn btn-primary" onclick="window.print()"><i class="fas fa-download"></i> Download PDF</button>
+                        <button class="btn btn-outline" onclick="window.print()"><i class="fas fa-print"></i> Print</button>
+                    </div>
+                </div>
+
+                <!-- Device Security Guide -->
+                <div class="guide-card">
+                    <div class="guide-header">
+                        <i class="fas fa-mobile-alt"></i>
+                        <h3>Device Security Essentials</h3>
+                    </div>
+                    <div class="guide-content">
+                        <p>Protect your devices from threats. Step-by-step instructions for securing phones, tablets, and computers for the whole family.</p>
+                        <ul>
+                            <li>Operating system security</li>
+                            <li>App permissions management</li>
+                            <li>Malware protection</li>
+                            <li>Backup and recovery</li>
+                        </ul>
+                    </div>
+                    <div class="guide-meta">
+                        <span><i class="fas fa-file-pdf"></i> 10 pages</span>
+                        <span><i class="fas fa-users"></i> Parents</span>
+                    </div>
+                    <div class="guide-actions">
+                        <button class="btn btn-primary" onclick="window.print()"><i class="fas fa-download"></i> Download PDF</button>
+                        <button class="btn btn-outline" onclick="window.print()"><i class="fas fa-print"></i> Print</button>
+                    </div>
+                </div>
+
+                <!-- Gaming Safety Guide -->
+                <div class="guide-card">
+                    <div class="guide-header">
+                        <i class="fas fa-gamepad"></i>
+                        <h3>Online Gaming Safety</h3>
+                    </div>
+                    <div class="guide-content">
+                        <p>Stay safe while gaming online. Covers in-game purchases, communication with strangers, and age-appropriate content selection.</p>
+                        <ul>
+                            <li>Platform safety features</li>
+                            <li>In-game communication</li>
+                            <li>Protecting personal information</li>
+                            <li>Managing screen time</li>
+                        </ul>
+                    </div>
+                    <div class="guide-meta">
+                        <span><i class="fas fa-file-pdf"></i> 8 pages</span>
+                        <span><i class="fas fa-users"></i> Ages 8+</span>
+                    </div>
+                    <div class="guide-actions">
+                        <button class="btn btn-primary" onclick="window.print()"><i class="fas fa-download"></i> Download PDF</button>
+                        <button class="btn btn-outline" onclick="window.print()"><i class="fas fa-print"></i> Print</button>
+                    </div>
+                </div>
+
+                <!-- Digital Wellbeing Guide -->
+                <div class="guide-card">
+                    <div class="guide-header">
+                        <i class="fas fa-heart"></i>
+                        <h3>Digital Wellbeing & Balance</h3>
+                    </div>
+                    <div class="guide-content">
+                        <p>Achieve healthy technology use. Strategies for managing screen time, digital detox, and maintaining work-life balance in a connected world.</p>
+                        <ul>
+                            <li>Healthy tech habits</li>
+                            <li>Screen time management</li>
+                            <li>Sleep and technology</li>
+                            <li>Mindful device use</li>
+                        </ul>
+                    </div>
+                    <div class="guide-meta">
+                        <span><i class="fas fa-file-pdf"></i> 10 pages</span>
+                        <span><i class="fas fa-users"></i> All Ages</span>
+                    </div>
+                    <div class="guide-actions">
+                        <button class="btn btn-primary" onclick="window.print()"><i class="fas fa-download"></i> Download PDF</button>
+                        <button class="btn btn-outline" onclick="window.print()"><i class="fas fa-print"></i> Print</button>
+                    </div>
+                </div>
+
+                <!-- Parent's Guide to Tech Talk -->
+                <div class="guide-card">
+                    <div class="guide-header">
+                        <i class="fas fa-comments"></i>
+                        <h3>Parent's Guide to Tech Talk</h3>
+                    </div>
+                    <div class="guide-content">
+                        <p>Communication strategies for parents. How to have meaningful conversations about technology with children at different ages.</p>
+                        <ul>
+                            <li>Age-appropriate discussions</li>
+                            <li>Active listening techniques</li>
+                            <li>Building trust</li>
+                            <li>Setting boundaries together</li>
+                        </ul>
+                    </div>
+                    <div class="guide-meta">
+                        <span><i class="fas fa-file-pdf"></i> 12 pages</span>
+                        <span><i class="fas fa-users"></i> Parents</span>
+                    </div>
+                    <div class="guide-actions">
+                        <button class="btn btn-primary" onclick="window.print()"><i class="fas fa-download"></i> Download PDF</button>
+                        <button class="btn btn-outline" onclick="window.print()"><i class="fas fa-print"></i> Print</button>
+                    </div>
+                </div>
+
+                <!-- Emergency Response Guide -->
+                <div class="guide-card">
+                    <div class="guide-header">
+                        <i class="fas fa-ambulance"></i>
+                        <h3>Digital Emergency Response</h3>
+                    </div>
+                    <div class="guide-content">
+                        <p>Quick reference for handling digital emergencies. What to do if accounts are hacked, identity is stolen, or harmful content is encountered.</p>
+                        <ul>
+                            <li>Immediate action steps</li>
+                            <li>Reporting procedures</li>
+                            <li>Evidence preservation</li>
+                            <li>Support resources</li>
+                        </ul>
+                    </div>
+                    <div class="guide-meta">
+                        <span><i class="fas fa-file-pdf"></i> 6 pages</span>
+                        <span><i class="fas fa-users"></i> All Ages</span>
+                    </div>
+                    <div class="guide-actions">
+                        <button class="btn btn-primary" onclick="window.print()"><i class="fas fa-download"></i> Download PDF</button>
+                        <button class="btn btn-outline" onclick="window.print()"><i class="fas fa-print"></i> Print</button>
+                    </div>
+                </div>
+
+                <!-- Privacy Protection Guide -->
+                <div class="guide-card">
+                    <div class="guide-header">
+                        <i class="fas fa-user-shield"></i>
+                        <h3>Privacy Protection Guide</h3>
+                    </div>
+                    <div class="guide-content">
+                        <p>Comprehensive privacy protection strategies. Understanding data collection, managing digital footprint, and controlling personal information online.</p>
+                        <ul>
+                            <li>Data privacy fundamentals</li>
+                            <li>Privacy settings walkthrough</li>
+                            <li>Managing online presence</li>
+                            <li>Rights and regulations</li>
+                        </ul>
+                    </div>
+                    <div class="guide-meta">
+                        <span><i class="fas fa-file-pdf"></i> 14 pages</span>
+                        <span><i class="fas fa-users"></i> Ages 13+</span>
+                    </div>
+                    <div class="guide-actions">
+                        <button class="btn btn-primary" onclick="window.print()"><i class="fas fa-download"></i> Download PDF</button>
+                        <button class="btn btn-outline" onclick="window.print()"><i class="fas fa-print"></i> Print</button>
+                    </div>
+                </div>
+            </div>
+
+            <div style="text-align: center; margin-top: 3rem;">
+                <a href="../index.html#toolkit" class="btn btn-primary">Back to Toolkit</a>
+                <a href="checklists.html" class="btn btn-outline">View Checklists</a>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2024 Digital Guardians. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+</body>
+</html>
