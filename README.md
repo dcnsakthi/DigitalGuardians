@@ -1,9 +1,45 @@
 # DigitalGuardians
 Digital Guardians: Empowering Families for a Safer Online Future!
 
+🌐 **Live Website**: [https://dcnsakthi.github.io/DigitalGuardians/](https://dcnsakthi.github.io/DigitalGuardians/)
+
 ## About Digital Guardians
 
 Digital Guardians is a comprehensive digital safety initiative that empowers families, educators, and communities to navigate the online world safely and responsibly. We believe that through education, awareness, and community support, we can create a safer digital environment for everyone.
+
+## 🚀 Website Features
+
+This is a professional, modern website built with **pure HTML, CSS, and JavaScript** that works perfectly on GitHub Pages:
+
+### 🎨 Design & User Experience
+- **Modern gradient hero section** with compelling call-to-action
+- **Fully responsive design** that works on desktop, tablet, and mobile devices
+- **Smooth scrolling navigation** with sticky header
+- **Interactive card animations** using Intersection Observer API
+- **Mobile-friendly hamburger menu** for small screens
+- **Professional color scheme** with CSS custom properties
+
+### 📱 Interactive Features
+- **Active navigation tracking** - automatically highlights current section on scroll
+- **Smooth scroll behavior** for all anchor links
+- **Fade-in animations** for content cards as they enter viewport
+- **Interactive quizzes** with question navigation and score tracking
+- **Printable checklists** with progress tracking
+- **Responsive layouts** using CSS Grid and Flexbox
+
+### 📄 Pages & Content
+1. **Homepage** - Overview of all programs and resources
+2. **Workshops** (4 pages) - Fake News, Phishing, Deepfakes, Parent-Child Sessions
+3. **Digital Safety Toolkit** (4 pages) - Guides, Checklists, Conversations, Multilingual
+4. **Learning Portal** (3 pages) - Quizzes, Simulations, Role-Play Scenarios
+5. **Community Ambassadors** (2 pages) - Youth Leaders, Parent Volunteers
+
+### 🔍 SEO & Social Sharing
+- Comprehensive meta tags for search engines
+- Open Graph tags for Facebook sharing
+- Twitter Card tags for Twitter sharing
+- Descriptive keywords and descriptions
+- Semantic HTML structure for better accessibility
 
 ## Community Ambassadors Program
 
@@ -238,6 +274,48 @@ These resources are free to use in educational settings:
 - Include in digital citizenship curricula
 - Use as part of parent education programs
 - Adapt for workshops and training sessions
+
+## 🌐 GitHub Pages Deployment
+
+This website is deployed and hosted on GitHub Pages. To deploy your own version:
+
+### Automatic Deployment
+1. Fork this repository
+2. Go to repository Settings > Pages
+3. Under "Source", select the main/master branch
+4. Click Save
+5. Your site will be available at `https://[username].github.io/DigitalGuardians/`
+
+### Local Development
+To test the website locally:
+```bash
+# Clone the repository
+git clone https://github.com/dcnsakthi/DigitalGuardians.git
+cd DigitalGuardians
+
+# Start a local web server (Python 3)
+python3 -m http.server 8000
+
+# Or using Python 2
+python -m SimpleHTTPServer 8000
+
+# Visit http://localhost:8000 in your browser
+```
+
+### Technologies Used
+- **HTML5** - Semantic markup for structure
+- **CSS3** - Modern styling with custom properties, Grid, and Flexbox
+- **Vanilla JavaScript** - No frameworks needed, pure ES6+
+- **Font Awesome** - Icon library from CDN
+- **GitHub Pages** - Static site hosting
+
+### Browser Compatibility
+The website works on all modern browsers:
+- ✅ Chrome/Edge (recommended)
+- ✅ Firefox
+- ✅ Safari
+- ✅ Opera
+- ✅ Mobile browsers (iOS Safari, Chrome Mobile)
 
 ## ⚖️ License
 
