@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Family Safety Checklist - Digital Guardians</title>
+    <link rel="stylesheet" href="../styles.css">
+    <style>
+        .resource-page {
+            padding: 4rem 0;
+            background: var(--light-color);
+        }
+        .checklist-section {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            margin-bottom: 2rem;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+        .checklist-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            padding: 1rem;
+            border-bottom: 1px solid var(--border-color);
+        }
+        .checklist-item:last-child {
+            border-bottom: none;
+        }
+        .checklist-checkbox {
+            width: 24px;
+            height: 24px;
+            cursor: pointer;
+        }
+        .checklist-item label {
+            cursor: pointer;
+            flex: 1;
+        }
+        .back-link {
+            display: inline-block;
+            margin-bottom: 2rem;
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="container">
+                <div class="logo">
+                    <span class="shield">🛡️</span>
+                    <h1>Digital Guardians</h1>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../index.html#toolkit">Toolkit</a></li>
+                    <li><a href="../index.html#learning">Learning</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main class="resource-page">
+        <div class="container">
+            <a href="../index.html#toolkit" class="back-link">← Back to Toolkit</a>
+            
+            <h1>📋 Family Safety Checklist</h1>
+            <p class="section-subtitle">Use this comprehensive checklist to assess and improve your family's digital safety practices.</p>
+
+            <div class="checklist-section">
+                <h2>🔒 Account Security</h2>
+                <div class="checklist-item">
+                    <input type="checkbox" id="check1" class="checklist-checkbox">
+                    <label for="check1">All family members use strong, unique passwords for each account</label>
+                </div>
+                <div class="checklist-item">
+                    <input type="checkbox" id="check2" class="checklist-checkbox">
+                    <label for="check2">Two-factor authentication (2FA) is enabled on all important accounts</label>
+                </div>
+                <div class="checklist-item">
+                    <input type="checkbox" id="check3" class="checklist-checkbox">
+                    <label for="check3">Passwords are changed regularly (at least every 3-6 months)</label>
+                </div>
+                <div class="checklist-item">
+                    <input type="checkbox" id="check4" class="checklist-checkbox">
+                    <label for="check4">A password manager is used to store and generate passwords</label>
+                </div>
+            </div>
+
+            <div class="checklist-section">
+                <h2>🌐 Privacy Settings</h2>
+                <div class="checklist-item">
+                    <input type="checkbox" id="check5" class="checklist-checkbox">
+                    <label for="check5">Social media accounts are set to private</label>
+                </div>
+                <div class="checklist-item">
+                    <input type="checkbox" id="check6" class="checklist-checkbox">
+                    <label for="check6">Location services are reviewed and limited to necessary apps</label>
+                </div>
+                <div class="checklist-item">
+                    <input type="checkbox" id="check7" class="checklist-checkbox">
+                    <label for="check7">Privacy settings on devices and apps are reviewed quarterly</label>
+                </div>
+                <div class="checklist-item">
+                    <input type="checkbox" id="check8" class="checklist-checkbox">
+                    <label for="check8">Personal information (address, phone number) is not shared publicly</label>
+                </div>
+            </div>
+
+            <div class="checklist-section">
+                <h2>👨‍👩‍👧‍👦 Family Communication</h2>
+                <div class="checklist-item">
+                    <input type="checkbox" id="check9" class="checklist-checkbox">
+                    <label for="check9">Family has regular discussions about online safety</label>
+                </div>
+                <div class="checklist-item">
+                    <input type="checkbox" id="check10" class="checklist-checkbox">
+                    <label for="check10">Children know they can report uncomfortable online experiences</label>
+                </div>
+                <div class="checklist-item">
+                    <input type="checkbox" id="check11" class="checklist-checkbox">
+                    <label for="check11">Family has agreed-upon rules for screen time and device usage</label>
+                </div>
+                <div class="checklist-item">
+                    <input type="checkbox" id="check12" class="checklist-checkbox">
+                    <label for="check12">Parents know what platforms and apps children are using</label>
+                </div>
+            </div>
+
+            <div class="checklist-section">
+                <h2>🛡️ Device Security</h2>
+                <div class="checklist-item">
+                    <input type="checkbox" id="check13" class="checklist-checkbox">
+                    <label for="check13">All devices have up-to-date antivirus software</label>
+                </div>
+                <div class="checklist-item">
+                    <input type="checkbox" id="check14" class="checklist-checkbox">
+                    <label for="check14">Operating systems and apps are regularly updated</label>
+                </div>
+                <div class="checklist-item">
+                    <input type="checkbox" id="check15" class="checklist-checkbox">
+                    <label for="check15">Devices are locked with PIN, password, or biometric security</label>
+                </div>
+                <div class="checklist-item">
+                    <input type="checkbox" id="check16" class="checklist-checkbox">
+                    <label for="check16">Public Wi-Fi is used cautiously or with a VPN</label>
+                </div>
+            </div>
+
+            <div class="checklist-section">
+                <h2>📱 Social Media & Apps</h2>
+                <div class="checklist-item">
+                    <input type="checkbox" id="check17" class="checklist-checkbox">
+                    <label for="check17">App permissions are reviewed and limited to necessary access</label>
+                </div>
+                <div class="checklist-item">
+                    <input type="checkbox" id="check18" class="checklist-checkbox">
+                    <label for="check18">Children understand not to accept friend requests from strangers</label>
+                </div>
+                <div class="checklist-item">
+                    <input type="checkbox" id="check19" class="checklist-checkbox">
+                    <label for="check19">Family members know how to block and report inappropriate content</label>
+                </div>
+                <div class="checklist-item">
+                    <input type="checkbox" id="check20" class="checklist-checkbox">
+                    <label for="check20">Unused apps and accounts are deleted regularly</label>
+                </div>
+            </div>
+
+            <div class="checklist-section">
+                <h2>🎓 Digital Literacy</h2>
+                <div class="checklist-item">
+                    <input type="checkbox" id="check21" class="checklist-checkbox">
+                    <label for="check21">Family can identify common phishing attempts</label>
+                </div>
+                <div class="checklist-item">
+                    <input type="checkbox" id="check22" class="checklist-checkbox">
+                    <label for="check22">Children understand how to verify information online</label>
+                </div>
+                <div class="checklist-item">
+                    <input type="checkbox" id="check23" class="checklist-checkbox">
+                    <label for="check23">Family is aware of deepfakes and manipulated media</label>
+                </div>
+                <div class="checklist-item">
+                    <input type="checkbox" id="check24" class="checklist-checkbox">
+                    <label for="check24">Everyone knows not to click on suspicious links or download unknown files</label>
+                </div>
+            </div>
+
+            <div style="text-align: center; margin-top: 3rem;">
+                <a href="../index.html#toolkit" class="btn btn-primary">Explore More Resources</a>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2024 Digital Guardians. Supporting the Digital for Life Fund initiative.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
