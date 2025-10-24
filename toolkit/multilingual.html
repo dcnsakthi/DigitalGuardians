@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multilingual Resources - Digital Guardians</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .toolkit-detail {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 3rem 20px;
+        }
+        .language-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        .language-card {
+            background: white;
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            padding: 1.5rem;
+            text-align: center;
+            transition: var(--transition);
+            cursor: pointer;
+        }
+        .language-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+        }
+        .language-flag {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        .language-card h3 {
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+        .language-card p {
+            color: var(--gray-color);
+            font-size: 0.9rem;
+        }
+        .info-section {
+            background: white;
+            padding: 2rem;
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            margin-bottom: 2rem;
+        }
+        .info-section h3 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+        .resource-list {
+            list-style: none;
+            padding: 0;
+        }
+        .resource-list li {
+            padding: 1rem;
+            background: var(--light-color);
+            margin-bottom: 0.5rem;
+            border-radius: 8px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .resource-list li strong {
+            color: var(--dark-color);
+        }
+        .download-btn {
+            padding: 0.5rem 1rem;
+            background: var(--primary-color);
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 0.9rem;
+        }
+        .download-btn:hover {
+            background: #1d4ed8;
+        }
+        .highlight-box {
+            background: linear-gradient(135deg, #dbeafe, #fce7f3);
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 2rem 0;
+        }
+        .highlight-box h4 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="container">
+                <div class="logo">
+                    <i class="fas fa-shield-alt"></i>
+                    <h1>Digital Guardians</h1>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="../index.html#home">Home</a></li>
+                    <li><a href="../index.html#workshops">Workshops</a></li>
+                    <li><a href="../index.html#toolkit">Safety Toolkit</a></li>
+                    <li><a href="../index.html#learning">Learning Portal</a></li>
+                    <li><a href="../index.html#ambassadors">Ambassadors</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="toolkit-detail">
+            <div style="text-align: center; margin-bottom: 3rem;">
+                <h1><i class="fas fa-language"></i> Multilingual Resources</h1>
+                <p>Digital safety materials available in multiple languages for inclusivity</p>
+            </div>
+
+            <div class="highlight-box">
+                <h4><i class="fas fa-globe"></i> Our Commitment to Inclusivity</h4>
+                <p>Digital safety should be accessible to everyone, regardless of language. We're continuously working to provide our resources in multiple languages to serve diverse communities. All materials maintain the same quality and comprehensive coverage of digital safety topics across languages.</p>
+            </div>
+
+            <div class="info-section">
+                <h3><i class="fas fa-check-circle"></i> Available Languages</h3>
+                <p>Select your preferred language below to access all resources in that language:</p>
+            </div>
+
+            <div class="language-grid">
+                <div class="language-card" onclick="selectLanguage('English')">
+                    <div class="language-flag">🇺🇸</div>
+                    <h3>English</h3>
+                    <p>Complete resource library</p>
+                </div>
+
+                <div class="language-card" onclick="selectLanguage('Spanish')">
+                    <div class="language-flag">🇪🇸</div>
+                    <h3>Español</h3>
+                    <p>Spanish (Spain)</p>
+                </div>
+
+                <div class="language-card" onclick="selectLanguage('Spanish-MX')">
+                    <div class="language-flag">🇲🇽</div>
+                    <h3>Español (México)</h3>
+                    <p>Spanish (Mexico)</p>
+                </div>
+
+                <div class="language-card" onclick="selectLanguage('French')">
+                    <div class="language-flag">🇫🇷</div>
+                    <h3>Français</h3>
+                    <p>French</p>
+                </div>
+
+                <div class="language-card" onclick="selectLanguage('German')">
+                    <div class="language-flag">🇩🇪</div>
+                    <h3>Deutsch</h3>
+                    <p>German</p>
+                </div>
+
+                <div class="language-card" onclick="selectLanguage('Chinese')">
+                    <div class="language-flag">🇨🇳</div>
+                    <h3>中文</h3>
+                    <p>Chinese (Simplified)</p>
+                </div>
+
+                <div class="language-card" onclick="selectLanguage('Chinese-TW')">
+                    <div class="language-flag">🇹🇼</div>
+                    <h3>中文 (繁體)</h3>
+                    <p>Chinese (Traditional)</p>
+                </div>
+
+                <div class="language-card" onclick="selectLanguage('Japanese')">
+                    <div class="language-flag">🇯🇵</div>
+                    <h3>日本語</h3>
+                    <p>Japanese</p>
+                </div>
+
+                <div class="language-card" onclick="selectLanguage('Korean')">
+                    <div class="language-flag">🇰🇷</div>
+                    <h3>한국어</h3>
+                    <p>Korean</p>
+                </div>
+
+                <div class="language-card" onclick="selectLanguage('Arabic')">
+                    <div class="language-flag">🇸🇦</div>
+                    <h3>العربية</h3>
+                    <p>Arabic</p>
+                </div>
+
+                <div class="language-card" onclick="selectLanguage('Portuguese')">
+                    <div class="language-flag">🇧🇷</div>
+                    <h3>Português</h3>
+                    <p>Portuguese (Brazil)</p>
+                </div>
+
+                <div class="language-card" onclick="selectLanguage('Hindi')">
+                    <div class="language-flag">🇮🇳</div>
+                    <h3>हिन्दी</h3>
+                    <p>Hindi</p>
+                </div>
+
+                <div class="language-card" onclick="selectLanguage('Russian')">
+                    <div class="language-flag">🇷🇺</div>
+                    <h3>Русский</h3>
+                    <p>Russian</p>
+                </div>
+
+                <div class="language-card" onclick="selectLanguage('Italian')">
+                    <div class="language-flag">🇮🇹</div>
+                    <h3>Italiano</h3>
+                    <p>Italian</p>
+                </div>
+
+                <div class="language-card" onclick="selectLanguage('Polish')">
+                    <div class="language-flag">🇵🇱</div>
+                    <h3>Polski</h3>
+                    <p>Polish</p>
+                </div>
+
+                <div class="language-card" onclick="selectLanguage('Vietnamese')">
+                    <div class="language-flag">🇻🇳</div>
+                    <h3>Tiếng Việt</h3>
+                    <p>Vietnamese</p>
+                </div>
+            </div>
+
+            <div class="info-section" id="resources-section" style="display: none;">
+                <h3><i class="fas fa-download"></i> Available Resources in <span id="selected-language">English</span></h3>
+                <ul class="resource-list">
+                    <li>
+                        <div>
+                            <strong>Internet Safety Basics Guide</strong>
+                            <p style="color: var(--gray-color); font-size: 0.9rem; margin: 0;">Comprehensive introduction to online safety</p>
+                        </div>
+                        <button class="download-btn" onclick="downloadResource('safety-basics')">
+                            <i class="fas fa-download"></i> Download
+                        </button>
+                    </li>
+                    <li>
+                        <div>
+                            <strong>Social Media Safety Guide</strong>
+                            <p style="color: var(--gray-color); font-size: 0.9rem; margin: 0;">Platform-specific safety tips and privacy settings</p>
+                        </div>
+                        <button class="download-btn" onclick="downloadResource('social-media')">
+                            <i class="fas fa-download"></i> Download
+                        </button>
+                    </li>
+                    <li>
+                        <div>
+                            <strong>Cyberbullying Prevention Guide</strong>
+                            <p style="color: var(--gray-color); font-size: 0.9rem; margin: 0;">Recognition, prevention, and response strategies</p>
+                        </div>
+                        <button class="download-btn" onclick="downloadResource('cyberbullying')">
+                            <i class="fas fa-download"></i> Download
+                        </button>
+                    </li>
+                    <li>
+                        <div>
+                            <strong>Family Safety Checklist</strong>
+                            <p style="color: var(--gray-color); font-size: 0.9rem; margin: 0;">Step-by-step family protection checklist</p>
+                        </div>
+                        <button class="download-btn" onclick="downloadResource('family-checklist')">
+                            <i class="fas fa-download"></i> Download
+                        </button>
+                    </li>
+                    <li>
+                        <div>
+                            <strong>Conversation Starters</strong>
+                            <p style="color: var(--gray-color); font-size: 0.9rem; margin: 0;">Culturally adapted conversation prompts</p>
+                        </div>
+                        <button class="download-btn" onclick="downloadResource('conversations')">
+                            <i class="fas fa-download"></i> Download
+                        </button>
+                    </li>
+                    <li>
+                        <div>
+                            <strong>Emergency Response Guide</strong>
+                            <p style="color: var(--gray-color); font-size: 0.9rem; margin: 0;">Quick reference for digital emergencies</p>
+                        </div>
+                        <button class="download-btn" onclick="downloadResource('emergency')">
+                            <i class="fas fa-download"></i> Download
+                        </button>
+                    </li>
+                    <li>
+                        <div>
+                            <strong>Privacy Protection Guide</strong>
+                            <p style="color: var(--gray-color); font-size: 0.9rem; margin: 0;">Comprehensive privacy strategies</p>
+                        </div>
+                        <button class="download-btn" onclick="downloadResource('privacy')">
+                            <i class="fas fa-download"></i> Download
+                        </button>
+                    </li>
+                    <li>
+                        <div>
+                            <strong>Digital Wellbeing Guide</strong>
+                            <p style="color: var(--gray-color); font-size: 0.9rem; margin: 0;">Healthy technology use strategies</p>
+                        </div>
+                        <button class="download-btn" onclick="downloadResource('wellbeing')">
+                            <i class="fas fa-download"></i> Download
+                        </button>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="info-section">
+                <h3><i class="fas fa-hands-helping"></i> Translation Support</h3>
+                <p>We welcome community contributions to expand our language offerings. If you're interested in helping translate Digital Guardians resources into additional languages, we'd love to hear from you.</p>
+                <ul style="margin-top: 1rem;">
+                    <li><strong>Volunteer Translators:</strong> Native speakers passionate about digital safety</li>
+                    <li><strong>Professional Review:</strong> All translations undergo quality assurance</li>
+                    <li><strong>Cultural Adaptation:</strong> Content adapted to be culturally relevant</li>
+                    <li><strong>Continuous Updates:</strong> Translations maintained as content evolves</li>
+                </ul>
+            </div>
+
+            <div class="highlight-box">
+                <h4><i class="fas fa-info-circle"></i> Language Notes</h4>
+                <ul style="margin: 0;">
+                    <li>All materials are professionally translated by native speakers</li>
+                    <li>Content is culturally adapted while maintaining core safety principles</li>
+                    <li>New resources are added regularly - check back for updates</li>
+                    <li>Workshop materials available in all supported languages</li>
+                    <li>Video content includes subtitles in multiple languages</li>
+                </ul>
+            </div>
+
+            <div class="info-section">
+                <h3><i class="fas fa-question-circle"></i> Frequently Asked Questions</h3>
+                
+                <div style="margin-top: 1rem;">
+                    <h4 style="color: var(--primary-color); margin-bottom: 0.5rem;">Are all resources available in every language?</h4>
+                    <p>We strive to provide complete coverage in all supported languages. Some newly added content may take time to be translated, but core resources are available in all listed languages.</p>
+                </div>
+
+                <div style="margin-top: 1rem;">
+                    <h4 style="color: var(--primary-color); margin-bottom: 0.5rem;">Can I request a specific language?</h4>
+                    <p>Yes! We prioritize languages based on community need. Contact us with your request and we'll consider it for future expansion.</p>
+                </div>
+
+                <div style="margin-top: 1rem;">
+                    <h4 style="color: var(--primary-color); margin-bottom: 0.5rem;">Are workshops available in multiple languages?</h4>
+                    <p>Yes, our interactive workshops can be conducted in any of the supported languages. Workshop materials and facilitator guides are fully translated.</p>
+                </div>
+
+                <div style="margin-top: 1rem;">
+                    <h4 style="color: var(--primary-color); margin-bottom: 0.5rem;">How do I switch the website language?</h4>
+                    <p>Use the language selector in the navigation menu to change the entire website interface to your preferred language.</p>
+                </div>
+            </div>
+
+            <div style="text-align: center; margin-top: 3rem;">
+                <a href="../index.html#toolkit" class="btn btn-primary">Back to Toolkit</a>
+                <a href="guides.html" class="btn btn-outline">View All Guides</a>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2024 Digital Guardians. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <script>
+        function selectLanguage(language) {
+            document.getElementById('selected-language').textContent = language;
+            document.getElementById('resources-section').style.display = 'block';
+            document.getElementById('resources-section').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        }
+
+        function downloadResource(resourceType) {
+            const language = document.getElementById('selected-language').textContent;
+            alert(`Downloading ${resourceType} in ${language}...\n\nIn a production environment, this would download the PDF file.`);
+        }
+    </script>
+</body>
+</html>
