@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Quizzes - Digital Guardians</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .learning-detail {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 3rem 20px;
+        }
+        .quiz-selection {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        .quiz-card {
+            background: white;
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            padding: 2rem;
+            transition: var(--transition);
+        }
+        .quiz-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+        }
+        .quiz-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+        .quiz-icon {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+        }
+        .quiz-meta {
+            display: flex;
+            gap: 1rem;
+            margin: 1rem 0;
+            font-size: 0.9rem;
+            color: var(--gray-color);
+        }
+        .quiz-meta span {
+            display: flex;
+            align-items: center;
+            gap: 0.3rem;
+        }
+        .quiz-container {
+            background: white;
+            padding: 2rem;
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            margin: 2rem 0;
+            display: none;
+        }
+        .quiz-container.active {
+            display: block;
+        }
+        .question-card {
+            background: var(--light-color);
+            padding: 2rem;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+        }
+        .question-number {
+            color: var(--primary-color);
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+        .question-text {
+            font-size: 1.1rem;
+            font-weight: 500;
+            margin-bottom: 1.5rem;
+            color: var(--dark-color);
+        }
+        .answer-options {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+        .answer-option {
+            padding: 1rem;
+            background: white;
+            border: 2px solid #e2e8f0;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+        .answer-option:hover {
+            border-color: var(--primary-color);
+            background: #f0f9ff;
+        }
+        .answer-option.selected {
+            border-color: var(--primary-color);
+            background: #dbeafe;
+        }
+        .answer-option.correct {
+            border-color: var(--success-color);
+            background: #dcfce7;
+        }
+        .answer-option.incorrect {
+            border-color: var(--danger-color);
+            background: #fee2e2;
+        }
+        .explanation {
+            background: #fef3c7;
+            padding: 1rem;
+            border-radius: 8px;
+            margin-top: 1rem;
+            display: none;
+        }
+        .explanation.show {
+            display: block;
+        }
+        .quiz-progress {
+            width: 100%;
+            height: 8px;
+            background: #e2e8f0;
+            border-radius: 4px;
+            margin-bottom: 2rem;
+        }
+        .quiz-progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, var(--primary-color), var(--success-color));
+            border-radius: 4px;
+            transition: width 0.3s ease;
+        }
+        .quiz-nav {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 2rem;
+        }
+        .results-card {
+            background: white;
+            padding: 2rem;
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            text-align: center;
+            display: none;
+        }
+        .results-card.show {
+            display: block;
+        }
+        .score-circle {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--primary-color), var(--success-color));
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            font-weight: bold;
+            margin: 2rem auto;
+        }
+        .badge-earned {
+            background: linear-gradient(135deg, #fbbf24, #f59e0b);
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            display: inline-block;
+            margin: 1rem 0;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="container">
+                <div class="logo">
+                    <i class="fas fa-shield-alt"></i>
+                    <h1>Digital Guardians</h1>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="../index.html#home">Home</a></li>
+                    <li><a href="../index.html#workshops">Workshops</a></li>
+                    <li><a href="../index.html#toolkit">Safety Toolkit</a></li>
+                    <li><a href="../index.html#learning">Learning Portal</a></li>
+                    <li><a href="../index.html#ambassadors">Ambassadors</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="learning-detail">
+            <div style="text-align: center; margin-bottom: 3rem;">
+                <h1><i class="fas fa-question-circle"></i> Interactive Quizzes</h1>
+                <p>Test your knowledge with engaging quizzes on digital safety topics</p>
+            </div>
+
+            <!-- Quiz Selection -->
+            <div class="quiz-selection" id="quiz-selection">
+                <div class="quiz-card">
+                    <div class="quiz-header">
+                        <div class="quiz-icon"><i class="fas fa-search"></i></div>
+                        <div>
+                            <h3>Fake News Detective</h3>
+                        </div>
+                    </div>
+                    <p>Test your ability to identify misinformation and evaluate sources</p>
+                    <div class="quiz-meta">
+                        <span><i class="fas fa-clock"></i> 10 min</span>
+                        <span><i class="fas fa-list"></i> 10 questions</span>
+                        <span><i class="fas fa-star"></i> Beginner</span>
+                    </div>
+                    <button class="btn btn-primary" onclick="startQuiz('fake-news')">Start Quiz</button>
+                </div>
+
+                <div class="quiz-card">
+                    <div class="quiz-header">
+                        <div class="quiz-icon"><i class="fas fa-fish"></i></div>
+                        <div>
+                            <h3>Phishing Challenge</h3>
+                        </div>
+                    </div>
+                    <p>Spot phishing attempts and learn to protect yourself from scams</p>
+                    <div class="quiz-meta">
+                        <span><i class="fas fa-clock"></i> 12 min</span>
+                        <span><i class="fas fa-list"></i> 12 questions</span>
+                        <span><i class="fas fa-star"></i> Intermediate</span>
+                    </div>
+                    <button class="btn btn-primary" onclick="startQuiz('phishing')">Start Quiz</button>
+                </div>
+
+                <div class="quiz-card">
+                    <div class="quiz-header">
+                        <div class="quiz-icon"><i class="fas fa-lock"></i></div>
+                        <div>
+                            <h3>Password Security</h3>
+                        </div>
+                    </div>
+                    <p>Master the art of creating and managing secure passwords</p>
+                    <div class="quiz-meta">
+                        <span><i class="fas fa-clock"></i> 8 min</span>
+                        <span><i class="fas fa-list"></i> 8 questions</span>
+                        <span><i class="fas fa-star"></i> Beginner</span>
+                    </div>
+                    <button class="btn btn-primary" onclick="startQuiz('password')">Start Quiz</button>
+                </div>
+
+                <div class="quiz-card">
+                    <div class="quiz-header">
+                        <div class="quiz-icon"><i class="fas fa-user-shield"></i></div>
+                        <div>
+                            <h3>Privacy Protection</h3>
+                        </div>
+                    </div>
+                    <p>Learn how to protect your personal information online</p>
+                    <div class="quiz-meta">
+                        <span><i class="fas fa-clock"></i> 10 min</span>
+                        <span><i class="fas fa-list"></i> 10 questions</span>
+                        <span><i class="fas fa-star"></i> Intermediate</span>
+                    </div>
+                    <button class="btn btn-primary" onclick="startQuiz('privacy')">Start Quiz</button>
+                </div>
+
+                <div class="quiz-card">
+                    <div class="quiz-header">
+                        <div class="quiz-icon"><i class="fas fa-share-alt"></i></div>
+                        <div>
+                            <h3>Social Media Safety</h3>
+                        </div>
+                    </div>
+                    <p>Navigate social platforms safely and responsibly</p>
+                    <div class="quiz-meta">
+                        <span><i class="fas fa-clock"></i> 10 min</span>
+                        <span><i class="fas fa-list"></i> 10 questions</span>
+                        <span><i class="fas fa-star"></i> Beginner</span>
+                    </div>
+                    <button class="btn btn-primary" onclick="startQuiz('social-media')">Start Quiz</button>
+                </div>
+
+                <div class="quiz-card">
+                    <div class="quiz-header">
+                        <div class="quiz-icon"><i class="fas fa-video"></i></div>
+                        <div>
+                            <h3>Deepfake Detection</h3>
+                        </div>
+                    </div>
+                    <p>Identify manipulated media and synthetic content</p>
+                    <div class="quiz-meta">
+                        <span><i class="fas fa-clock"></i> 15 min</span>
+                        <span><i class="fas fa-list"></i> 12 questions</span>
+                        <span><i class="fas fa-star"></i> Advanced</span>
+                    </div>
+                    <button class="btn btn-primary" onclick="startQuiz('deepfake')">Start Quiz</button>
+                </div>
+            </div>
+
+            <!-- Quiz Container (Sample Quiz - Fake News Detective) -->
+            <div class="quiz-container" id="quiz-container">
+                <button class="btn btn-outline" onclick="backToSelection()">
+                    <i class="fas fa-arrow-left"></i> Back to Quizzes
+                </button>
+                
+                <h2 id="quiz-title" style="margin: 1.5rem 0;">Fake News Detective Quiz</h2>
+                
+                <div class="quiz-progress">
+                    <div class="quiz-progress-fill" id="progress-fill" style="width: 0%"></div>
+                </div>
+
+                <div id="question-container">
+                    <!-- Questions will be loaded here dynamically -->
+                </div>
+
+                <div class="quiz-nav">
+                    <button class="btn btn-outline" id="prev-btn" onclick="previousQuestion()" disabled>
+                        <i class="fas fa-arrow-left"></i> Previous
+                    </button>
+                    <button class="btn btn-primary" id="next-btn" onclick="nextQuestion()">
+                        Next <i class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Results Container -->
+            <div class="results-card" id="results-container">
+                <h2>Quiz Complete!</h2>
+                <div class="score-circle" id="score-display">0%</div>
+                <h3 id="score-message">Great job!</h3>
+                <p id="score-details"></p>
+                <div id="badge-container"></div>
+                <div style="display: flex; gap: 1rem; justify-content: center; margin-top: 2rem; flex-wrap: wrap;">
+                    <button class="btn btn-primary" onclick="retakeQuiz()">
+                        <i class="fas fa-redo"></i> Retake Quiz
+                    </button>
+                    <button class="btn btn-outline" onclick="backToSelection()">
+                        <i class="fas fa-list"></i> More Quizzes
+                    </button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2024 Digital Guardians. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <script>
+        // Sample quiz data structure
+        const quizzes = {
+            'fake-news': {
+                title: 'Fake News Detective Quiz',
+                questions: [
+                    {
+                        question: "What is the FIRST thing you should do when you see a surprising news headline?",
+                        options: [
+                            "Share it immediately with friends",
+                            "Check the source and publication date",
+                            "Assume it's true if it has many shares",
+                            "Post a comment about it"
+                        ],
+                        correct: 1,
+                        explanation: "Always verify the source and check when the article was published before believing or sharing news."
+                    },
+                    {
+                        question: "Which of these is a red flag that a news article might be fake?",
+                        options: [
+                            "It includes quotes from named experts",
+                            "The headline is extremely sensational or shocking",
+                            "It has a clear publication date",
+                            "Multiple reputable sources report the same story"
+                        ],
+                        correct: 1,
+                        explanation: "Sensational or shocking headlines designed to provoke strong emotions are often signs of fake news."
+                    },
+                    {
+                        question: "What does 'confirmation bias' mean in the context of fake news?",
+                        options: [
+                            "Confirming news with multiple sources",
+                            "Believing information that confirms your existing beliefs",
+                            "Getting confirmation from fact-checkers",
+                            "Verifying the author's credentials"
+                        ],
+                        correct: 1,
+                        explanation: "Confirmation bias makes us more likely to believe and share information that aligns with our existing views."
+                    },
+                    {
+                        question: "Which website would be MOST reliable for fact-checking?",
+                        options: [
+                            "A random blog",
+                            "Snopes.com or FactCheck.org",
+                            "Social media comments",
+                            "Your friend's post"
+                        ],
+                        correct: 1,
+                        explanation: "Professional fact-checking organizations like Snopes and FactCheck.org are reliable sources for verification."
+                    },
+                    {
+                        question: "What should you look for in a credible news source?",
+                        options: [
+                            "Clickbait headlines",
+                            "Anonymous authors",
+                            "Clear about/contact information and editorial standards",
+                            "Lots of advertisements"
+                        ],
+                        correct: 2,
+                        explanation: "Credible sources are transparent about their organization, have clear editorial standards, and provide contact information."
+                    }
+                ]
+            }
+        };
+
+        let currentQuiz = null;
+        let currentQuestion = 0;
+        let userAnswers = [];
+        let score = 0;
+
+        function startQuiz(quizId) {
+            currentQuiz = quizzes[quizId] || quizzes['fake-news'];
+            currentQuestion = 0;
+            userAnswers = [];
+            score = 0;
+
+            document.getElementById('quiz-selection').style.display = 'none';
+            document.getElementById('quiz-container').classList.add('active');
+            document.getElementById('quiz-title').textContent = currentQuiz.title;
+
+            loadQuestion();
+        }
+
+        function loadQuestion() {
+            const question = currentQuiz.questions[currentQuestion];
+            const container = document.getElementById('question-container');
+            
+            let html = `
+                <div class="question-card">
+                    <div class="question-number">Question ${currentQuestion + 1} of ${currentQuiz.questions.length}</div>
+                    <div class="question-text">${question.question}</div>
+                    <div class="answer-options">
+            `;
+
+            question.options.forEach((option, index) => {
+                const selected = userAnswers[currentQuestion] === index ? 'selected' : '';
+                html += `
+                    <div class="answer-option ${selected}" onclick="selectAnswer(${index})">
+                        ${option}
+                    </div>
+                `;
+            });
+
+            html += `
+                    </div>
+                    <div class="explanation" id="explanation">${question.explanation}</div>
+                </div>
+            `;
+
+            container.innerHTML = html;
+            updateProgress();
+            updateButtons();
+        }
+
+        function selectAnswer(index) {
+            userAnswers[currentQuestion] = index;
+            loadQuestion();
+        }
+
+        function updateProgress() {
+            const progress = ((currentQuestion + 1) / currentQuiz.questions.length) * 100;
+            document.getElementById('progress-fill').style.width = progress + '%';
+        }
+
+        function updateButtons() {
+            document.getElementById('prev-btn').disabled = currentQuestion === 0;
+            const nextBtn = document.getElementById('next-btn');
+            
+            if (currentQuestion === currentQuiz.questions.length - 1) {
+                nextBtn.innerHTML = 'Finish <i class="fas fa-check"></i>';
+            } else {
+                nextBtn.innerHTML = 'Next <i class="fas fa-arrow-right"></i>';
+            }
+        }
+
+        function nextQuestion() {
+            if (currentQuestion < currentQuiz.questions.length - 1) {
+                currentQuestion++;
+                loadQuestion();
+            } else {
+                showResults();
+            }
+        }
+
+        function previousQuestion() {
+            if (currentQuestion > 0) {
+                currentQuestion--;
+                loadQuestion();
+            }
+        }
+
+        function showResults() {
+            // Calculate score
+            score = 0;
+            currentQuiz.questions.forEach((q, i) => {
+                if (userAnswers[i] === q.correct) score++;
+            });
+
+            const percentage = Math.round((score / currentQuiz.questions.length) * 100);
+
+            document.getElementById('quiz-container').classList.remove('active');
+            document.getElementById('results-container').classList.add('show');
+            document.getElementById('score-display').textContent = percentage + '%';
+            document.getElementById('score-details').textContent = 
+                `You answered ${score} out of ${currentQuiz.questions.length} questions correctly.`;
+
+            let message = '';
+            let badge = '';
+            
+            if (percentage >= 90) {
+                message = 'Outstanding! You\'re a digital safety expert!';
+                badge = '<div class="badge-earned"><i class="fas fa-trophy"></i> Master Badge Earned!</div>';
+            } else if (percentage >= 70) {
+                message = 'Great job! You have a solid understanding!';
+                badge = '<div class="badge-earned"><i class="fas fa-medal"></i> Proficient Badge Earned!</div>';
+            } else if (percentage >= 50) {
+                message = 'Good effort! Keep learning!';
+                badge = '<div class="badge-earned"><i class="fas fa-star"></i> Learner Badge Earned!</div>';
+            } else {
+                message = 'Keep practicing! Review the materials and try again.';
+            }
+
+            document.getElementById('score-message').textContent = message;
+            document.getElementById('badge-container').innerHTML = badge;
+        }
+
+        function retakeQuiz() {
+            currentQuestion = 0;
+            userAnswers = [];
+            score = 0;
+            document.getElementById('results-container').classList.remove('show');
+            document.getElementById('quiz-container').classList.add('active');
+            loadQuestion();
+        }
+
+        function backToSelection() {
+            document.getElementById('quiz-selection').style.display = 'grid';
+            document.getElementById('quiz-container').classList.remove('active');
+            document.getElementById('results-container').classList.remove('show');
+        }
+    </script>
+</body>
+</html>

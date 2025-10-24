@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Safety Simulations - Digital Guardians</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .learning-detail {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 3rem 20px;
+        }
+        .simulation-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        .simulation-card {
+            background: white;
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            overflow: hidden;
+            transition: var(--transition);
+        }
+        .simulation-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+        }
+        .simulation-header {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 2rem;
+            text-align: center;
+        }
+        .simulation-header i {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        .simulation-body {
+            padding: 2rem;
+        }
+        .simulation-meta {
+            display: flex;
+            gap: 1rem;
+            margin: 1rem 0;
+            font-size: 0.9rem;
+            color: var(--gray-color);
+            flex-wrap: wrap;
+        }
+        .simulation-meta span {
+            display: flex;
+            align-items: center;
+            gap: 0.3rem;
+        }
+        .scenario-box {
+            background: var(--light-color);
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 1rem 0;
+        }
+        .scenario-box h4 {
+            color: var(--primary-color);
+            margin-bottom: 0.75rem;
+        }
+        .choice-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+            margin-top: 1rem;
+        }
+        .choice-btn {
+            padding: 1rem;
+            background: white;
+            border: 2px solid var(--primary-color);
+            border-radius: 8px;
+            color: var(--primary-color);
+            cursor: pointer;
+            transition: var(--transition);
+            text-align: left;
+        }
+        .choice-btn:hover {
+            background: var(--primary-color);
+            color: white;
+        }
+        .feedback-box {
+            padding: 1rem;
+            border-radius: 8px;
+            margin-top: 1rem;
+            display: none;
+        }
+        .feedback-box.show {
+            display: block;
+        }
+        .feedback-box.good {
+            background: #dcfce7;
+            border-left: 4px solid var(--success-color);
+        }
+        .feedback-box.bad {
+            background: #fee2e2;
+            border-left: 4px solid var(--danger-color);
+        }
+        .simulation-launcher {
+            background: white;
+            padding: 2rem;
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            margin: 2rem 0;
+            display: none;
+        }
+        .simulation-launcher.active {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="container">
+                <div class="logo">
+                    <i class="fas fa-shield-alt"></i>
+                    <h1>Digital Guardians</h1>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="../index.html#home">Home</a></li>
+                    <li><a href="../index.html#workshops">Workshops</a></li>
+                    <li><a href="../index.html#toolkit">Safety Toolkit</a></li>
+                    <li><a href="../index.html#learning">Learning Portal</a></li>
+                    <li><a href="../index.html#ambassadors">Ambassadors</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="learning-detail">
+            <div style="text-align: center; margin-bottom: 3rem;">
+                <h1><i class="fas fa-laptop-code"></i> Safety Simulations</h1>
+                <p>Practice responding to real-world digital safety scenarios</p>
+            </div>
+
+            <div class="simulation-grid" id="simulation-list">
+                <div class="simulation-card">
+                    <div class="simulation-header">
+                        <i class="fas fa-envelope"></i>
+                        <h3>Email Phishing Scenario</h3>
+                    </div>
+                    <div class="simulation-body">
+                        <p>You receive an urgent email claiming to be from your bank. Learn to identify phishing attempts and respond appropriately.</p>
+                        <div class="simulation-meta">
+                            <span><i class="fas fa-clock"></i> 10-15 min</span>
+                            <span><i class="fas fa-signal"></i> Beginner</span>
+                            <span><i class="fas fa-trophy"></i> Badge Available</span>
+                        </div>
+                        <button class="btn btn-primary" onclick="launchSimulation('phishing')">
+                            <i class="fas fa-play"></i> Start Simulation
+                        </button>
+                    </div>
+                </div>
+
+                <div class="simulation-card">
+                    <div class="simulation-header">
+                        <i class="fas fa-user-secret"></i>
+                        <h3>Social Engineering Attack</h3>
+                    </div>
+                    <div class="simulation-body">
+                        <p>Experience common social engineering tactics and practice protecting your personal information from manipulation.</p>
+                        <div class="simulation-meta">
+                            <span><i class="fas fa-clock"></i> 15-20 min</span>
+                            <span><i class="fas fa-signal"></i> Intermediate</span>
+                            <span><i class="fas fa-trophy"></i> Badge Available</span>
+                        </div>
+                        <button class="btn btn-primary" onclick="alert('Simulation coming soon!')">
+                            <i class="fas fa-play"></i> Start Simulation
+                        </button>
+                    </div>
+                </div>
+
+                <div class="simulation-card">
+                    <div class="simulation-header">
+                        <i class="fas fa-shield-virus"></i>
+                        <h3>Malware Defense</h3>
+                    </div>
+                    <div class="simulation-body">
+                        <p>Navigate through scenarios involving suspicious downloads, pop-ups, and potentially infected files.</p>
+                        <div class="simulation-meta">
+                            <span><i class="fas fa-clock"></i> 12-18 min</span>
+                            <span><i class="fas fa-signal"></i> Intermediate</span>
+                            <span><i class="fas fa-trophy"></i> Badge Available</span>
+                        </div>
+                        <button class="btn btn-primary" onclick="alert('Simulation coming soon!')">
+                            <i class="fas fa-play"></i> Start Simulation
+                        </button>
+                    </div>
+                </div>
+
+                <div class="simulation-card">
+                    <div class="simulation-header">
+                        <i class="fas fa-user-lock"></i>
+                        <h3>Privacy Settings Challenge</h3>
+                    </div>
+                    <div class="simulation-body">
+                        <p>Practice configuring privacy settings across different platforms to protect your digital identity.</p>
+                        <div class="simulation-meta">
+                            <span><i class="fas fa-clock"></i> 15-25 min</span>
+                            <span><i class="fas fa-signal"></i> Advanced</span>
+                            <span><i class="fas fa-trophy"></i> Badge Available</span>
+                        </div>
+                        <button class="btn btn-primary" onclick="alert('Simulation coming soon!')">
+                            <i class="fas fa-play"></i> Start Simulation
+                        </button>
+                    </div>
+                </div>
+
+                <div class="simulation-card">
+                    <div class="simulation-header">
+                        <i class="fas fa-comments"></i>
+                        <h3>Cyberbullying Response</h3>
+                    </div>
+                    <div class="simulation-body">
+                        <p>Learn how to recognize, document, and respond to cyberbullying situations effectively and safely.</p>
+                        <div class="simulation-meta">
+                            <span><i class="fas fa-clock"></i> 10-15 min</span>
+                            <span><i class="fas fa-signal"></i> Beginner</span>
+                            <span><i class="fas fa-trophy"></i> Badge Available</span>
+                        </div>
+                        <button class="btn btn-primary" onclick="alert('Simulation coming soon!')">
+                            <i class="fas fa-play"></i> Start Simulation
+                        </button>
+                    </div>
+                </div>
+
+                <div class="simulation-card">
+                    <div class="simulation-header">
+                        <i class="fas fa-search"></i>
+                        <h3>Digital Footprint Audit</h3>
+                    </div>
+                    <div class="simulation-body">
+                        <p>Evaluate and manage your online presence by conducting a comprehensive digital footprint assessment.</p>
+                        <div class="simulation-meta">
+                            <span><i class="fas fa-clock"></i> 20-30 min</span>
+                            <span><i class="fas fa-signal"></i> Advanced</span>
+                            <span><i class="fas fa-trophy"></i> Badge Available</span>
+                        </div>
+                        <button class="btn btn-primary" onclick="alert('Simulation coming soon!')">
+                            <i class="fas fa-play"></i> Start Simulation
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Phishing Simulation -->
+            <div class="simulation-launcher" id="phishing-sim">
+                <button class="btn btn-outline" onclick="closeSimulation()">
+                    <i class="fas fa-arrow-left"></i> Back to Simulations
+                </button>
+
+                <h2 style="margin: 1.5rem 0;">Email Phishing Simulation</h2>
+                
+                <div class="scenario-box">
+                    <h4>Scenario:</h4>
+                    <p>You just received this email in your inbox:</p>
+                    
+                    <div style="background: white; padding: 1rem; border: 1px solid #ccc; margin-top: 1rem; font-family: monospace; font-size: 0.9rem;">
+                        <p><strong>From:</strong> security@paypa1-verification.com</p>
+                        <p><strong>Subject:</strong> URGENT: Your Account Will Be Suspended</p>
+                        <hr>
+                        <p>Dear Valued Customer,</p>
+                        <p>We have detected unusual activity on your PayPal account. Your account will be suspended within 24 hours unless you verify your identity immediately.</p>
+                        <p><strong>Click here to verify your account now: <a href="#" onclick="return false;">https://paypa1-verify.com/secure</a></strong></p>
+                        <p>Failure to verify will result in permanent account closure and loss of funds.</p>
+                        <p>Thank you,<br>PayPal Security Team</p>
+                    </div>
+                </div>
+
+                <div class="scenario-box">
+                    <h4>What should you do?</h4>
+                    <div class="choice-buttons">
+                        <button class="choice-btn" onclick="showFeedback('bad1')">
+                            Click the link immediately to save my account
+                        </button>
+                        <button class="choice-btn" onclick="showFeedback('bad2')">
+                            Reply to the email asking for more information
+                        </button>
+                        <button class="choice-btn" onclick="showFeedback('good')">
+                            Don't click the link; log into PayPal directly through my browser and check my account
+                        </button>
+                        <button class="choice-btn" onclick="showFeedback('bad3')">
+                            Forward the email to friends to warn them
+                        </button>
+                    </div>
+                </div>
+
+                <div class="feedback-box bad" id="feedback-bad1">
+                    <h4><i class="fas fa-times-circle"></i> Not the best choice!</h4>
+                    <p>Never click links in suspicious emails. This is exactly what the attacker wants you to do. The link likely leads to a fake website designed to steal your login credentials.</p>
+                    <p><strong>Tip:</strong> Always access your accounts directly by typing the URL in your browser, not through email links.</p>
+                </div>
+
+                <div class="feedback-box bad" id="feedback-bad2">
+                    <h4><i class="fas fa-times-circle"></i> Not recommended!</h4>
+                    <p>Replying to phishing emails confirms your email address is active and may result in more attacks. It also won't help verify if the email is legitimate.</p>
+                    <p><strong>Tip:</strong> Never respond to suspicious emails. Instead, contact the company directly using official contact information.</p>
+                </div>
+
+                <div class="feedback-box good" id="feedback-good">
+                    <h4><i class="fas fa-check-circle"></i> Excellent choice!</h4>
+                    <p>This is the correct approach! By logging in directly through your browser or app, you can safely check your account status without risk.</p>
+                    <p><strong>Red flags in this email:</strong></p>
+                    <ul>
+                        <li>Misspelled domain: "paypa1" instead of "paypal"</li>
+                        <li>Generic greeting: "Dear Valued Customer"</li>
+                        <li>Urgent threatening language</li>
+                        <li>Suspicious link</li>
+                        <li>Poor grammar and formatting</li>
+                    </ul>
+                    <p><strong>Next steps:</strong> Report the email as phishing and delete it.</p>
+                </div>
+
+                <div class="feedback-box bad" id="feedback-bad3">
+                    <h4><i class="fas fa-exclamation-triangle"></i> Not ideal!</h4>
+                    <p>While your intent to warn others is good, forwarding phishing emails can spread them further and might accidentally trick someone into clicking the malicious link.</p>
+                    <p><strong>Better approach:</strong> Tell people verbally or share general information about the scam without forwarding the actual email.</p>
+                </div>
+
+                <div style="margin-top: 2rem; padding: 1.5rem; background: #fef3c7; border-radius: 8px;">
+                    <h4><i class="fas fa-lightbulb"></i> Learning Points:</h4>
+                    <ul>
+                        <li>Always verify sender email addresses carefully</li>
+                        <li>Look for typos in domain names (paypa1 vs paypal)</li>
+                        <li>Be suspicious of urgent or threatening language</li>
+                        <li>Never click links in unexpected emails</li>
+                        <li>Access accounts directly through official websites or apps</li>
+                        <li>Report phishing attempts to the real company and your email provider</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div style="text-align: center; margin-top: 3rem;">
+                <a href="../index.html#learning" class="btn btn-primary">Back to Learning Portal</a>
+                <a href="quizzes.html" class="btn btn-outline">Try Quizzes</a>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2024 Digital Guardians. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <script>
+        function launchSimulation(simType) {
+            document.getElementById('simulation-list').style.display = 'none';
+            document.getElementById(simType + '-sim').classList.add('active');
+        }
+
+        function closeSimulation() {
+            document.getElementById('simulation-list').style.display = 'grid';
+            document.querySelectorAll('.simulation-launcher').forEach(sim => {
+                sim.classList.remove('active');
+            });
+            document.querySelectorAll('.feedback-box').forEach(fb => {
+                fb.classList.remove('show');
+            });
+        }
+
+        function showFeedback(feedbackId) {
+            // Hide all feedback boxes
+            document.querySelectorAll('.feedback-box').forEach(fb => {
+                fb.classList.remove('show');
+            });
+            // Show selected feedback
+            document.getElementById('feedback-' + feedbackId).classList.add('show');
+            // Scroll to feedback
+            document.getElementById('feedback-' + feedbackId).scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        }
+    </script>
+</body>
+</html>
