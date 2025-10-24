@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Youth Leaders Program - Digital Guardians</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .ambassador-detail {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 3rem 20px;
+        }
+        .hero-section {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 3rem;
+            border-radius: var(--border-radius);
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        .hero-section h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        .content-section {
+            background: white;
+            padding: 2rem;
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            margin-bottom: 2rem;
+        }
+        .content-section h3 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+        .program-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin: 1.5rem 0;
+        }
+        .program-card {
+            background: var(--light-color);
+            padding: 1.5rem;
+            border-radius: 8px;
+            border-left: 4px solid var(--secondary-color);
+        }
+        .program-card h4 {
+            color: var(--primary-color);
+            margin-bottom: 0.75rem;
+        }
+        .timeline {
+            position: relative;
+            padding-left: 2rem;
+            margin: 2rem 0;
+        }
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: var(--primary-color);
+        }
+        .timeline-item {
+            position: relative;
+            padding-bottom: 2rem;
+        }
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -2.5rem;
+            top: 0;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: var(--secondary-color);
+            border: 3px solid white;
+            box-shadow: 0 0 0 3px var(--secondary-color);
+        }
+        .timeline-item h4 {
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+        .testimonial {
+            background: linear-gradient(135deg, #f0f9ff, #fef3c7);
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 1rem 0;
+            font-style: italic;
+        }
+        .testimonial-author {
+            font-style: normal;
+            font-weight: 600;
+            color: var(--primary-color);
+            margin-top: 0.5rem;
+        }
+        .requirements-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+            margin: 1rem 0;
+        }
+        .requirement-item {
+            display: flex;
+            align-items: start;
+            gap: 0.75rem;
+            padding: 1rem;
+            background: var(--light-color);
+            border-radius: 8px;
+        }
+        .requirement-item i {
+            color: var(--success-color);
+            font-size: 1.2rem;
+            margin-top: 0.2rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="container">
+                <div class="logo">
+                    <i class="fas fa-shield-alt"></i>
+                    <h1>Digital Guardians</h1>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="../index.html#home">Home</a></li>
+                    <li><a href="../index.html#workshops">Workshops</a></li>
+                    <li><a href="../index.html#toolkit">Safety Toolkit</a></li>
+                    <li><a href="../index.html#learning">Learning Portal</a></li>
+                    <li><a href="../index.html#ambassadors">Ambassadors</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="ambassador-detail">
+            <div class="hero-section">
+                <i class="fas fa-graduation-cap" style="font-size: 4rem; margin-bottom: 1rem;"></i>
+                <h1>Youth Leaders Program</h1>
+                <p style="font-size: 1.2rem;">Empower young people to become digital safety champions among their peers</p>
+            </div>
+
+            <div class="content-section">
+                <h3><i class="fas fa-star"></i> Why Become a Youth Leader?</h3>
+                <p>As a Digital Guardians Youth Leader, you'll gain valuable leadership skills while making a real difference in your community. Young people often learn best from their peers, and your voice can reach those who might not listen to adults.</p>
+                
+                <div class="program-grid">
+                    <div class="program-card">
+                        <i class="fas fa-trophy" style="font-size: 2rem; color: var(--accent-color); margin-bottom: 0.5rem;"></i>
+                        <h4>Leadership Development</h4>
+                        <p>Build public speaking, teaching, and mentoring skills that will serve you throughout life</p>
+                    </div>
+                    <div class="program-card">
+                        <i class="fas fa-certificate" style="font-size: 2rem; color: var(--accent-color); margin-bottom: 0.5rem;"></i>
+                        <h4>Official Certification</h4>
+                        <p>Earn recognized credentials that enhance college applications and resumes</p>
+                    </div>
+                    <div class="program-card">
+                        <i class="fas fa-users" style="font-size: 2rem; color: var(--accent-color); margin-bottom: 0.5rem;"></i>
+                        <h4>Community Impact</h4>
+                        <p>Make a real difference by educating peers about digital safety</p>
+                    </div>
+                    <div class="program-card">
+                        <i class="fas fa-network-wired" style="font-size: 2rem; color: var(--accent-color); margin-bottom: 0.5rem;"></i>
+                        <h4>National Network</h4>
+                        <p>Connect with other youth leaders across the country</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-section">
+                <h3><i class="fas fa-clipboard-check"></i> Program Requirements</h3>
+                <div class="requirements-list">
+                    <div class="requirement-item">
+                        <i class="fas fa-check-circle"></i>
+                        <div>
+                            <strong>Age:</strong> 14-19 years old
+                        </div>
+                    </div>
+                    <div class="requirement-item">
+                        <i class="fas fa-check-circle"></i>
+                        <div>
+                            <strong>Commitment:</strong> 20 hours initial training + 5 hours/month
+                        </div>
+                    </div>
+                    <div class="requirement-item">
+                        <i class="fas fa-check-circle"></i>
+                        <div>
+                            <strong>Interest:</strong> Passion for digital safety and helping others
+                        </div>
+                    </div>
+                    <div class="requirement-item">
+                        <i class="fas fa-check-circle"></i>
+                        <div>
+                            <strong>Skills:</strong> Good communication (we'll help you improve!)
+                        </div>
+                    </div>
+                    <div class="requirement-item">
+                        <i class="fas fa-check-circle"></i>
+                        <div>
+                            <strong>Support:</strong> Parent/guardian approval
+                        </div>
+                    </div>
+                    <div class="requirement-item">
+                        <i class="fas fa-check-circle"></i>
+                        <div>
+                            <strong>Completion:</strong> All training modules and final assessment
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-section">
+                <h3><i class="fas fa-road"></i> Training Journey</h3>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <h4>Phase 1: Foundation (Weeks 1-4)</h4>
+                        <p><strong>Digital Safety Fundamentals</strong></p>
+                        <ul>
+                            <li>Comprehensive overview of digital safety topics</li>
+                            <li>Understanding online threats and risks</li>
+                            <li>Privacy protection and security best practices</li>
+                            <li>Social media safety and digital citizenship</li>
+                        </ul>
+                    </div>
+
+                    <div class="timeline-item">
+                        <h4>Phase 2: Leadership Skills (Weeks 5-8)</h4>
+                        <p><strong>Teaching and Communication</strong></p>
+                        <ul>
+                            <li>Public speaking and presentation skills</li>
+                            <li>Peer education techniques</li>
+                            <li>Active listening and empathy building</li>
+                            <li>Conflict resolution and difficult conversations</li>
+                        </ul>
+                    </div>
+
+                    <div class="timeline-item">
+                        <h4>Phase 3: Practical Application (Weeks 9-12)</h4>
+                        <p><strong>Hands-On Experience</strong></p>
+                        <ul>
+                            <li>Developing workshop content for different age groups</li>
+                            <li>Creating engaging presentations and activities</li>
+                            <li>Observing experienced ambassadors</li>
+                            <li>Co-facilitating practice sessions</li>
+                        </ul>
+                    </div>
+
+                    <div class="timeline-item">
+                        <h4>Phase 4: Certification (Weeks 13-16)</h4>
+                        <p><strong>Assessment and Launch</strong></p>
+                        <ul>
+                            <li>Knowledge assessment</li>
+                            <li>Facilitation demonstration</li>
+                            <li>Peer and mentor feedback</li>
+                            <li>Official certification ceremony</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-section">
+                <h3><i class="fas fa-tasks"></i> What You'll Learn</h3>
+                <div class="program-grid">
+                    <div class="program-card">
+                        <h4>Core Topics</h4>
+                        <ul>
+                            <li>Identifying fake news and misinformation</li>
+                            <li>Recognizing phishing and scams</li>
+                            <li>Understanding deepfakes</li>
+                            <li>Password security and account protection</li>
+                            <li>Privacy settings and data protection</li>
+                            <li>Cyberbullying prevention and response</li>
+                        </ul>
+                    </div>
+                    <div class="program-card">
+                        <h4>Teaching Skills</h4>
+                        <ul>
+                            <li>Lesson planning and content development</li>
+                            <li>Engaging presentation techniques</li>
+                            <li>Facilitating group discussions</li>
+                            <li>Using interactive activities and games</li>
+                            <li>Adapting content for different ages</li>
+                            <li>Handling challenging questions</li>
+                        </ul>
+                    </div>
+                    <div class="program-card">
+                        <h4>Leadership Competencies</h4>
+                        <ul>
+                            <li>Effective communication</li>
+                            <li>Building trust and rapport</li>
+                            <li>Mentoring and peer support</li>
+                            <li>Project management basics</li>
+                            <li>Team collaboration</li>
+                            <li>Self-reflection and continuous improvement</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-section">
+                <h3><i class="fas fa-hands-helping"></i> Ambassador Activities</h3>
+                <p>As a certified Youth Leader, you can participate in various activities:</p>
+                <ul style="margin-top: 1rem;">
+                    <li><strong>School Presentations:</strong> Lead workshops in your own or partner schools</li>
+                    <li><strong>Community Events:</strong> Staff information booths at local events</li>
+                    <li><strong>Online Content:</strong> Create educational content for social media</li>
+                    <li><strong>Peer Mentoring:</strong> One-on-one support for students with questions</li>
+                    <li><strong>Parent Workshops:</strong> Co-facilitate family education sessions</li>
+                    <li><strong>New Ambassador Training:</strong> Help train the next cohort of leaders</li>
+                    <li><strong>Advocacy Projects:</strong> Develop campaigns for specific safety issues</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h3><i class="fas fa-comments"></i> Testimonials</h3>
+                <div class="testimonial">
+                    <p>"Being a Digital Guardians Youth Leader changed my life. I gained confidence in public speaking and learned so much about technology. The best part is knowing I'm helping other students stay safe online. This experience has been invaluable for my college applications too!"</p>
+                    <div class="testimonial-author">— Sarah M., 17, Youth Leader since 2023</div>
+                </div>
+                <div class="testimonial">
+                    <p>"I used to be shy about speaking in front of people, but this program helped me develop skills I never thought I had. Now I'm leading workshops for younger students and even helped train new ambassadors. It's amazing to see the impact we can make."</p>
+                    <div class="testimonial-author">— Marcus T., 16, Youth Leader since 2022</div>
+                </div>
+                <div class="testimonial">
+                    <p>"The training was thorough and supportive. I learned not just about digital safety, but also about leadership, communication, and community service. The connections I made with other youth leaders across the country are incredible."</p>
+                    <div class="testimonial-author">— Priya K., 18, Youth Leader since 2023</div>
+                </div>
+            </div>
+
+            <div class="content-section">
+                <h3><i class="fas fa-gift"></i> Benefits and Recognition</h3>
+                <div class="program-grid">
+                    <div class="program-card">
+                        <h4>Official Recognition</h4>
+                        <ul>
+                            <li>Digital Guardians Youth Leader certificate</li>
+                            <li>Letter of recommendation upon request</li>
+                            <li>Volunteer hour documentation</li>
+                            <li>LinkedIn endorsement</li>
+                        </ul>
+                    </div>
+                    <div class="program-card">
+                        <h4>Professional Development</h4>
+                        <ul>
+                            <li>Resume-building experience</li>
+                            <li>Public speaking practice</li>
+                            <li>Teaching portfolio</li>
+                            <li>Leadership references</li>
+                        </ul>
+                    </div>
+                    <div class="program-card">
+                        <h4>Community & Support</h4>
+                        <ul>
+                            <li>Private online community</li>
+                            <li>Monthly virtual meetups</li>
+                            <li>Annual leadership summit</li>
+                            <li>Mentorship from adult advisors</li>
+                        </ul>
+                    </div>
+                    <div class="program-card">
+                        <h4>Resources & Tools</h4>
+                        <ul>
+                            <li>Complete teaching materials</li>
+                            <li>Digital resource library</li>
+                            <li>Ambassador toolkit</li>
+                            <li>Ongoing training opportunities</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-section">
+                <h3><i class="fas fa-calendar-alt"></i> Application Process</h3>
+                <ol style="margin-top: 1rem; padding-left: 1.5rem;">
+                    <li><strong>Submit Application:</strong> Complete the online application form (15-20 minutes)</li>
+                    <li><strong>Parent Consent:</strong> Obtain parent/guardian signature on consent form</li>
+                    <li><strong>Interview:</strong> Participate in a brief virtual interview (30 minutes)</li>
+                    <li><strong>Selection:</strong> Applications reviewed within 2 weeks</li>
+                    <li><strong>Onboarding:</strong> Join the next training cohort</li>
+                </ol>
+                
+                <div style="background: #fef3c7; padding: 1rem; border-radius: 8px; margin-top: 1.5rem;">
+                    <p><strong><i class="fas fa-info-circle"></i> Next Training Cohort:</strong></p>
+                    <p>Applications open quarterly. Next cohort starts: <strong>[Date TBD]</strong></p>
+                    <p>Limited spots available - apply early!</p>
+                </div>
+            </div>
+
+            <div style="text-align: center; margin-top: 3rem;">
+                <button class="btn btn-primary" style="font-size: 1.1rem; padding: 1rem 2rem;">
+                    <i class="fas fa-user-plus"></i> Apply Now
+                </button>
+                <a href="../index.html#ambassadors" class="btn btn-outline">Learn More About Ambassadors</a>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2024 Digital Guardians. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+</body>
+</html>
