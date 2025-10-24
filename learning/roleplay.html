@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Role-Play Scenarios - Digital Guardians</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .learning-detail {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 3rem 20px;
+        }
+        .roleplay-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        .roleplay-card {
+            background: white;
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            padding: 2rem;
+            transition: var(--transition);
+        }
+        .roleplay-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+        }
+        .roleplay-icon {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--accent-color), #f59e0b);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+        }
+        .role-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin: 1rem 0;
+        }
+        .role-tag {
+            padding: 0.3rem 0.8rem;
+            background: #e0e7ff;
+            color: var(--primary-color);
+            border-radius: 20px;
+            font-size: 0.85rem;
+        }
+        .scenario-detail {
+            background: white;
+            padding: 2rem;
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            margin: 2rem 0;
+            display: none;
+        }
+        .scenario-detail.active {
+            display: block;
+        }
+        .character-card {
+            background: var(--light-color);
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 1rem 0;
+            border-left: 4px solid var(--primary-color);
+        }
+        .character-card h4 {
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+        .dialogue-box {
+            background: white;
+            padding: 1rem;
+            border-radius: 8px;
+            margin: 0.5rem 0;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .dialogue-box.parent {
+            border-left: 4px solid #3b82f6;
+        }
+        .dialogue-box.child {
+            border-left: 4px solid #8b5cf6;
+        }
+        .dialogue-box.bystander {
+            border-left: 4px solid #10b981;
+        }
+        .dialogue-box.authority {
+            border-left: 4px solid #f59e0b;
+        }
+        .speaker-label {
+            font-weight: 600;
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+        .reflection-box {
+            background: linear-gradient(135deg, #fef3c7, #fce7f3);
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 2rem 0;
+        }
+        .reflection-box h4 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="container">
+                <div class="logo">
+                    <i class="fas fa-shield-alt"></i>
+                    <h1>Digital Guardians</h1>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="../index.html#home">Home</a></li>
+                    <li><a href="../index.html#workshops">Workshops</a></li>
+                    <li><a href="../index.html#toolkit">Safety Toolkit</a></li>
+                    <li><a href="../index.html#learning">Learning Portal</a></li>
+                    <li><a href="../index.html#ambassadors">Ambassadors</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="learning-detail">
+            <div style="text-align: center; margin-bottom: 3rem;">
+                <h1><i class="fas fa-theater-masks"></i> Role-Play Scenarios</h1>
+                <p>Experience different perspectives in digital safety situations</p>
+            </div>
+
+            <div style="background: white; padding: 2rem; border-radius: var(--border-radius); box-shadow: var(--box-shadow); margin-bottom: 2rem;">
+                <h3><i class="fas fa-info-circle"></i> How Role-Playing Helps</h3>
+                <p>Role-playing allows you to step into different perspectives and understand various viewpoints in digital safety situations. By experiencing scenarios from multiple angles, you develop empathy and better decision-making skills.</p>
+                <ul style="margin-top: 1rem;">
+                    <li><strong>Build Empathy:</strong> Understand how others feel in difficult situations</li>
+                    <li><strong>Practice Responses:</strong> Try different approaches in a safe environment</li>
+                    <li><strong>Multiple Perspectives:</strong> See situations from various viewpoints</li>
+                    <li><strong>Real-World Preparation:</strong> Be ready for actual challenges</li>
+                </ul>
+            </div>
+
+            <div class="roleplay-grid" id="roleplay-list">
+                <div class="roleplay-card">
+                    <div class="roleplay-icon"><i class="fas fa-comment-slash"></i></div>
+                    <h3>Cyberbullying Witness</h3>
+                    <p>You witness a classmate being bullied online. Experience this situation from multiple perspectives.</p>
+                    <div class="role-tags">
+                        <span class="role-tag">Victim</span>
+                        <span class="role-tag">Bystander</span>
+                        <span class="role-tag">Friend</span>
+                        <span class="role-tag">Parent</span>
+                    </div>
+                    <button class="btn btn-primary" onclick="showScenario('cyberbullying')">
+                        <i class="fas fa-play"></i> Start Scenario
+                    </button>
+                </div>
+
+                <div class="roleplay-card">
+                    <div class="roleplay-icon"><i class="fas fa-share"></i></div>
+                    <h3>Oversharing Dilemma</h3>
+                    <p>A friend shares too much personal information online. Navigate this delicate conversation.</p>
+                    <div class="role-tags">
+                        <span class="role-tag">Concerned Friend</span>
+                        <span class="role-tag">Oversharer</span>
+                        <span class="role-tag">Parent</span>
+                    </div>
+                    <button class="btn btn-primary" onclick="alert('Scenario coming soon!')">
+                        <i class="fas fa-play"></i> Start Scenario
+                    </button>
+                </div>
+
+                <div class="roleplay-card">
+                    <div class="roleplay-icon"><i class="fas fa-user-secret"></i></div>
+                    <h3>Stranger Contact</h3>
+                    <p>A child receives messages from an unknown person online. Explore appropriate responses.</p>
+                    <div class="role-tags">
+                        <span class="role-tag">Child</span>
+                        <span class="role-tag">Parent</span>
+                        <span class="role-tag">Teacher</span>
+                    </div>
+                    <button class="btn btn-primary" onclick="alert('Scenario coming soon!')">
+                        <i class="fas fa-play"></i> Start Scenario
+                    </button>
+                </div>
+
+                <div class="roleplay-card">
+                    <div class="roleplay-icon"><i class="fas fa-clock"></i></div>
+                    <h3>Screen Time Conflict</h3>
+                    <p>Family members disagree about screen time limits. Find common ground and solutions.</p>
+                    <div class="role-tags">
+                        <span class="role-tag">Teen</span>
+                        <span class="role-tag">Parent</span>
+                        <span class="role-tag">Sibling</span>
+                    </div>
+                    <button class="btn btn-primary" onclick="alert('Scenario coming soon!')">
+                        <i class="fas fa-play"></i> Start Scenario
+                    </button>
+                </div>
+
+                <div class="roleplay-card">
+                    <div class="roleplay-icon"><i class="fas fa-camera"></i></div>
+                    <h3>Photo Consent</h3>
+                    <p>Someone posts photos of you without permission. Learn about digital consent and boundaries.</p>
+                    <div class="role-tags">
+                        <span class="role-tag">Subject</span>
+                        <span class="role-tag">Poster</span>
+                        <span class="role-tag">Mediator</span>
+                    </div>
+                    <button class="btn btn-primary" onclick="alert('Scenario coming soon!')">
+                        <i class="fas fa-play"></i> Start Scenario
+                    </button>
+                </div>
+
+                <div class="roleplay-card">
+                    <div class="roleplay-icon"><i class="fas fa-exclamation-triangle"></i></div>
+                    <h3>Account Compromise</h3>
+                    <p>A family member's account gets hacked. Work together to resolve the crisis.</p>
+                    <div class="role-tags">
+                        <span class="role-tag">Victim</span>
+                        <span class="role-tag">Tech-Savvy Teen</span>
+                        <span class="role-tag">Parent</span>
+                    </div>
+                    <button class="btn btn-primary" onclick="alert('Scenario coming soon!')">
+                        <i class="fas fa-play"></i> Start Scenario
+                    </button>
+                </div>
+            </div>
+
+            <!-- Cyberbullying Scenario -->
+            <div class="scenario-detail" id="cyberbullying-scenario">
+                <button class="btn btn-outline" onclick="hideScenario()">
+                    <i class="fas fa-arrow-left"></i> Back to Scenarios
+                </button>
+
+                <h2 style="margin: 1.5rem 0;">Cyberbullying Witness Scenario</h2>
+
+                <div class="character-card">
+                    <h4>Situation:</h4>
+                    <p>During lunch, you notice several students looking at their phones and laughing. You overhear that someone created a fake social media account mocking a classmate named Alex, posting embarrassing photos and mean comments. The account has been shared in multiple group chats.</p>
+                </div>
+
+                <div style="margin: 2rem 0;">
+                    <h3 style="color: var(--primary-color); margin-bottom: 1rem;">Perspective 1: Alex (The Victim)</h3>
+                    <div class="character-card">
+                        <h4>Your Experience:</h4>
+                        <p>You just found out about the fake account during class when your friend showed you. You feel:</p>
+                        <ul>
+                            <li>Humiliated and exposed</li>
+                            <li>Angry but also scared to confront anyone</li>
+                            <li>Worried about what else might be shared</li>
+                            <li>Unsure who created it or how many people have seen it</li>
+                            <li>Anxious about going to school tomorrow</li>
+                        </ul>
+                    </div>
+
+                    <div class="dialogue-box child">
+                        <div class="speaker-label">Alex's Inner Thoughts:</div>
+                        <p>"Why would someone do this? What did I do to deserve this? Should I tell someone? But what if it makes things worse? What if no one believes me or cares?"</p>
+                    </div>
+
+                    <div class="reflection-box">
+                        <h4>Reflection Questions:</h4>
+                        <ul>
+                            <li>How would this situation make you feel?</li>
+                            <li>What would be your biggest fear?</li>
+                            <li>Who would you want to talk to?</li>
+                            <li>What kind of support would help you most?</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div style="margin: 2rem 0;">
+                    <h3 style="color: var(--primary-color); margin-bottom: 1rem;">Perspective 2: Sam (The Bystander)</h3>
+                    <div class="character-card">
+                        <h4>Your Situation:</h4>
+                        <p>You saw the fake account in a group chat. You think it's mean, but you:</p>
+                        <ul>
+                            <li>Don't know Alex very well</li>
+                            <li>Worry about becoming a target if you speak up</li>
+                            <li>Feel uncomfortable but unsure what to do</li>
+                            <li>Know who created it but don't want to snitch</li>
+                        </ul>
+                    </div>
+
+                    <div class="dialogue-box bystander">
+                        <div class="speaker-label">Sam's Internal Conflict:</div>
+                        <p>"This isn't right, but if I say something, will they turn on me next? Maybe if I just ignore it, it will go away. But I'd want someone to help me if this happened to me..."</p>
+                    </div>
+
+                    <div class="reflection-box">
+                        <h4>Reflection Questions:</h4>
+                        <ul>
+                            <li>What stops people from helping in these situations?</li>
+                            <li>How can you be an upstander instead of a bystander?</li>
+                            <li>What are safe ways to help without putting yourself at risk?</li>
+                            <li>How would you feel if no one helped you in a similar situation?</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div style="margin: 2rem 0;">
+                    <h3 style="color: var(--primary-color); margin-bottom: 1rem;">Perspective 3: Jordan (Alex's Friend)</h3>
+                    <div class="character-card">
+                        <h4>Your Response:</h4>
+                        <p>You're Alex's best friend and you just found out. You want to help but need to figure out the best approach:</p>
+                        <ul>
+                            <li>Comfort and support Alex emotionally</li>
+                            <li>Help document evidence (screenshots)</li>
+                            <li>Encourage reporting to adults and platform</li>
+                            <li>Avoid spreading or engaging with the content</li>
+                        </ul>
+                    </div>
+
+                    <div class="dialogue-box child">
+                        <div class="speaker-label">Jordan to Alex:</div>
+                        <p>"I'm so sorry this is happening. This isn't your fault. Let's figure this out together. First, let's take screenshots for evidence. Then we should tell a teacher or counselor. You don't have to face this alone."</p>
+                    </div>
+
+                    <div class="reflection-box">
+                        <h4>Reflection Questions:</h4>
+                        <ul>
+                            <li>What's the most helpful thing a friend can do?</li>
+                            <li>How can you support without making decisions for them?</li>
+                            <li>What practical steps can help resolve the situation?</li>
+                            <li>How do you balance supporting your friend and involving adults?</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div style="margin: 2rem 0;">
+                    <h3 style="color: var(--primary-color); margin-bottom: 1rem;">Perspective 4: Parent (Alex's Parent)</h3>
+                    <div class="character-card">
+                        <h4>Your Discovery:</h4>
+                        <p>Alex comes home upset and tells you what happened. As a parent, you need to:</p>
+                        <ul>
+                            <li>Listen without judgment and validate their feelings</li>
+                            <li>Stay calm even though you're angry about the situation</li>
+                            <li>Document everything and report to school and platform</li>
+                            <li>Consider involving authorities if necessary</li>
+                            <li>Focus on Alex's wellbeing and recovery</li>
+                        </ul>
+                    </div>
+
+                    <div class="dialogue-box parent">
+                        <div class="speaker-label">Parent to Alex:</div>
+                        <p>"Thank you for telling me. I know this took courage. You did nothing wrong, and we're going to handle this together. Let's start by saving evidence, then we'll contact the school and report the account. How are you feeling? What do you need from me right now?"</p>
+                    </div>
+
+                    <div class="reflection-box">
+                        <h4>Reflection Questions:</h4>
+                        <ul>
+                            <li>How should parents balance protection and empowerment?</li>
+                            <li>What are appropriate consequences for cyberbullying?</li>
+                            <li>How can parents support emotional recovery?</li>
+                            <li>When should authorities be involved?</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="reflection-box">
+                    <h4><i class="fas fa-lightbulb"></i> Key Takeaways:</h4>
+                    <ul>
+                        <li><strong>For Victims:</strong> It's not your fault. Document evidence, report to trusted adults and platforms, and seek support.</li>
+                        <li><strong>For Bystanders:</strong> Your silence can hurt. Report anonymously, support the victim privately, don't share the content.</li>
+                        <li><strong>For Friends:</strong> Listen, validate, help document, encourage reporting, and be consistently supportive.</li>
+                        <li><strong>For Parents:</strong> Stay calm, listen first, document everything, work with school, focus on child's wellbeing.</li>
+                        <li><strong>For Everyone:</strong> Cyberbullying is never acceptable. We all have a role in creating a safer online environment.</li>
+                    </ul>
+                </div>
+
+                <div style="margin-top: 2rem; padding: 1.5rem; background: #dbeafe; border-radius: 8px;">
+                    <h4><i class="fas fa-phone"></i> Need Help?</h4>
+                    <p><strong>Crisis Text Line:</strong> Text HOME to 741741</p>
+                    <p><strong>National Suicide Prevention Lifeline:</strong> 1-800-273-8255</p>
+                    <p><strong>Cyberbullying Research Center:</strong> cyberbullying.org</p>
+                    <p><strong>StopBullying.gov:</strong> stopbullying.gov</p>
+                </div>
+            </div>
+
+            <div style="text-align: center; margin-top: 3rem;">
+                <a href="../index.html#learning" class="btn btn-primary">Back to Learning Portal</a>
+                <a href="simulations.html" class="btn btn-outline">Try Simulations</a>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2024 Digital Guardians. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <script>
+        function showScenario(scenarioId) {
+            document.getElementById('roleplay-list').style.display = 'none';
+            document.getElementById(scenarioId + '-scenario').classList.add('active');
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        function hideScenario() {
+            document.getElementById('roleplay-list').style.display = 'grid';
+            document.querySelectorAll('.scenario-detail').forEach(scenario => {
+                scenario.classList.remove('active');
+            });
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    </script>
+</body>
+</html>

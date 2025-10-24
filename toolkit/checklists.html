@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Safety Checklists - Digital Guardians</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .toolkit-detail {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 3rem 20px;
+        }
+        .checklist-section {
+            background: white;
+            padding: 2rem;
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            margin-bottom: 2rem;
+        }
+        .checklist-section h3 {
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .checklist {
+            list-style: none;
+            padding: 0;
+        }
+        .checklist li {
+            padding: 1rem;
+            margin-bottom: 0.5rem;
+            background: var(--light-color);
+            border-radius: 8px;
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            transition: var(--transition);
+        }
+        .checklist li:hover {
+            background: #e0e7ff;
+        }
+        .checkbox {
+            width: 24px;
+            height: 24px;
+            border: 2px solid var(--primary-color);
+            border-radius: 4px;
+            flex-shrink: 0;
+            cursor: pointer;
+            transition: var(--transition);
+            margin-top: 2px;
+        }
+        .checkbox:hover {
+            background: var(--primary-color);
+        }
+        .checkbox.checked {
+            background: var(--success-color);
+            border-color: var(--success-color);
+            position: relative;
+        }
+        .checkbox.checked::after {
+            content: "✓";
+            color: white;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-weight: bold;
+        }
+        .checklist-text {
+            flex: 1;
+        }
+        .checklist-text strong {
+            display: block;
+            color: var(--dark-color);
+            margin-bottom: 0.25rem;
+        }
+        .checklist-text span {
+            color: var(--gray-color);
+            font-size: 0.9rem;
+        }
+        .priority-badge {
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+        .priority-high {
+            background: #fee2e2;
+            color: var(--danger-color);
+        }
+        .priority-medium {
+            background: #fef3c7;
+            color: var(--accent-color);
+        }
+        .priority-low {
+            background: #dcfce7;
+            color: var(--success-color);
+        }
+        .action-buttons {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1.5rem;
+            flex-wrap: wrap;
+        }
+        .progress-bar {
+            width: 100%;
+            height: 8px;
+            background: #e2e8f0;
+            border-radius: 4px;
+            overflow: hidden;
+            margin-bottom: 1rem;
+        }
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, var(--primary-color), var(--success-color));
+            width: 0%;
+            transition: width 0.3s ease;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="container">
+                <div class="logo">
+                    <i class="fas fa-shield-alt"></i>
+                    <h1>Digital Guardians</h1>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="../index.html#home">Home</a></li>
+                    <li><a href="../index.html#workshops">Workshops</a></li>
+                    <li><a href="../index.html#toolkit">Safety Toolkit</a></li>
+                    <li><a href="../index.html#learning">Learning Portal</a></li>
+                    <li><a href="../index.html#ambassadors">Ambassadors</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="toolkit-detail">
+            <div style="text-align: center; margin-bottom: 3rem;">
+                <h1>Digital Safety Checklists</h1>
+                <p>Step-by-step checklists for securing devices and accounts</p>
+            </div>
+
+            <!-- Device Security Checklist -->
+            <div class="checklist-section">
+                <h3><i class="fas fa-mobile-alt"></i> Device Security Checklist</h3>
+                <div class="progress-bar">
+                    <div class="progress-fill" id="device-progress"></div>
+                </div>
+                <ul class="checklist" data-checklist="device">
+                    <li>
+                        <div class="checkbox" onclick="toggleCheck(this)"></div>
+                        <div class="checklist-text">
+                            <strong>Enable automatic updates <span class="priority-badge priority-high">High Priority</span></strong>
+                            <span>Keep your operating system and apps up to date with the latest security patches</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="checkbox" onclick="toggleCheck(this)"></div>
+                        <div class="checklist-text">
+                            <strong>Set up screen lock with strong password/PIN <span class="priority-badge priority-high">High Priority</span></strong>
+                            <span>Use at least 6 digits or a complex password to protect device access</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="checkbox" onclick="toggleCheck(this)"></div>
+                        <div class="checklist-text">
+                            <strong>Enable biometric authentication <span class="priority-badge priority-medium">Medium Priority</span></strong>
+                            <span>Use fingerprint or face recognition for added security</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="checkbox" onclick="toggleCheck(this)"></div>
+                        <div class="checklist-text">
+                            <strong>Install reputable antivirus software <span class="priority-badge priority-high">High Priority</span></strong>
+                            <span>Protect against malware, viruses, and other threats</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="checkbox" onclick="toggleCheck(this)"></div>
+                        <div class="checklist-text">
+                            <strong>Enable Find My Device feature <span class="priority-badge priority-medium">Medium Priority</span></strong>
+                            <span>Locate, lock, or wipe your device if lost or stolen</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="checkbox" onclick="toggleCheck(this)"></div>
+                        <div class="checklist-text">
+                            <strong>Review and limit app permissions <span class="priority-badge priority-medium">Medium Priority</span></strong>
+                            <span>Only grant necessary permissions to apps (camera, location, contacts)</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="checkbox" onclick="toggleCheck(this)"></div>
+                        <div class="checklist-text">
+                            <strong>Disable Bluetooth when not in use <span class="priority-badge priority-low">Low Priority</span></strong>
+                            <span>Reduce potential security vulnerabilities</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="checkbox" onclick="toggleCheck(this)"></div>
+                        <div class="checklist-text">
+                            <strong>Set up automatic backup <span class="priority-badge priority-high">High Priority</span></strong>
+                            <span>Protect your data with regular cloud or local backups</span>
+                        </div>
+                    </li>
+                </ul>
+                <div class="action-buttons">
+                    <button class="btn btn-primary" onclick="window.print()"><i class="fas fa-print"></i> Print Checklist</button>
+                    <button class="btn btn-outline" onclick="resetChecklist('device')"><i class="fas fa-redo"></i> Reset</button>
+                </div>
+            </div>
+
+            <!-- Account Security Checklist -->
+            <div class="checklist-section">
+                <h3><i class="fas fa-user-lock"></i> Account Security Checklist</h3>
+                <div class="progress-bar">
+                    <div class="progress-fill" id="account-progress"></div>
+                </div>
+                <ul class="checklist" data-checklist="account">
+                    <li>
+                        <div class="checkbox" onclick="toggleCheck(this)"></div>
+                        <div class="checklist-text">
+                            <strong>Create strong, unique passwords <span class="priority-badge priority-high">High Priority</span></strong>
+                            <span>Use at least 12 characters with letters, numbers, and symbols</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="checkbox" onclick="toggleCheck(this)"></div>
+                        <div class="checklist-text">
+                            <strong>Enable two-factor authentication (2FA) <span class="priority-badge priority-high">High Priority</span></strong>
+                            <span>Add an extra layer of security to all important accounts</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="checkbox" onclick="toggleCheck(this)"></div>
+                        <div class="checklist-text">
+                            <strong>Use a password manager <span class="priority-badge priority-high">High Priority</span></strong>
+                            <span>Safely store and generate complex passwords</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="checkbox" onclick="toggleCheck(this)"></div>
+                        <div class="checklist-text">
+                            <strong>Review connected apps and services <span class="priority-badge priority-medium">Medium Priority</span></strong>
+                            <span>Remove access for apps you no longer use</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="checkbox" onclick="toggleCheck(this)"></div>
+                        <div class="checklist-text">
+                            <strong>Update security questions <span class="priority-badge priority-medium">Medium Priority</span></strong>
+                            <span>Use answers that aren't easily guessable or publicly available</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="checkbox" onclick="toggleCheck(this)"></div>
+                        <div class="checklist-text">
+                            <strong>Check account activity regularly <span class="priority-badge priority-medium">Medium Priority</span></strong>
+                            <span>Review login history and unusual activity</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="checkbox" onclick="toggleCheck(this)"></div>
+                        <div class="checklist-text">
+                            <strong>Set up account recovery options <span class="priority-badge priority-high">High Priority</span></strong>
+                            <span>Add backup email and phone number for account recovery</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="checkbox" onclick="toggleCheck(this)"></div>
+                        <div class="checklist-text">
+                            <strong>Delete unused accounts <span class="priority-badge priority-low">Low Priority</span></strong>
+                            <span>Reduce your digital footprint by removing old accounts</span>
+                        </div>
+                    </li>
+                </ul>
+                <div class="action-buttons">
+                    <button class="btn btn-primary" onclick="window.print()"><i class="fas fa-print"></i> Print Checklist</button>
+                    <button class="btn btn-outline" onclick="resetChecklist('account')"><i class="fas fa-redo"></i> Reset</button>
+                </div>
+            </div>
+
+            <!-- Privacy Settings Checklist -->
+            <div class="checklist-section">
+                <h3><i class="fas fa-user-shield"></i> Privacy Settings Checklist</h3>
+                <div class="progress-bar">
+                    <div class="progress-fill" id="privacy-progress"></div>
+                </div>
+                <ul class="checklist" data-checklist="privacy">
+                    <li>
+                        <div class="checkbox" onclick="toggleCheck(this)"></div>
+                        <div class="checklist-text">
+                            <strong>Review social media privacy settings <span class="priority-badge priority-high">High Priority</span></strong>
+                            <span>Control who can see your posts, profile, and personal information</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="checkbox" onclick="toggleCheck(this)"></div>
+                        <div class="checklist-text">
+                            <strong>Disable location tracking <span class="priority-badge priority-high">High Priority</span></strong>
+                            <span>Turn off location services for apps that don't need it</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="checkbox" onclick="toggleCheck(this)"></div>
+                        <div class="checklist-text">
+                            <strong>Limit ad tracking <span class="priority-badge priority-medium">Medium Priority</span></strong>
+                            <span>Opt out of personalized advertising across platforms</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="checkbox" onclick="toggleCheck(this)"></div>
+                        <div class="checklist-text">
+                            <strong>Review app data sharing <span class="priority-badge priority-medium">Medium Priority</span></strong>
+                            <span>Check which apps share data with third parties</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="checkbox" onclick="toggleCheck(this)"></div>
+                        <div class="checklist-text">
+                            <strong>Disable microphone/camera access <span class="priority-badge priority-high">High Priority</span></strong>
+                            <span>Only allow access when actively using these features</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="checkbox" onclick="toggleCheck(this)"></div>
+                        <div class="checklist-text">
+                            <strong>Use private browsing mode <span class="priority-badge priority-low">Low Priority</span></strong>
+                            <span>Browse without saving history or cookies</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="checkbox" onclick="toggleCheck(this)"></div>
+                        <div class="checklist-text">
+                            <strong>Clear cookies and cache regularly <span class="priority-badge priority-low">Low Priority</span></strong>
+                            <span>Remove tracking data from your browser</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="checkbox" onclick="toggleCheck(this)"></div>
+                        <div class="checklist-text">
+                            <strong>Review email privacy settings <span class="priority-badge priority-medium">Medium Priority</span></strong>
+                            <span>Disable email tracking and read receipts</span>
+                        </div>
+                    </li>
+                </ul>
+                <div class="action-buttons">
+                    <button class="btn btn-primary" onclick="window.print()"><i class="fas fa-print"></i> Print Checklist</button>
+                    <button class="btn btn-outline" onclick="resetChecklist('privacy')"><i class="fas fa-redo"></i> Reset</button>
+                </div>
+            </div>
+
+            <!-- Family Safety Checklist -->
+            <div class="checklist-section">
+                <h3><i class="fas fa-users"></i> Family Safety Checklist</h3>
+                <div class="progress-bar">
+                    <div class="progress-fill" id="family-progress"></div>
+                </div>
+                <ul class="checklist" data-checklist="family">
+                    <li>
+                        <div class="checkbox" onclick="toggleCheck(this)"></div>
+                        <div class="checklist-text">
+                            <strong>Create family digital agreement <span class="priority-badge priority-high">High Priority</span></strong>
+                            <span>Establish rules and expectations for online behavior</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="checkbox" onclick="toggleCheck(this)"></div>
+                        <div class="checklist-text">
+                            <strong>Set up parental controls <span class="priority-badge priority-high">High Priority</span></strong>
+                            <span>Configure age-appropriate content filters and time limits</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="checkbox" onclick="toggleCheck(this)"></div>
+                        <div class="checklist-text">
+                            <strong>Schedule regular family tech talks <span class="priority-badge priority-medium">Medium Priority</span></strong>
+                            <span>Have ongoing conversations about online experiences</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="checkbox" onclick="toggleCheck(this)"></div>
+                        <div class="checklist-text">
+                            <strong>Create tech-free zones <span class="priority-badge priority-medium">Medium Priority</span></strong>
+                            <span>Designate areas like bedrooms or dining table as device-free</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="checkbox" onclick="toggleCheck(this)"></div>
+                        <div class="checklist-text">
+                            <strong>Review children's friend lists <span class="priority-badge priority-high">High Priority</span></strong>
+                            <span>Ensure children only connect with people they know in real life</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="checkbox" onclick="toggleCheck(this)"></div>
+                        <div class="checklist-text">
+                            <strong>Teach reporting procedures <span class="priority-badge priority-high">High Priority</span></strong>
+                            <span>Make sure children know how to report inappropriate content or behavior</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="checkbox" onclick="toggleCheck(this)"></div>
+                        <div class="checklist-text">
+                            <strong>Model good digital behavior <span class="priority-badge priority-medium">Medium Priority</span></strong>
+                            <span>Demonstrate healthy technology habits for children to follow</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="checkbox" onclick="toggleCheck(this)"></div>
+                        <div class="checklist-text">
+                            <strong>Keep devices in common areas <span class="priority-badge priority-low">Low Priority</span></strong>
+                            <span>Monitor usage by keeping devices visible</span>
+                        </div>
+                    </li>
+                </ul>
+                <div class="action-buttons">
+                    <button class="btn btn-primary" onclick="window.print()"><i class="fas fa-print"></i> Print Checklist</button>
+                    <button class="btn btn-outline" onclick="resetChecklist('family')"><i class="fas fa-redo"></i> Reset</button>
+                </div>
+            </div>
+
+            <div style="text-align: center; margin-top: 3rem;">
+                <a href="../index.html#toolkit" class="btn btn-primary">Back to Toolkit</a>
+                <a href="conversations.html" class="btn btn-outline">View Conversation Starters</a>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2024 Digital Guardians. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <script>
+        function toggleCheck(element) {
+            element.classList.toggle('checked');
+            updateProgress(element.closest('.checklist').dataset.checklist);
+            saveProgress();
+        }
+
+        function updateProgress(checklistName) {
+            const checklist = document.querySelector(`[data-checklist="${checklistName}"]`);
+            const checkboxes = checklist.querySelectorAll('.checkbox');
+            const checked = checklist.querySelectorAll('.checkbox.checked');
+            const progress = (checked.length / checkboxes.length) * 100;
+            document.getElementById(`${checklistName}-progress`).style.width = `${progress}%`;
+        }
+
+        function resetChecklist(checklistName) {
+            const checklist = document.querySelector(`[data-checklist="${checklistName}"]`);
+            checklist.querySelectorAll('.checkbox').forEach(cb => cb.classList.remove('checked'));
+            updateProgress(checklistName);
+            saveProgress();
+        }
+
+        function saveProgress() {
+            const progress = {};
+            document.querySelectorAll('.checklist').forEach(list => {
+                const name = list.dataset.checklist;
+                const checked = Array.from(list.querySelectorAll('.checkbox')).map(cb => cb.classList.contains('checked'));
+                progress[name] = checked;
+            });
+            localStorage.setItem('checklistProgress', JSON.stringify(progress));
+        }
+
+        function loadProgress() {
+            const saved = localStorage.getItem('checklistProgress');
+            if (saved) {
+                const progress = JSON.parse(saved);
+                Object.keys(progress).forEach(name => {
+                    const checklist = document.querySelector(`[data-checklist="${name}"]`);
+                    if (checklist) {
+                        const checkboxes = checklist.querySelectorAll('.checkbox');
+                        progress[name].forEach((checked, index) => {
+                            if (checked && checkboxes[index]) {
+                                checkboxes[index].classList.add('checked');
+                            }
+                        });
+                        updateProgress(name);
+                    }
+                });
+            }
+        }
+
+        // Load saved progress on page load
+        window.addEventListener('DOMContentLoaded', loadProgress);
+    </script>
+</body>
+</html>
