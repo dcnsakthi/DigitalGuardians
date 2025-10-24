@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Internet Safety Basics - Digital Guardians</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        @media print {
+            body {
+                padding: 0;
+                max-width: 100%;
+            }
+            .no-print {
+                display: none;
+            }
+            a {
+                color: #333;
+                text-decoration: none;
+            }
+            h1, h2, h3 {
+                page-break-after: avoid;
+            }
+            ul, ol {
+                page-break-inside: avoid;
+            }
+        }
+        
+        .header {
+            text-align: center;
+            border-bottom: 3px solid #2563eb;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .header h1 {
+            color: #2563eb;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        
+        .header .subtitle {
+            color: #666;
+            font-size: 1.1em;
+        }
+        
+        .age-badge {
+            display: inline-block;
+            background: #10b981;
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            margin: 10px 0;
+            font-weight: bold;
+        }
+        
+        .section {
+            margin: 30px 0;
+        }
+        
+        h2 {
+            color: #2563eb;
+            font-size: 1.8em;
+            margin: 25px 0 15px 0;
+            border-left: 5px solid #2563eb;
+            padding-left: 15px;
+        }
+        
+        h3 {
+            color: #1e40af;
+            font-size: 1.3em;
+            margin: 20px 0 10px 0;
+        }
+        
+        p {
+            margin: 10px 0;
+        }
+        
+        ul, ol {
+            margin: 15px 0 15px 30px;
+        }
+        
+        li {
+            margin: 8px 0;
+        }
+        
+        .tip-box {
+            background: #fef3c7;
+            border-left: 4px solid #f59e0b;
+            padding: 15px;
+            margin: 20px 0;
+        }
+        
+        .tip-box h4 {
+            color: #d97706;
+            margin-bottom: 10px;
+        }
+        
+        .warning-box {
+            background: #fee2e2;
+            border-left: 4px solid #dc2626;
+            padding: 15px;
+            margin: 20px 0;
+        }
+        
+        .warning-box h4 {
+            color: #dc2626;
+            margin-bottom: 10px;
+        }
+        
+        .info-box {
+            background: #dbeafe;
+            border-left: 4px solid #2563eb;
+            padding: 15px;
+            margin: 20px 0;
+        }
+        
+        .info-box h4 {
+            color: #1e40af;
+            margin-bottom: 10px;
+        }
+        
+        .checklist {
+            list-style: none;
+            margin: 15px 0;
+        }
+        
+        .checklist li:before {
+            content: "☐ ";
+            font-weight: bold;
+            margin-right: 10px;
+        }
+        
+        .footer {
+            margin-top: 50px;
+            padding-top: 20px;
+            border-top: 2px solid #e5e7eb;
+            text-align: center;
+            color: #666;
+            font-size: 0.9em;
+        }
+        
+        .btn-group {
+            text-align: center;
+            margin: 30px 0;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 5px;
+            background: #2563eb;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            border: none;
+            cursor: pointer;
+            font-size: 1em;
+        }
+        
+        .btn:hover {
+            background: #1e40af;
+        }
+        
+        .btn-secondary {
+            background: #6b7280;
+        }
+        
+        .btn-secondary:hover {
+            background: #4b5563;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        
+        th, td {
+            border: 1px solid #e5e7eb;
+            padding: 12px;
+            text-align: left;
+        }
+        
+        th {
+            background: #f3f4f6;
+            font-weight: bold;
+            color: #1f2937;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Internet Safety Basics</h1>
+        <p class="subtitle">A Comprehensive Guide for Families</p>
+        <span class="age-badge">All Ages</span>
+        <p style="margin-top: 10px; color: #666;">Digital Guardians • 12 Pages</p>
+    </div>
+
+    <div class="btn-group no-print">
+        <button class="btn" onclick="window.print()">📥 Download PDF</button>
+        <button class="btn" onclick="window.print()">🖨️ Print Guide</button>
+        <a href="../guides.html" class="btn btn-secondary">← Back to Guides</a>
+    </div>
+
+    <div class="section">
+        <h2>Introduction</h2>
+        <p>Welcome to the Internet Safety Basics guide! This comprehensive resource is designed to help families of all ages understand and navigate the digital world safely. Whether you're a parent, child, or educator, this guide provides essential information to protect yourself and your loved ones online.</p>
+        
+        <div class="info-box">
+            <h4>📚 What You'll Learn</h4>
+            <ul>
+                <li>Understanding common online risks and how to avoid them</li>
+                <li>Creating and managing strong passwords</li>
+                <li>Configuring privacy settings on devices and platforms</li>
+                <li>Practicing safe communication online</li>
+                <li>Recognizing and responding to online threats</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Understanding Online Risks</h2>
+        
+        <h3>Common Digital Threats</h3>
+        <p>The internet offers incredible opportunities for learning, connection, and entertainment, but it also presents risks that everyone should understand:</p>
+        
+        <table>
+            <tr>
+                <th>Threat</th>
+                <th>Description</th>
+                <th>Who's at Risk</th>
+            </tr>
+            <tr>
+                <td><strong>Cyberbullying</strong></td>
+                <td>Harassment, threats, or humiliation through digital platforms</td>
+                <td>Children & Teens</td>
+            </tr>
+            <tr>
+                <td><strong>Online Predators</strong></td>
+                <td>Adults who build relationships with children for harmful purposes</td>
+                <td>Children & Teens</td>
+            </tr>
+            <tr>
+                <td><strong>Phishing Scams</strong></td>
+                <td>Fraudulent attempts to obtain sensitive information</td>
+                <td>All Ages</td>
+            </tr>
+            <tr>
+                <td><strong>Malware</strong></td>
+                <td>Malicious software that can damage devices or steal data</td>
+                <td>All Ages</td>
+            </tr>
+            <tr>
+                <td><strong>Identity Theft</strong></td>
+                <td>Unauthorized use of personal information</td>
+                <td>Teens & Adults</td>
+            </tr>
+            <tr>
+                <td><strong>Privacy Violations</strong></td>
+                <td>Unauthorized collection or sharing of personal data</td>
+                <td>All Ages</td>
+            </tr>
+        </table>
+        
+        <div class="warning-box">
+            <h4>⚠️ Remember</h4>
+            <p>Not all online threats are obvious. Many dangers disguise themselves as friendly interactions, helpful messages, or exciting opportunities. Always maintain a healthy level of skepticism online.</p>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Creating Strong Passwords</h2>
+        
+        <h3>Password Best Practices</h3>
+        <p>Strong passwords are your first line of defense against unauthorized access to your accounts. Follow these guidelines to create secure passwords:</p>
+        
+        <h3>The Anatomy of a Strong Password</h3>
+        <ul>
+            <li><strong>Length:</strong> At least 12-16 characters long</li>
+            <li><strong>Complexity:</strong> Mix of uppercase letters, lowercase letters, numbers, and symbols</li>
+            <li><strong>Unpredictability:</strong> Avoid dictionary words, personal information, or common patterns</li>
+            <li><strong>Uniqueness:</strong> Use different passwords for different accounts</li>
+        </ul>
+        
+        <h3>Password Examples</h3>
+        <table>
+            <tr>
+                <th>Weak ❌</th>
+                <th>Strong ✅</th>
+                <th>Why It Works</th>
+            </tr>
+            <tr>
+                <td>password123</td>
+                <td>Tr0p!c@l$unset#2025</td>
+                <td>Long, complex, unpredictable</td>
+            </tr>
+            <tr>
+                <td>johnsmith</td>
+                <td>B1ueM0unta!n&Sk¥</td>
+                <td>No personal information, varied characters</td>
+            </tr>
+            <tr>
+                <td>12345678</td>
+                <td>P!zz@L0vers#7Cats</td>
+                <td>Memorable phrase with substitutions</td>
+            </tr>
+        </table>
+        
+        <div class="tip-box">
+            <h4>💡 Pro Tip: The Passphrase Method</h4>
+            <p>Create a memorable passphrase using random words combined with numbers and symbols:</p>
+            <p><strong>Example:</strong> "Correct-Horse-Battery-Staple-2025!"</p>
+            <p>This is easy to remember but extremely difficult to crack.</p>
+        </div>
+        
+        <h3>Password Management</h3>
+        <ul>
+            <li><strong>Use a Password Manager:</strong> Tools like LastPass, 1Password, or Bitwarden can securely store and generate passwords</li>
+            <li><strong>Enable Two-Factor Authentication (2FA):</strong> Adds an extra layer of security beyond passwords</li>
+            <li><strong>Change Passwords Regularly:</strong> Update important passwords every 3-6 months</li>
+            <li><strong>Never Share Passwords:</strong> Exception: parents may need access to children's accounts</li>
+            <li><strong>Avoid Writing Passwords Down:</strong> Unless stored in a secure, locked location</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Privacy Settings Overview</h2>
+        
+        <h3>Device Privacy Settings</h3>
+        <p>Every device you use should be properly configured to protect your privacy:</p>
+        
+        <h3>Essential Privacy Configurations</h3>
+        
+        <h4>🖥️ Computers (Windows/Mac)</h4>
+        <ul class="checklist">
+            <li>Create separate user accounts for each family member</li>
+            <li>Enable automatic updates for operating system and security software</li>
+            <li>Turn on firewall protection</li>
+            <li>Disable location tracking when not needed</li>
+            <li>Review app permissions regularly</li>
+            <li>Enable screen lock with password/PIN after inactivity</li>
+        </ul>
+        
+        <h4>📱 Mobile Devices (iOS/Android)</h4>
+        <ul class="checklist">
+            <li>Use Face ID, fingerprint, or strong PIN to unlock device</li>
+            <li>Review and limit app permissions (camera, microphone, location)</li>
+            <li>Disable app tracking and ad personalization</li>
+            <li>Turn off Bluetooth and WiFi when not in use</li>
+            <li>Only download apps from official app stores</li>
+            <li>Keep operating system and apps updated</li>
+        </ul>
+        
+        <h3>Online Account Privacy</h3>
+        
+        <h4>Social Media Privacy Checklist</h4>
+        <ul class="checklist">
+            <li>Set profile to private (friends/followers only)</li>
+            <li>Review who can see your posts and personal information</li>
+            <li>Disable location tagging in photos</li>
+            <li>Turn off facial recognition features</li>
+            <li>Review and remove old posts that reveal personal information</li>
+            <li>Limit who can tag you in photos or posts</li>
+            <li>Regularly review and update friend/follower lists</li>
+        </ul>
+        
+        <div class="info-box">
+            <h4>🔍 Privacy Check Schedule</h4>
+            <p>Set a reminder to review your privacy settings every 3 months. Platforms frequently update their settings, and new features may expose more information than intended.</p>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Safe Communication Practices</h2>
+        
+        <h3>General Communication Rules</h3>
+        
+        <h4>Think Before You Share</h4>
+        <p>Before posting, sending, or sharing anything online, ask yourself:</p>
+        <ol>
+            <li><strong>Would I be comfortable with everyone seeing this?</strong> (including parents, teachers, future employers)</li>
+            <li><strong>Could this information be used to identify or locate me?</strong></li>
+            <li><strong>Could this hurt someone's feelings or reputation?</strong></li>
+            <li><strong>Am I sharing someone else's personal information?</strong></li>
+            <li><strong>Could I regret posting this in the future?</strong></li>
+        </ol>
+        
+        <div class="warning-box">
+            <h4>⚠️ The Permanence Principle</h4>
+            <p>Once something is posted online, it can never be truly deleted. Screenshots, archives, and shares can preserve content forever. Always assume that anything you post will be permanent.</p>
+        </div>
+        
+        <h3>Information You Should NEVER Share Online</h3>
+        <ul>
+            <li>Full name and date of birth</li>
+            <li>Home address, school name, or workplace address</li>
+            <li>Phone number or email address (in public posts)</li>
+            <li>Social Security number or financial information</li>
+            <li>Passwords or login credentials</li>
+            <li>Travel plans (especially while away from home)</li>
+            <li>Real-time location information</li>
+            <li>Photos that reveal your location or daily routines</li>
+            <li>Personal conflicts or family issues</li>
+        </ul>
+        
+        <h3>Communicating with Others</h3>
+        
+        <h4>For Children & Teens</h4>
+        <ul>
+            <li><strong>Talk to trusted adults</strong> about people you meet online</li>
+            <li><strong>Never meet online friends in person</strong> without parent permission and supervision</li>
+            <li><strong>Be cautious of compliments or gifts</strong> from people you don't know well</li>
+            <li><strong>Block and report</strong> anyone who makes you uncomfortable</li>
+            <li><strong>Don't accept friend requests</strong> from people you don't know</li>
+        </ul>
+        
+        <h4>For Parents</h4>
+        <ul>
+            <li><strong>Establish open communication</strong> with your children about their online activities</li>
+            <li><strong>Know your children's online friends</strong> just as you would their in-person friends</li>
+            <li><strong>Create family rules</strong> about online communication together</li>
+            <li><strong>Monitor without invading privacy</strong> - build trust while maintaining oversight</li>
+        </ul>
+        
+        <div class="tip-box">
+            <h4>💡 The Stranger Danger Rule Still Applies</h4>
+            <p>If you wouldn't share information with a stranger on the street, don't share it with a stranger online. The internet doesn't change the basic safety rules we teach children about stranger danger.</p>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Recognizing Online Threats</h2>
+        
+        <h3>Warning Signs of Suspicious Activity</h3>
+        
+        <h4>Red Flags in Messages</h4>
+        <ul>
+            <li>Urgent requests for personal information or money</li>
+            <li>Promises of prizes, rewards, or special offers that seem too good to be true</li>
+            <li>Requests to keep conversations secret from parents or authorities</li>
+            <li>Pressure to make quick decisions without time to think</li>
+            <li>Poor spelling, grammar, or formatting in professional communications</li>
+            <li>Mismatched email addresses or URLs (e.g., "paypa1.com" instead of "paypal.com")</li>
+            <li>Requests to download attachments or click suspicious links</li>
+        </ul>
+        
+        <h4>Signs of Phishing</h4>
+        <table>
+            <tr>
+                <th>Legitimate</th>
+                <th>Phishing</th>
+            </tr>
+            <tr>
+                <td>From: support@amazon.com</td>
+                <td>From: support@amaz0n-security.com</td>
+            </tr>
+            <tr>
+                <td>Personalized greeting</td>
+                <td>Generic "Dear Customer"</td>
+            </tr>
+            <tr>
+                <td>No urgency or threats</td>
+                <td>"Act now or account will be closed!"</td>
+            </tr>
+            <tr>
+                <td>Secure company website link</td>
+                <td>Suspicious or shortened URL</td>
+            </tr>
+        </table>
+        
+        <h3>What to Do If You Suspect a Threat</h3>
+        <ol>
+            <li><strong>Don't click</strong> on links or download attachments</li>
+            <li><strong>Don't respond</strong> to suspicious messages</li>
+            <li><strong>Take a screenshot</strong> for evidence if needed</li>
+            <li><strong>Report</strong> the suspicious activity to the platform</li>
+            <li><strong>Tell a trusted adult</strong> (children and teens)</li>
+            <li><strong>Contact the company directly</strong> using official contact information (not from the suspicious message)</li>
+        </ol>
+    </div>
+
+    <div class="section">
+        <h2>Family Safety Agreement</h2>
+        
+        <p>Create a family agreement that everyone signs and commits to following. This helps establish clear expectations and opens communication channels.</p>
+        
+        <h3>Our Family's Internet Safety Rules</h3>
+        
+        <ul class="checklist">
+            <li>We will keep all passwords private (except with parents)</li>
+            <li>We will ask permission before downloading apps or making purchases</li>
+            <li>We will be kind and respectful in all online interactions</li>
+            <li>We will think before we post or share content</li>
+            <li>We will never share personal information publicly</li>
+            <li>We will use devices in common family areas</li>
+            <li>We will respect screen time limits and tech-free times</li>
+            <li>We will tell a trusted adult if something makes us uncomfortable</li>
+            <li>We will not meet online friends in person without parent approval</li>
+            <li>We will regularly review and update our privacy settings together</li>
+        </ul>
+        
+        <div style="margin-top: 30px; border: 2px solid #333; padding: 20px;">
+            <p><strong>Family Members' Signatures:</strong></p>
+            <p style="margin: 20px 0;">______________________________________ Date: __________</p>
+            <p style="margin: 20px 0;">______________________________________ Date: __________</p>
+            <p style="margin: 20px 0;">______________________________________ Date: __________</p>
+            <p style="margin: 20px 0;">______________________________________ Date: __________</p>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Quick Reference Guide</h2>
+        
+        <h3>Emergency Contacts</h3>
+        <ul>
+            <li><strong>National Center for Missing & Exploited Children:</strong> 1-800-843-5678</li>
+            <li><strong>Cybertipline (Report Child Exploitation):</strong> www.cybertipline.org</li>
+            <li><strong>FBI Internet Crime Complaint Center:</strong> www.ic3.gov</li>
+            <li><strong>Local Police Non-Emergency:</strong> ____________________</li>
+        </ul>
+        
+        <h3>Do's and Don'ts Quick List</h3>
+        
+        <table>
+            <tr>
+                <th>DO ✅</th>
+                <th>DON'T ❌</th>
+            </tr>
+            <tr>
+                <td>Use strong, unique passwords</td>
+                <td>Share passwords with friends</td>
+            </tr>
+            <tr>
+                <td>Enable two-factor authentication</td>
+                <td>Click on suspicious links</td>
+            </tr>
+            <tr>
+                <td>Keep software updated</td>
+                <td>Download from untrusted sources</td>
+            </tr>
+            <tr>
+                <td>Use privacy settings</td>
+                <td>Share personal information publicly</td>
+            </tr>
+            <tr>
+                <td>Think before posting</td>
+                <td>Post when emotional or angry</td>
+            </tr>
+            <tr>
+                <td>Verify sender identity</td>
+                <td>Trust messages claiming urgency</td>
+            </tr>
+            <tr>
+                <td>Report suspicious activity</td>
+                <td>Respond to threatening messages</td>
+            </tr>
+            <tr>
+                <td>Talk to trusted adults</td>
+                <td>Keep online problems secret</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="section">
+        <h2>Additional Resources</h2>
+        
+        <h3>Helpful Websites</h3>
+        <ul>
+            <li><strong>Common Sense Media:</strong> Age-based reviews of apps, games, and media</li>
+            <li><strong>NetSmartz:</strong> Internet safety resources from NCMEC</li>
+            <li><strong>StopBullying.gov:</strong> Federal government's cyberbullying resources</li>
+            <li><strong>ConnectSafely:</strong> Parent and teen guides for social media platforms</li>
+        </ul>
+        
+        <h3>Recommended Tools</h3>
+        <ul>
+            <li><strong>Password Managers:</strong> LastPass, 1Password, Bitwarden</li>
+            <li><strong>Parental Control Software:</strong> Qustodio, Net Nanny, Norton Family</li>
+            <li><strong>Browser Extensions:</strong> uBlock Origin (ad blocker), Privacy Badger</li>
+        </ul>
+    </div>
+
+    <div class="footer">
+        <p><strong>Digital Guardians</strong> - Empowering Families for a Safer Online Future</p>
+        <p>For more resources, visit our website or contact us for support.</p>
+        <p style="margin-top: 10px; font-size: 0.8em;">© 2025 Digital Guardians. This guide may be reproduced for educational purposes.</p>
+    </div>
+
+    <div class="btn-group no-print" style="margin-top: 30px;">
+        <button class="btn" onclick="window.print()">📥 Download PDF</button>
+        <button class="btn" onclick="window.print()">🖨️ Print Guide</button>
+        <a href="../guides.html" class="btn btn-secondary">← Back to Guides</a>
+    </div>
+</body>
+</html>

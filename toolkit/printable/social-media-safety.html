@@ -1,0 +1,744 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Social Media Safety - Digital Guardians</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        @media print {
+            body {
+                padding: 0;
+                max-width: 100%;
+            }
+            .no-print {
+                display: none;
+            }
+            a {
+                color: #333;
+                text-decoration: none;
+            }
+            h1, h2, h3 {
+                page-break-after: avoid;
+            }
+            ul, ol {
+                page-break-inside: avoid;
+            }
+        }
+        
+        .header {
+            text-align: center;
+            border-bottom: 3px solid: #8b5cf6;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .header h1 {
+            color: #8b5cf6;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        
+        .header .subtitle {
+            color: #666;
+            font-size: 1.1em;
+        }
+        
+        .age-badge {
+            display: inline-block;
+            background: #8b5cf6;
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            margin: 10px 0;
+            font-weight: bold;
+        }
+        
+        .section {
+            margin: 30px 0;
+        }
+        
+        h2 {
+            color: #8b5cf6;
+            font-size: 1.8em;
+            margin: 25px 0 15px 0;
+            border-left: 5px solid #8b5cf6;
+            padding-left: 15px;
+        }
+        
+        h3 {
+            color: #7c3aed;
+            font-size: 1.3em;
+            margin: 20px 0 10px 0;
+        }
+        
+        p {
+            margin: 10px 0;
+        }
+        
+        ul, ol {
+            margin: 15px 0 15px 30px;
+        }
+        
+        li {
+            margin: 8px 0;
+        }
+        
+        .tip-box {
+            background: #fef3c7;
+            border-left: 4px solid #f59e0b;
+            padding: 15px;
+            margin: 20px 0;
+        }
+        
+        .tip-box h4 {
+            color: #d97706;
+            margin-bottom: 10px;
+        }
+        
+        .warning-box {
+            background: #fee2e2;
+            border-left: 4px solid #dc2626;
+            padding: 15px;
+            margin: 20px 0;
+        }
+        
+        .warning-box h4 {
+            color: #dc2626;
+            margin-bottom: 10px;
+        }
+        
+        .info-box {
+            background: #ede9fe;
+            border-left: 4px solid #8b5cf6;
+            padding: 15px;
+            margin: 20px 0;
+        }
+        
+        .info-box h4 {
+            color: #7c3aed;
+            margin-bottom: 10px;
+        }
+        
+        .checklist {
+            list-style: none;
+            margin: 15px 0;
+        }
+        
+        .checklist li:before {
+            content: "☐ ";
+            font-weight: bold;
+            margin-right: 10px;
+        }
+        
+        .footer {
+            margin-top: 50px;
+            padding-top: 20px;
+            border-top: 2px solid #e5e7eb;
+            text-align: center;
+            color: #666;
+            font-size: 0.9em;
+        }
+        
+        .btn-group {
+            text-align: center;
+            margin: 30px 0;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 5px;
+            background: #8b5cf6;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            border: none;
+            cursor: pointer;
+            font-size: 1em;
+        }
+        
+        .btn:hover {
+            background: #7c3aed;
+        }
+        
+        .btn-secondary {
+            background: #6b7280;
+        }
+        
+        .btn-secondary:hover {
+            background: #4b5563;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        
+        th, td {
+            border: 1px solid #e5e7eb;
+            padding: 12px;
+            text-align: left;
+        }
+        
+        th {
+            background: #f3f4f6;
+            font-weight: bold;
+            color: #1f2937;
+        }
+        
+        .platform-box {
+            background: #f9fafb;
+            border: 2px solid #e5e7eb;
+            border-radius: 8px;
+            padding: 15px;
+            margin: 15px 0;
+        }
+        
+        .platform-box h4 {
+            color: #8b5cf6;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Social Media Safety</h1>
+        <p class="subtitle">Navigate Social Platforms Safely and Responsibly</p>
+        <span class="age-badge">Ages 10+</span>
+        <p style="margin-top: 10px; color: #666;">Digital Guardians • 16 Pages</p>
+    </div>
+
+    <div class="btn-group no-print">
+        <button class="btn" onclick="window.print()">📥 Download PDF</button>
+        <button class="btn" onclick="window.print()">🖨️ Print Guide</button>
+        <a href="../guides.html" class="btn btn-secondary">← Back to Guides</a>
+    </div>
+
+    <div class="section">
+        <h2>Introduction</h2>
+        <p>Social media platforms offer amazing opportunities to connect with friends, express creativity, and discover new interests. However, they also come with unique challenges and risks. This guide will help you navigate social media safely while enjoying all the positive aspects these platforms offer.</p>
+        
+        <div class="info-box">
+            <h4>📱 What You'll Learn</h4>
+            <ul>
+                <li>Platform-specific safety features and settings</li>
+                <li>Managing your digital footprint and online reputation</li>
+                <li>Identifying and responding to online risks</li>
+                <li>Balancing social media use with real life</li>
+                <li>Understanding the impact of social media on mental health</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Age Requirements & Platform Overview</h2>
+        
+        <h3>Know the Age Limits</h3>
+        <p>Most social media platforms have minimum age requirements for legal reasons (COPPA - Children's Online Privacy Protection Act). These exist to protect young users:</p>
+        
+        <table>
+            <tr>
+                <th>Platform</th>
+                <th>Minimum Age</th>
+                <th>Key Features</th>
+            </tr>
+            <tr>
+                <td>Instagram</td>
+                <td>13</td>
+                <td>Photo/video sharing, Stories, Reels, Direct Messages</td>
+            </tr>
+            <tr>
+                <td>TikTok</td>
+                <td>13</td>
+                <td>Short-form videos, live streaming, duets</td>
+            </tr>
+            <tr>
+                <td>Snapchat</td>
+                <td>13</td>
+                <td>Disappearing messages, Stories, Snap Map</td>
+            </tr>
+            <tr>
+                <td>Facebook</td>
+                <td>13</td>
+                <td>Social networking, groups, marketplace</td>
+            </tr>
+            <tr>
+                <td>YouTube</td>
+                <td>13 (supervised account at younger ages)</td>
+                <td>Video sharing, live streaming, comments</td>
+            </tr>
+            <tr>
+                <td>Discord</td>
+                <td>13</td>
+                <td>Chat communities, voice/video calls</td>
+            </tr>
+            <tr>
+                <td>WhatsApp</td>
+                <td>13 (16 in Europe)</td>
+                <td>Messaging, voice/video calls, groups</td>
+            </tr>
+        </table>
+        
+        <div class="warning-box">
+            <h4>⚠️ Why Age Limits Matter</h4>
+            <p>Age limits exist because younger children may not have the maturity to handle online interactions safely, understand privacy implications, or recognize manipulative behavior. Always respect these limits and discuss with parents before joining any platform.</p>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Platform-Specific Privacy Settings</h2>
+        
+        <div class="platform-box">
+            <h4>📸 Instagram Privacy Setup</h4>
+            <ul class="checklist">
+                <li>Go to Settings → Privacy → Account Privacy → Switch to "Private Account"</li>
+                <li>Disable "Activity Status" to hide when you're online</li>
+                <li>Turn off "Share Story to Facebook" for better control</li>
+                <li>Review "Tags" settings - approve tags before they appear</li>
+                <li>Disable "Add automatically" for Close Friends</li>
+                <li>Turn off location services in your device settings for Instagram</li>
+                <li>Hide your Story from specific people if needed</li>
+                <li>Review who can message you (Settings → Privacy → Messages)</li>
+            </ul>
+        </div>
+        
+        <div class="platform-box">
+            <h4>🎵 TikTok Privacy Setup</h4>
+            <ul class="checklist">
+                <li>Go to Settings → Privacy → Set account to "Private"</li>
+                <li>Disable "Suggest your account to others"</li>
+                <li>Turn off "Allow your videos to be downloaded"</li>
+                <li>Set "Who can comment on your videos" to "Friends"</li>
+                <li>Set "Who can Duet/Stitch with your videos" to "Only you" or "Friends"</li>
+                <li>Disable "Show your liked videos"</li>
+                <li>Review and restrict direct messaging options</li>
+                <li>Turn off location in videos</li>
+            </ul>
+        </div>
+        
+        <div class="platform-box">
+            <h4>👻 Snapchat Privacy Setup</h4>
+            <ul class="checklist">
+                <li>Go to Settings → Who Can... → Set all to "My Friends" or "Only Me"</li>
+                <li>Disable Snap Map or set to "Ghost Mode"</li>
+                <li>Turn off "Quick Add" feature</li>
+                <li>Disable "See Me in Quick Add"</li>
+                <li>Review who can contact you (Friends vs. Everyone)</li>
+                <li>Turn off location permissions in device settings</li>
+                <li>Be selective about accepting friend requests</li>
+            </ul>
+        </div>
+        
+        <div class="platform-box">
+            <h4>💬 Discord Privacy Setup</h4>
+            <ul class="checklist">
+                <li>Go to User Settings → Privacy & Safety</li>
+                <li>Enable "Keep me safe" for explicit content filtering</li>
+                <li>Disable "Allow direct messages from server members"</li>
+                <li>Turn off "Activity Status"</li>
+                <li>Only join servers recommended by people you trust</li>
+                <li>Use Discord's blocking and reporting features liberally</li>
+                <li>Be cautious about clicking links shared in chats</li>
+            </ul>
+        </div>
+        
+        <div class="tip-box">
+            <h4>💡 Regular Privacy Checkups</h4>
+            <p>Platforms frequently update their features and settings. Set a reminder to review your privacy settings every 2-3 months, or whenever you hear about a platform update.</p>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Managing Your Digital Footprint</h2>
+        
+        <h3>What is a Digital Footprint?</h3>
+        <p>Your digital footprint is the trail of data you leave behind whenever you use the internet. This includes:</p>
+        <ul>
+            <li>Posts, comments, and likes on social media</li>
+            <li>Photos and videos you share or appear in</li>
+            <li>Search history and website visits</li>
+            <li>Online purchases and reviews</li>
+            <li>Email communications and forum discussions</li>
+            <li>Information others share about you</li>
+        </ul>
+        
+        <h3>Why Your Digital Footprint Matters</h3>
+        <table>
+            <tr>
+                <th>Who's Looking</th>
+                <th>What They See</th>
+                <th>Impact</th>
+            </tr>
+            <tr>
+                <td>Future Employers</td>
+                <td>Public posts, photos, behavior</td>
+                <td>Job opportunities</td>
+            </tr>
+            <tr>
+                <td>College Admissions</td>
+                <td>Character assessment through social media</td>
+                <td>Acceptance decisions</td>
+            </tr>
+            <tr>
+                <td>Friends & Peers</td>
+                <td>Your personality and values</td>
+                <td>Relationships and reputation</td>
+            </tr>
+            <tr>
+                <td>Family Members</td>
+                <td>Activities and associations</td>
+                <td>Trust and freedom</td>
+            </tr>
+            <tr>
+                <td>Strangers</td>
+                <td>Personal information</td>
+                <td>Privacy and safety</td>
+            </tr>
+        </table>
+        
+        <h3>Managing Your Reputation</h3>
+        
+        <h4>Before Posting - The T.H.I.N.K. Method</h4>
+        <ul>
+            <li><strong>T</strong>rue - Is it factual and accurate?</li>
+            <li><strong>H</strong>elpful - Does it contribute positively?</li>
+            <li><strong>I</strong>nspiring - Does it uplift others?</li>
+            <li><strong>N</strong>ecessary - Does it need to be shared?</li>
+            <li><strong>K</strong>ind - Is it respectful and considerate?</li>
+        </ul>
+        
+        <h4>Digital Footprint Cleanup Checklist</h4>
+        <ul class="checklist">
+            <li>Review old posts and delete anything inappropriate or embarrassing</li>
+            <li>Untag yourself from unflattering or problematic photos</li>
+            <li>Google yourself to see what others can find about you</li>
+            <li>Remove personal information from bio and about sections</li>
+            <li>Clean up your friends/followers list</li>
+            <li>Review what you're tagged in regularly</li>
+            <li>Check privacy settings on all platforms</li>
+            <li>Consider creating a professional online presence separately</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Recognizing and Avoiding Online Risks</h2>
+        
+        <h3>Common Social Media Threats</h3>
+        
+        <h4>1. Catfishing</h4>
+        <p><strong>What it is:</strong> Someone creates a fake identity to deceive others, often for romantic or financial purposes.</p>
+        <p><strong>Warning signs:</strong></p>
+        <ul>
+            <li>Refuses to video chat or meet in person</li>
+            <li>Has very few friends or followers</li>
+            <li>Photos seem too professional or model-like</li>
+            <li>Story details don't add up or change frequently</li>
+            <li>Moves the relationship very quickly</li>
+        </ul>
+        
+        <h4>2. Impersonation</h4>
+        <p><strong>What it is:</strong> Someone pretends to be you or someone you know online.</p>
+        <p><strong>What to do:</strong></p>
+        <ul>
+            <li>Report the fake account immediately</li>
+            <li>Notify your friends to block the fake account</li>
+            <li>Document everything with screenshots</li>
+            <li>Change your passwords</li>
+            <li>Review your privacy settings</li>
+        </ul>
+        
+        <h4>3. Online Challenges</h4>
+        <p><strong>What it is:</strong> Viral trends that can be dangerous or harmful.</p>
+        <p><strong>How to respond:</strong></p>
+        <ul>
+            <li>Research challenges before participating</li>
+            <li>Never do anything that could harm you or others</li>
+            <li>Don't participate due to peer pressure</li>
+            <li>Talk to a trusted adult if you're concerned</li>
+            <li>Report dangerous challenges to the platform</li>
+        </ul>
+        
+        <h4>4. Scams and Phishing</h4>
+        <p><strong>What it is:</strong> Attempts to steal personal information or money.</p>
+        <p><strong>Common tactics:</strong></p>
+        <ul>
+            <li>"You've won a prize!" messages</li>
+            <li>Fake job opportunities</li>
+            <li>Messages claiming your account will be deleted</li>
+            <li>Requests to verify your identity</li>
+            <li>Links to fake login pages</li>
+        </ul>
+        
+        <div class="warning-box">
+            <h4>⚠️ If Something Feels Wrong, It Probably Is</h4>
+            <p>Trust your instincts. If an interaction, message, or situation makes you uncomfortable, disconnect immediately and tell a trusted adult. It's always better to be cautious.</p>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Dealing with Online Drama</h2>
+        
+        <h3>Types of Online Conflict</h3>
+        
+        <h4>Cyberbullying</h4>
+        <p>Repeated, intentional harm through digital means. Signs include:</p>
+        <ul>
+            <li>Hurtful messages, comments, or posts</li>
+            <li>Spreading rumors or lies</li>
+            <li>Sharing embarrassing photos or information</li>
+            <li>Exclusion from online groups</li>
+            <li>Threats or intimidation</li>
+        </ul>
+        
+        <h4>Drama vs. Bullying</h4>
+        <table>
+            <tr>
+                <th>Drama</th>
+                <th>Bullying</th>
+            </tr>
+            <tr>
+                <td>Both people participate equally</td>
+                <td>Power imbalance between people</td>
+            </tr>
+            <tr>
+                <td>Temporary disagreement</td>
+                <td>Repeated, targeted behavior</td>
+            </tr>
+            <tr>
+                <td>Can be resolved through communication</td>
+                <td>Requires intervention and support</td>
+            </tr>
+            <tr>
+                <td>May be unintentional</td>
+                <td>Intentional harm</td>
+            </tr>
+        </table>
+        
+        <h3>Response Strategies</h3>
+        
+        <h4>The 4 S's of Responding to Conflict</h4>
+        <ol>
+            <li><strong>Stop</strong> - Don't respond immediately when emotional</li>
+            <li><strong>Screenshot</strong> - Document the behavior for evidence</li>
+            <li><strong>Support</strong> - Reach out to trusted friends and adults</li>
+            <li><strong>Speak up</strong> - Report to the platform and authorities if necessary</li>
+        </ol>
+        
+        <h4>De-escalation Techniques</h4>
+        <ul>
+            <li><strong>Take a break:</strong> Step away from the device before responding</li>
+            <li><strong>Don't retaliate:</strong> Responding with anger escalates the situation</li>
+            <li><strong>Move offline:</strong> Some conversations are better in person</li>
+            <li><strong>Use private messages:</strong> Don't argue publicly</li>
+            <li><strong>Block and move on:</strong> Sometimes it's best to disengage completely</li>
+        </ul>
+        
+        <h4>When to Seek Help</h4>
+        <p>Immediately tell a trusted adult if:</p>
+        <ul class="checklist">
+            <li>Someone threatens you or someone else</li>
+            <li>You feel afraid or unsafe</li>
+            <li>The behavior is affecting your sleep, eating, or schoolwork</li>
+            <li>Someone shares inappropriate or illegal content</li>
+            <li>You're being pressured to do something you're uncomfortable with</li>
+            <li>The situation involves an adult contacting you inappropriately</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Social Media & Mental Health</h2>
+        
+        <h3>Understanding the Impact</h3>
+        
+        <h4>Negative Effects to Watch For</h4>
+        <ul>
+            <li><strong>Comparison trap:</strong> Feeling inadequate compared to others' curated posts</li>
+            <li><strong>FOMO (Fear of Missing Out):</strong> Anxiety about not being included</li>
+            <li><strong>Validation seeking:</strong> Basing self-worth on likes and comments</li>
+            <li><strong>Sleep disruption:</strong> Late-night scrolling affecting rest</li>
+            <li><strong>Reduced face-to-face interaction:</strong> Missing real-world connections</li>
+            <li><strong>Distraction:</strong> Difficulty focusing on important tasks</li>
+        </ul>
+        
+        <h4>Positive Aspects to Embrace</h4>
+        <ul>
+            <li>Staying connected with friends and family</li>
+            <li>Discovering new interests and communities</li>
+            <li>Expressing creativity and individuality</li>
+            <li>Learning new skills and information</li>
+            <li>Finding support for challenges you're facing</li>
+            <li>Amplifying important causes and messages</li>
+        </ul>
+        
+        <h3>Healthy Social Media Habits</h3>
+        
+        <ul class="checklist">
+            <li>Set time limits for social media use</li>
+            <li>Turn off non-essential notifications</li>
+            <li>Don't check social media first thing in the morning or before bed</li>
+            <li>Curate your feed - unfollow accounts that make you feel bad</li>
+            <li>Take regular breaks or "digital detox" periods</li>
+            <li>Engage authentically rather than just scrolling passively</li>
+            <li>Balance online time with offline activities</li>
+            <li>Practice gratitude for your own life instead of comparing</li>
+            <li>Remember that posts show highlights, not reality</li>
+        </ul>
+        
+        <div class="tip-box">
+            <h4>💡 The 30-30 Rule</h4>
+            <p>No screens 30 minutes before bed and 30 minutes after waking up. This helps improve sleep quality and starts your day with intention rather than distraction.</p>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Content Creation Guidelines</h2>
+        
+        <h3>If You're Creating Content</h3>
+        
+        <h4>Safety Considerations</h4>
+        <ul>
+            <li>Never reveal your location in real-time</li>
+            <li>Be careful about showing identifying information (school logos, street signs, etc.)</li>
+            <li>Don't share your schedule or routines</li>
+            <li>Consider the long-term impact of what you post</li>
+            <li>Use platform safety features for creators</li>
+            <li>Have a parent or guardian review content before posting (for younger creators)</li>
+        </ul>
+        
+        <h4>Dealing with Comments</h4>
+        <ul>
+            <li>Enable comment filtering for offensive words</li>
+            <li>Don't feel obligated to respond to every comment</li>
+            <li>Delete or hide hurtful comments</li>
+            <li>Block users who are consistently negative</li>
+            <li>Don't engage with trolls or hate comments</li>
+            <li>Report serious harassment to the platform</li>
+        </ul>
+        
+        <h3>Copyright and Permissions</h3>
+        <ul>
+            <li>Don't use other people's photos or videos without permission</li>
+            <li>Credit original creators when sharing their content</li>
+            <li>Understand that posting something doesn't make it yours</li>
+            <li>Use royalty-free music and images when needed</li>
+            <li>Get permission before posting photos or videos of others</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Parent Guidance</h2>
+        
+        <h3>Supporting Your Teen on Social Media</h3>
+        
+        <h4>Do's</h4>
+        <ul>
+            <li>Have open, non-judgmental conversations about social media use</li>
+            <li>Follow your child's accounts (with their knowledge)</li>
+            <li>Educate yourself about the platforms they use</li>
+            <li>Establish clear family rules and consequences</li>
+            <li>Encourage them to come to you with concerns</li>
+            <li>Model healthy social media behavior yourself</li>
+            <li>Celebrate responsible online behavior</li>
+        </ul>
+        
+        <h4>Don'ts</h4>
+        <ul>
+            <li>Don't snoop without discussing boundaries first</li>
+            <li>Don't embarrass them by commenting publicly</li>
+            <li>Don't make it all about restriction - discuss benefits too</li>
+            <li>Don't assume all online interactions are dangerous</li>
+            <li>Don't ignore warning signs of problems</li>
+        </ul>
+        
+        <h3>Recommended Family Rules</h3>
+        <ul class="checklist">
+            <li>All accounts must be set to private</li>
+            <li>No posting personal information publicly</li>
+            <li>Parents have account passwords for younger teens</li>
+            <li>Devices stay in common areas during certain hours</li>
+            <li>No social media during family meals or after bedtime</li>
+            <li>Must inform parents of new platforms or accounts</li>
+            <li>Regular check-ins about online experiences</li>
+            <li>Immediate reporting of uncomfortable situations</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Quick Reference: Red Flags</h2>
+        
+        <h3>Signs Someone May Not Be Who They Claim</h3>
+        <ul>
+            <li>❌ Profile created recently with few posts</li>
+            <li>❌ Only has celebrity or model-quality photos</li>
+            <li>❌ Refuses to video chat or meet in person</li>
+            <li>❌ Stories have inconsistencies</li>
+            <li>❌ Asks a lot of personal questions quickly</li>
+            <li>❌ Wants to move conversation off the platform immediately</li>
+            <li>❌ Asks for money or financial information</li>
+            <li>❌ Pushes for secrets or inappropriate content</li>
+            <li>❌ Gets angry or manipulative if you pull back</li>
+            <li>❌ Claims to need help urgently</li>
+        </ul>
+        
+        <h3>Emergency Response</h3>
+        <p><strong>If you encounter illegal content or feel threatened:</strong></p>
+        <ol>
+            <li><strong>Stop interaction immediately</strong> - Don't respond or engage further</li>
+            <li><strong>Take screenshots</strong> - Document without sharing with others</li>
+            <li><strong>Tell a trusted adult immediately</strong></li>
+            <li><strong>Report to the platform</strong> - Use built-in reporting tools</li>
+            <li><strong>Report to authorities if necessary</strong> - NCMEC Cybertipline, local police</li>
+            <li><strong>Block the person</strong> - Use platform blocking features</li>
+        </ol>
+    </div>
+
+    <div class="section">
+        <h2>Resources & Support</h2>
+        
+        <h3>Helpful Organizations</h3>
+        <ul>
+            <li><strong>Common Sense Media:</strong> Reviews and advice for apps and media</li>
+            <li><strong>Cyberbullying Research Center:</strong> Research and resources</li>
+            <li><strong>Crisis Text Line:</strong> Text HOME to 741741</li>
+            <li><strong>National Suicide Prevention Lifeline:</strong> 1-800-273-8255</li>
+            <li><strong>NCMEC CyberTipline:</strong> Report child exploitation</li>
+        </ul>
+        
+        <h3>Platform-Specific Help Centers</h3>
+        <ul>
+            <li>Instagram: Settings → Help → Report a Problem</li>
+            <li>TikTok: Settings → Report a Problem</li>
+            <li>Snapchat: Settings → Support</li>
+            <li>Discord: Right-click message → Report</li>
+        </ul>
+    </div>
+
+    <div class="footer">
+        <p><strong>Digital Guardians</strong> - Empowering Families for a Safer Online Future</p>
+        <p>Remember: Social media should enhance your life, not define it. Use it mindfully and safely.</p>
+        <p style="margin-top: 10px; font-size: 0.8em;">© 2025 Digital Guardians. This guide may be reproduced for educational purposes.</p>
+    </div>
+
+    <div class="btn-group no-print" style="margin-top: 30px;">
+        <button class="btn" onclick="window.print()">📥 Download PDF</button>
+        <button class="btn" onclick="window.print()">🖨️ Print Guide</button>
+        <a href="../guides.html" class="btn btn-secondary">← Back to Guides</a>
+    </div>
+</body>
+</html>
