@@ -179,7 +179,7 @@
                         <span class="role-tag">Oversharer</span>
                         <span class="role-tag">Parent</span>
                     </div>
-                    <button class="btn btn-primary" onclick="alert('Scenario coming soon!')">
+                    <button class="btn btn-primary" onclick="showScenario('oversharing')">
                         <i class="fas fa-play"></i> Start Scenario
                     </button>
                 </div>
@@ -193,7 +193,7 @@
                         <span class="role-tag">Parent</span>
                         <span class="role-tag">Teacher</span>
                     </div>
-                    <button class="btn btn-primary" onclick="alert('Scenario coming soon!')">
+                    <button class="btn btn-primary" onclick="showScenario('stranger')">
                         <i class="fas fa-play"></i> Start Scenario
                     </button>
                 </div>
@@ -207,7 +207,7 @@
                         <span class="role-tag">Parent</span>
                         <span class="role-tag">Sibling</span>
                     </div>
-                    <button class="btn btn-primary" onclick="alert('Scenario coming soon!')">
+                    <button class="btn btn-primary" onclick="showScenario('screentime')">
                         <i class="fas fa-play"></i> Start Scenario
                     </button>
                 </div>
@@ -221,7 +221,7 @@
                         <span class="role-tag">Poster</span>
                         <span class="role-tag">Mediator</span>
                     </div>
-                    <button class="btn btn-primary" onclick="alert('Scenario coming soon!')">
+                    <button class="btn btn-primary" onclick="showScenario('photoconsent')">
                         <i class="fas fa-play"></i> Start Scenario
                     </button>
                 </div>
@@ -235,9 +235,681 @@
                         <span class="role-tag">Tech-Savvy Teen</span>
                         <span class="role-tag">Parent</span>
                     </div>
-                    <button class="btn btn-primary" onclick="alert('Scenario coming soon!')">
+                    <button class="btn btn-primary" onclick="showScenario('accounthack')">
                         <i class="fas fa-play"></i> Start Scenario
                     </button>
+                </div>
+            </div>
+
+            <!-- Account Compromise Scenario -->
+            <div class="scenario-detail" id="accounthack-scenario">
+                <button class="btn btn-outline" onclick="hideScenario()">
+                    <i class="fas fa-arrow-left"></i> Back to Scenarios
+                </button>
+
+                <h2 style="margin: 1.5rem 0;">Account Compromise Scenario</h2>
+
+                <div class="character-card">
+                    <h4>Situation:</h4>
+                    <p>Mom's email account has been hacked. She's locked out and the hacker is sending suspicious emails to her contacts asking for money. The family discovers this when a friend calls to verify a strange request. Mom is panicking, feeling violated and worried about her personal information and finances.</p>
+                </div>
+
+                <div style="margin: 2rem 0;">
+                    <h3 style="color: var(--primary-color); margin-bottom: 1rem;">Perspective 1: Mom (The Victim)</h3>
+                    <div class="character-card">
+                        <h4>Your Experience:</h4>
+                        <p>You're overwhelmed and scared because:</p>
+                        <ul>
+                            <li>You can't access your own email account</li>
+                            <li>Someone is impersonating you to scam your friends</li>
+                            <li>Your personal emails, photos, and documents are compromised</li>
+                            <li>You're worried about linked accounts (banking, shopping, social media)</li>
+                            <li>You feel embarrassed and violated</li>
+                            <li>You're not sure what steps to take first</li>
+                        </ul>
+                    </div>
+
+                    <div class="dialogue-box parent">
+                        <div class="speaker-label">Mom's Panic:</div>
+                        <p>"I can't believe this is happening! How did they get in? What do they have access to? My bank account is linked to this email! And now my friends think I'm trying to scam them. I feel so stupid. What do I do first?"</p>
+                    </div>
+
+                    <div class="reflection-box">
+                        <h4>Reflection Questions:</h4>
+                        <ul>
+                            <li>How does it feel to lose control of your digital identity?</li>
+                            <li>What are the immediate priorities in this situation?</li>
+                            <li>How do you balance quick action with careful thinking?</li>
+                            <li>What support do you need from family in a crisis?</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div style="margin: 2rem 0;">
+                    <h3 style="color: var(--primary-color); margin-bottom: 1rem;">Perspective 2: Chris (Tech-Savvy Teen)</h3>
+                    <div class="character-card">
+                        <h4>Your Response:</h4>
+                        <p>You have technical knowledge and want to help systematically:</p>
+                        <ul>
+                            <li>Stay calm and reassure Mom this can be fixed</li>
+                            <li>Create a step-by-step action plan</li>
+                            <li>Help recover the account through proper channels</li>
+                            <li>Assess damage and secure other accounts</li>
+                            <li>Teach preventive measures for the future</li>
+                        </ul>
+                    </div>
+
+                    <div class="dialogue-box child">
+                        <div class="speaker-label">Chris's Action Plan:</div>
+                        <p>"Mom, take a breath. We can fix this together. First, let's use account recovery on your email. Then we'll change passwords on all your other accounts, especially banking. I'll help you set up two-factor authentication. We should also notify your contacts about the hack. This happens to lots of people - you're not alone, and we'll get through it."</p>
+                    </div>
+
+                    <div class="reflection-box">
+                        <h4>Reflection Questions:</h4>
+                        <ul>
+                            <li>How can tech-savvy family members help without taking over?</li>
+                            <li>What's the correct order of operations in account recovery?</li>
+                            <li>How do you explain technical concepts to non-tech family?</li>
+                            <li>What preventive education should follow the crisis?</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div style="margin: 2rem 0;">
+                    <h3 style="color: var(--primary-color); margin-bottom: 1rem;">Perspective 3: Dad (The Support Parent)</h3>
+                    <div class="character-card">
+                        <h4>Your Role:</h4>
+                        <p>You may not be tech-savvy but provide emotional and practical support:</p>
+                        <ul>
+                            <li>Comfort and reassure your partner</li>
+                            <li>Help coordinate communications with affected contacts</li>
+                            <li>Monitor financial accounts for suspicious activity</li>
+                            <li>Document everything for potential identity theft reports</li>
+                            <li>Ensure the family learns from this experience together</li>
+                        </ul>
+                    </div>
+
+                    <div class="dialogue-box parent">
+                        <div class="speaker-label">Dad's Support:</div>
+                        <p>"Honey, this isn't your fault. Let's work together. Chris, thank you for helping with the technical side. I'll call the bank to put alerts on our accounts and reach out to our close friends to warn them about the scam emails. We're a team, and we'll handle this together. What else do we need to do?"</p>
+                    </div>
+
+                    <div class="reflection-box">
+                        <h4>Reflection Questions:</h4>
+                        <ul>
+                            <li>How do families divide responsibilities in a digital crisis?</li>
+                            <li>What emotional support is needed alongside technical help?</li>
+                            <li>How do you prevent blame and shame in these situations?</li>
+                            <li>What does family cybersecurity teamwork look like?</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="reflection-box">
+                    <h4><i class="fas fa-lightbulb"></i> Key Takeaways:</h4>
+                    <ul>
+                        <li><strong>Immediate Actions:</strong> Attempt account recovery, change passwords on all accounts, enable 2FA, notify contacts.</li>
+                        <li><strong>Stay Calm:</strong> Panic makes mistakes. Take systematic action with family support.</li>
+                        <li><strong>Prevent Future Hacks:</strong> Use strong unique passwords, enable 2FA, be aware of phishing.</li>
+                        <li><strong>Monitor Damage:</strong> Check bank accounts, credit reports, and linked services for unauthorized activity.</li>
+                        <li><strong>No Shame:</strong> Account compromises happen to everyone. Focus on resolution and learning.</li>
+                        <li><strong>Family Teamwork:</strong> Combine technical skills, emotional support, and practical coordination.</li>
+                    </ul>
+                </div>
+
+                <div style="margin-top: 2rem; padding: 1.5rem; background: #fee2e2; border-radius: 8px;">
+                    <h4><i class="fas fa-list-check"></i> Account Compromise Response Checklist:</h4>
+                    <p><strong>Immediate Steps (First Hour):</strong></p>
+                    <ul>
+                        <li>☐ Attempt account recovery using backup email/phone</li>
+                        <li>☐ Change passwords on all linked accounts</li>
+                        <li>☐ Enable two-factor authentication everywhere possible</li>
+                        <li>☐ Notify email contacts about the compromise</li>
+                        <li>☐ Check recent account activity and login locations</li>
+                    </ul>
+                    <p style="margin-top: 1rem;"><strong>Follow-Up (First 24 Hours):</strong></p>
+                    <ul>
+                        <li>☐ Monitor bank and credit card statements</li>
+                        <li>☐ Review and revoke unknown app permissions</li>
+                        <li>☐ Check credit reports for unusual activity</li>
+                        <li>☐ Document all evidence and timeline</li>
+                        <li>☐ Report to platform and consider filing police report</li>
+                    </ul>
+                    <p style="margin-top: 1rem;"><strong>Prevention (Ongoing):</strong></p>
+                    <ul>
+                        <li>☐ Use password manager for unique, strong passwords</li>
+                        <li>☐ Enable 2FA on all important accounts</li>
+                        <li>☐ Be vigilant about phishing attempts</li>
+                        <li>☐ Keep software and apps updated</li>
+                        <li>☐ Regularly review account security settings</li>
+                    </ul>
+                </div>
+
+                <div style="margin-top: 2rem; padding: 1.5rem; background: #dbeafe; border-radius: 8px;">
+                    <h4><i class="fas fa-shield-alt"></i> Resources:</h4>
+                    <p><strong>Identity Theft:</strong> IdentityTheft.gov or call 1-877-ID-THEFT</p>
+                    <p><strong>Credit Monitoring:</strong> AnnualCreditReport.com (free annual reports)</p>
+                    <p><strong>Report Fraud:</strong> FBI Internet Crime Complaint Center (IC3.gov)</p>
+                </div>
+            </div>
+
+            <!-- Photo Consent Scenario -->
+            <div class="scenario-detail" id="photoconsent-scenario">
+                <button class="btn btn-outline" onclick="hideScenario()">
+                    <i class="fas fa-arrow-left"></i> Back to Scenarios
+                </button>
+
+                <h2 style="margin: 1.5rem 0;">Photo Consent Scenario</h2>
+
+                <div class="character-card">
+                    <h4>Situation:</h4>
+                    <p>During a fun day at the beach, Kim takes several photos of the group including close-ups of Drew without asking. Later that evening, Drew discovers Kim has posted these photos on Instagram with tags and captions. Some photos are unflattering, and Drew feels uncomfortable having them online without being asked first.</p>
+                </div>
+
+                <div style="margin: 2rem 0;">
+                    <h3 style="color: var(--primary-color); margin-bottom: 1rem;">Perspective 1: Drew (The Subject)</h3>
+                    <div class="character-card">
+                        <h4>Your Feelings:</h4>
+                        <p>You're upset and uncomfortable because:</p>
+                        <ul>
+                            <li>You weren't asked before photos were taken or posted</li>
+                            <li>Some photos are unflattering and you feel self-conscious</li>
+                            <li>Your tagged location is visible to strangers</li>
+                            <li>You value your privacy and control over your online image</li>
+                            <li>You're unsure how to ask for the photos to be removed without seeming dramatic</li>
+                        </ul>
+                    </div>
+
+                    <div class="dialogue-box child">
+                        <div class="speaker-label">Drew's Message to Kim:</div>
+                        <p>"Hey Kim, I saw you posted photos from yesterday. I appreciate that you wanted to share the fun, but I'm not comfortable with those photos being online. Would you mind taking them down? In the future, can we check with each other before posting photos? I'd do the same for you."</p>
+                    </div>
+
+                    <div class="reflection-box">
+                        <h4>Reflection Questions:</h4>
+                        <ul>
+                            <li>Why is consent important before posting photos of others?</li>
+                            <li>How do you assert your boundaries respectfully?</li>
+                            <li>What if someone refuses to remove photos?</li>
+                            <li>How can you prevent this situation in the future?</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div style="margin: 2rem 0;">
+                    <h3 style="color: var(--primary-color); margin-bottom: 1rem;">Perspective 2: Kim (The Poster)</h3>
+                    <div class="character-card">
+                        <h4>Your Perspective:</h4>
+                        <p>You didn't realize this was a problem because:</p>
+                        <ul>
+                            <li>You thought everyone would enjoy seeing the photos</li>
+                            <li>You didn't consider asking first - it seemed natural to share</li>
+                            <li>You've never had someone ask you to remove photos before</li>
+                            <li>You feel a bit defensive but also understand their concern</li>
+                            <li>You want to respect boundaries but also share your experiences</li>
+                        </ul>
+                    </div>
+
+                    <div class="dialogue-box child">
+                        <div class="speaker-label">Kim's Response:</div>
+                        <p>"I'm really sorry, Drew. I didn't think about asking first - you're totally right that I should have. I'll take them down now. I didn't mean to make you uncomfortable. Thanks for telling me instead of just being mad. I'll definitely ask next time before posting photos with people in them."</p>
+                    </div>
+
+                    <div class="reflection-box">
+                        <h4>Reflection Questions:</h4>
+                        <ul>
+                            <li>Why should we ask before posting photos of others?</li>
+                            <li>What's a good policy for group photos and social media?</li>
+                            <li>How do you respond when someone asks you to remove content?</li>
+                            <li>What are the legal and ethical considerations?</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div style="margin: 2rem 0;">
+                    <h3 style="color: var(--primary-color); margin-bottom: 1rem;">Perspective 3: Alex (The Mediator Friend)</h3>
+                    <div class="character-card">
+                        <h4>Your Role:</h4>
+                        <p>You see both sides and want to help resolve this respectfully:</p>
+                        <ul>
+                            <li>You understand Drew's right to privacy and consent</li>
+                            <li>You also understand Kim meant no harm</li>
+                            <li>You want to help establish group norms going forward</li>
+                            <li>You see this as a learning opportunity for everyone</li>
+                            <li>You want to maintain friendships while supporting boundaries</li>
+                        </ul>
+                    </div>
+
+                    <div class="dialogue-box bystander">
+                        <div class="speaker-label">Alex's Suggestion:</div>
+                        <p>"This is actually a good conversation for all of us to have. How about we agree as a group to always ask before posting photos that include others? We can make it simple - just send a quick message like 'Hey, is it cool if I post this?' It respects everyone's privacy and avoids awkward situations."</p>
+                    </div>
+
+                    <div class="reflection-box">
+                        <h4>Reflection Questions:</h4>
+                        <ul>
+                            <li>How can friends support healthy digital boundaries?</li>
+                            <li>What are good group norms for photo sharing?</li>
+                            <li>How do you mediate conflicts about digital content?</li>
+                            <li>What role does empathy play in these situations?</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="reflection-box">
+                    <h4><i class="fas fa-lightbulb"></i> Key Takeaways:</h4>
+                    <ul>
+                        <li><strong>Always Ask First:</strong> Get explicit permission before posting photos or videos of others.</li>
+                        <li><strong>Respect Removal Requests:</strong> If someone asks you to take down a photo, do it promptly and without argument.</li>
+                        <li><strong>Consider Context:</strong> A photo might be fine in a private chat but not on public social media.</li>
+                        <li><strong>Tag Carefully:</strong> Tags can reveal locations and associate people with content they didn't approve.</li>
+                        <li><strong>Right to Your Image:</strong> Everyone has the right to control how their image is used online.</li>
+                        <li><strong>Group Guidelines:</strong> Friend groups should establish mutual expectations about photo sharing.</li>
+                    </ul>
+                </div>
+
+                <div style="margin-top: 2rem; padding: 1.5rem; background: #fef3c7; border-radius: 8px;">
+                    <h4><i class="fas fa-camera"></i> Photo Sharing Etiquette:</h4>
+                    <p><strong>Before Posting:</strong></p>
+                    <ul>
+                        <li>Ask permission from everyone identifiable in the photo</li>
+                        <li>Consider if the photo could embarrass or harm anyone</li>
+                        <li>Check if the location tag could compromise anyone's privacy</li>
+                        <li>Think about whether the context is appropriate for your audience</li>
+                    </ul>
+                    <p style="margin-top: 1rem;"><strong>If Someone Objects:</strong></p>
+                    <ul>
+                        <li>Remove the content immediately without making them feel bad</li>
+                        <li>Thank them for communicating their boundaries</li>
+                        <li>Remember their preferences for future posts</li>
+                        <li>Apologize sincerely if you've made them uncomfortable</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Screen Time Conflict Scenario -->
+            <div class="scenario-detail" id="screentime-scenario">
+                <button class="btn btn-outline" onclick="hideScenario()">
+                    <i class="fas fa-arrow-left"></i> Back to Scenarios
+                </button>
+
+                <h2 style="margin: 1.5rem 0;">Screen Time Conflict Scenario</h2>
+
+                <div class="character-card">
+                    <h4>Situation:</h4>
+                    <p>The Martinez family is having ongoing arguments about screen time. 15-year-old Morgan feels the 2-hour daily limit is unfair, especially since homework requires screen time. Parents worry about gaming addiction and sleep disruption. 12-year-old Riley feels the rules aren't applied equally. Tensions are rising at dinner time.</p>
+                </div>
+
+                <div style="margin: 2rem 0;">
+                    <h3 style="color: var(--primary-color); margin-bottom: 1rem;">Perspective 1: Morgan (The Teenager)</h3>
+                    <div class="character-card">
+                        <h4>Your Frustrations:</h4>
+                        <p>You feel the current system is unfair because:</p>
+                        <ul>
+                            <li>Your homework and research require computer time that counts against your limit</li>
+                            <li>Your friends are all online gaming and you feel left out</li>
+                            <li>You use your phone to stay connected with friends and for creative projects</li>
+                            <li>The same rules apply to your younger sibling which doesn't seem right</li>
+                            <li>You feel trusted enough for other responsibilities but not this</li>
+                        </ul>
+                    </div>
+
+                    <div class="dialogue-box child">
+                        <div class="speaker-label">Morgan's Perspective:</div>
+                        <p>"I get that you're worried, but I'm responsible! My homework needs the computer, and when I'm done, I barely have time to relax. All my friends are online, and I feel disconnected. Can we at least separate homework time from fun time? And why does Riley get the same rules as me when I'm older?"</p>
+                    </div>
+
+                    <div class="reflection-box">
+                        <h4>Reflection Questions:</h4>
+                        <ul>
+                            <li>How can you express your needs without seeming defiant?</li>
+                            <li>What compromises might work for everyone?</li>
+                            <li>How do you demonstrate you can self-regulate?</li>
+                            <li>What are fair differences between age groups?</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div style="margin: 2rem 0;">
+                    <h3 style="color: var(--primary-color); margin-bottom: 1rem;">Perspective 2: Parent (The Concerned Parents)</h3>
+                    <div class="character-card">
+                        <h4>Your Concerns:</h4>
+                        <p>You implemented limits because you worry about:</p>
+                        <ul>
+                            <li>Sleep deprivation from late-night screen use</li>
+                            <li>Impact on grades and face-to-face social skills</li>
+                            <li>Gaming becoming addictive or all-consuming</li>
+                            <li>Lack of physical activity and outdoor time</li>
+                            <li>Family disconnect during meals and together time</li>
+                        </ul>
+                    </div>
+
+                    <div class="dialogue-box parent">
+                        <div class="speaker-label">Parent's Approach:</div>
+                        <p>"We hear your frustration, Morgan. You're right that homework time should be separate - that's our fault for not being clear. We're not trying to control you; we're worried about your health and sleep. What if we work together on a plan? Maybe different limits for weekdays vs. weekends, and age-appropriate rules for each of you?"</p>
+                    </div>
+
+                    <div class="reflection-box">
+                        <h4>Reflection Questions:</h4>
+                        <ul>
+                            <li>How do you set boundaries while respecting growing independence?</li>
+                            <li>What are evidence-based guidelines for healthy screen time?</li>
+                            <li>How can rules be flexible yet consistent?</li>
+                            <li>What behaviors indicate a need for intervention?</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div style="margin: 2rem 0;">
+                    <h3 style="color: var(--primary-color); margin-bottom: 1rem;">Perspective 3: Riley (The Younger Sibling)</h3>
+                    <div class="character-card">
+                        <h4>Your Observations:</h4>
+                        <p>You notice the conflict and have your own perspective:</p>
+                        <ul>
+                            <li>You feel caught in the middle of arguments</li>
+                            <li>Sometimes the rules seem unfairly applied</li>
+                            <li>You want more screen time but also want family peace</li>
+                            <li>You see Morgan breaking rules sometimes</li>
+                            <li>You wonder how the rules will change as you get older</li>
+                        </ul>
+                    </div>
+
+                    <div class="dialogue-box child">
+                        <div class="speaker-label">Riley's Input:</div>
+                        <p>"I don't mind different rules for different ages if they make sense. Maybe we could have a family meeting where everyone gets to talk? I'd rather have clear rules that work than constant fighting. And maybe we could plan some screen-free family activities we all enjoy?"</p>
+                    </div>
+
+                    <div class="reflection-box">
+                        <h4>Reflection Questions:</h4>
+                        <ul>
+                            <li>How do family conflicts affect younger siblings?</li>
+                            <li>What makes rules feel fair vs. unfair?</li>
+                            <li>How can families make decisions together?</li>
+                            <li>What role can younger family members play in solutions?</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="reflection-box">
+                    <h4><i class="fas fa-lightbulb"></i> Key Takeaways:</h4>
+                    <ul>
+                        <li><strong>Communication is Key:</strong> Family meetings can help everyone feel heard and find solutions together.</li>
+                        <li><strong>Separate Work and Play:</strong> Educational screen time should be tracked differently from entertainment.</li>
+                        <li><strong>Age-Appropriate Rules:</strong> Older teens can have more autonomy while younger kids need more structure.</li>
+                        <li><strong>Focus on Health:</strong> Rules should prioritize sleep, physical activity, and face-to-face connection.</li>
+                        <li><strong>Flexibility with Consistency:</strong> Weekend vs. weekday rules, special occasions, and earned privileges can work.</li>
+                        <li><strong>Lead by Example:</strong> Parents should model healthy screen habits too.</li>
+                    </ul>
+                </div>
+
+                <div style="margin-top: 2rem; padding: 1.5rem; background: #f0fdf4; border-radius: 8px;">
+                    <h4><i class="fas fa-handshake"></i> Family Screen Time Agreement:</h4>
+                    <p><strong>Consider including:</strong></p>
+                    <ul>
+                        <li>Separate limits for educational vs. entertainment screen time</li>
+                        <li>Screen-free zones (dinner table, bedrooms after bedtime)</li>
+                        <li>Device-free times (family meals, family activities)</li>
+                        <li>Different rules for weekdays vs. weekends</li>
+                        <li>Age-specific guidelines that evolve with maturity</li>
+                        <li>Consequences and rewards based on adherence</li>
+                        <li>Regular family check-ins to adjust the agreement</li>
+                        <li>Parents modeling the same healthy habits</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Stranger Contact Scenario -->
+            <div class="scenario-detail" id="stranger-scenario">
+                <button class="btn btn-outline" onclick="hideScenario()">
+                    <i class="fas fa-arrow-left"></i> Back to Scenarios
+                </button>
+
+                <h2 style="margin: 1.5rem 0;">Stranger Contact Scenario</h2>
+
+                <div class="character-card">
+                    <h4>Situation:</h4>
+                    <p>10-year-old Jamie has been playing an online game and receives friend requests and messages from someone claiming to be "13 years old and a pro gamer." The stranger starts asking personal questions and wants to video chat. Jamie feels uncomfortable but is unsure what to do.</p>
+                </div>
+
+                <div style="margin: 2rem 0;">
+                    <h3 style="color: var(--primary-color); margin-bottom: 1rem;">Perspective 1: Jamie (The Child)</h3>
+                    <div class="character-card">
+                        <h4>Your Experience:</h4>
+                        <p>You're in a confusing situation because:</p>
+                        <ul>
+                            <li>This person seems friendly and shares your interests</li>
+                            <li>They're asking questions that make you uncomfortable (age, school, where you live)</li>
+                            <li>They want to video chat and meet in person</li>
+                            <li>Something feels wrong but you can't explain why</li>
+                            <li>You're worried about getting in trouble if you tell an adult</li>
+                        </ul>
+                    </div>
+
+                    <div class="dialogue-box child">
+                        <div class="speaker-label">Jamie's Inner Thoughts:</div>
+                        <p>"This person is nice and good at the game, but why do they want to know where I go to school? And why do they keep asking if I'm home alone? I feel weird about this. Maybe I should tell Mom or Dad, but what if I get banned from playing games?"</p>
+                    </div>
+
+                    <div class="reflection-box">
+                        <h4>Reflection Questions:</h4>
+                        <ul>
+                            <li>What are the warning signs in this situation?</li>
+                            <li>Why is it important to trust your instincts?</li>
+                            <li>What should you do when someone makes you uncomfortable online?</li>
+                            <li>Why is it safe to tell a trusted adult?</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div style="margin: 2rem 0;">
+                    <h3 style="color: var(--primary-color); margin-bottom: 1rem;">Perspective 2: Parent (Jamie's Parent)</h3>
+                    <div class="character-card">
+                        <h4>Your Response:</h4>
+                        <p>Jamie tells you about the messages. You need to:</p>
+                        <ul>
+                            <li>Stay calm and thank them for being honest</li>
+                            <li>Reassure them they're not in trouble</li>
+                            <li>Review the messages together and document evidence</li>
+                            <li>Report and block the user immediately</li>
+                            <li>Teach about online predator tactics without causing fear</li>
+                        </ul>
+                    </div>
+
+                    <div class="dialogue-box parent">
+                        <div class="speaker-label">Parent to Jamie:</div>
+                        <p>"Thank you so much for telling me. You did exactly the right thing, and you're not in trouble at all. This person is not who they say they are - adults sometimes pretend to be kids online to trick children. Let's block them right now and report this. You're safe, and I'm proud of you for trusting your instincts. Can we look at the messages together?"</p>
+                    </div>
+
+                    <div class="reflection-box">
+                        <h4>Reflection Questions:</h4>
+                        <ul>
+                            <li>How do you respond without creating excessive fear?</li>
+                            <li>What should be reported to authorities?</li>
+                            <li>How can you maintain open communication going forward?</li>
+                            <li>What safety measures should be implemented?</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div style="margin: 2rem 0;">
+                    <h3 style="color: var(--primary-color); margin-bottom: 1rem;">Perspective 3: Teacher (School Educator)</h3>
+                    <div class="character-card">
+                        <h4>Your Educational Role:</h4>
+                        <p>You're teaching students about online safety. You need to:</p>
+                        <ul>
+                            <li>Educate about stranger danger in digital spaces</li>
+                            <li>Teach how to recognize manipulation tactics</li>
+                            <li>Create a safe environment for reporting concerns</li>
+                            <li>Provide age-appropriate examples and guidance</li>
+                            <li>Coordinate with parents on online safety education</li>
+                        </ul>
+                    </div>
+
+                    <div class="dialogue-box authority">
+                        <div class="speaker-label">Teacher to Class:</div>
+                        <p>"Remember, online strangers might not be who they say they are. If someone you don't know in real life asks personal questions, wants to video chat, or asks you to keep secrets, that's a red flag. Always tell a trusted adult - you will never get in trouble for asking for help. Your safety is the most important thing."</p>
+                    </div>
+
+                    <div class="reflection-box">
+                        <h4>Reflection Questions:</h4>
+                        <ul>
+                            <li>How can schools support online safety education?</li>
+                            <li>What age-appropriate lessons are most effective?</li>
+                            <li>How do teachers work with parents on this issue?</li>
+                            <li>What resources should schools provide?</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="reflection-box">
+                    <h4><i class="fas fa-lightbulb"></i> Key Takeaways:</h4>
+                    <ul>
+                        <li><strong>Red Flags:</strong> Personal questions, requests to meet, asking for photos, wanting to keep secrets, age inconsistencies.</li>
+                        <li><strong>Trust Your Gut:</strong> If something feels wrong, it probably is. Always tell a trusted adult.</li>
+                        <li><strong>Never Share:</strong> Don't give out personal information, location, or images to online strangers.</li>
+                        <li><strong>Block and Report:</strong> Immediately block suspicious users and report them to the platform.</li>
+                        <li><strong>You're Not in Trouble:</strong> Telling an adult about uncomfortable interactions is always the right choice.</li>
+                        <li><strong>Predator Tactics:</strong> Adults may pose as children, offer gifts, or try to build trust before asking for more.</li>
+                    </ul>
+                </div>
+
+                <div style="margin-top: 2rem; padding: 1.5rem; background: #fef2f2; border-radius: 8px;">
+                    <h4><i class="fas fa-exclamation-circle"></i> Report Immediately If:</h4>
+                    <ul>
+                        <li>Someone asks for personal information or photos</li>
+                        <li>They want to meet in person</li>
+                        <li>They ask you to keep conversations secret</li>
+                        <li>They send inappropriate content</li>
+                        <li>You feel scared, uncomfortable, or confused</li>
+                    </ul>
+                    <p style="margin-top: 1rem;"><strong>Report to:</strong> CyberTipline at cybertipline.org or call 1-800-THE-LOST</p>
+                </div>
+            </div>
+
+            <!-- Oversharing Dilemma Scenario -->
+            <div class="scenario-detail" id="oversharing-scenario">
+                <button class="btn btn-outline" onclick="hideScenario()">
+                    <i class="fas fa-arrow-left"></i> Back to Scenarios
+                </button>
+
+                <h2 style="margin: 1.5rem 0;">Oversharing Dilemma Scenario</h2>
+
+                <div class="character-card">
+                    <h4>Situation:</h4>
+                    <p>Your friend Taylor has been posting detailed updates on social media including home address, school schedule, vacation plans, and even photos of expensive items their family owns. You're concerned about their safety but don't want to sound controlling or judgmental.</p>
+                </div>
+
+                <div style="margin: 2rem 0;">
+                    <h3 style="color: var(--primary-color); margin-bottom: 1rem;">Perspective 1: Casey (The Concerned Friend)</h3>
+                    <div class="character-card">
+                        <h4>Your Concerns:</h4>
+                        <p>You've noticed Taylor's posts and you're worried because:</p>
+                        <ul>
+                            <li>They're sharing their exact location in real-time</li>
+                            <li>Strangers can see when their house is empty</li>
+                            <li>Personal details could be used for identity theft</li>
+                            <li>You care about their safety but don't want to seem preachy</li>
+                            <li>You're unsure how to bring it up without hurting feelings</li>
+                        </ul>
+                    </div>
+
+                    <div class="dialogue-box child">
+                        <div class="speaker-label">Casey's Approach:</div>
+                        <p>"Hey Taylor, I saw your posts about your vacation and new laptop. I'm not trying to tell you what to do, but I've been learning about online safety and wanted to share something. When we post locations and schedules, people we don't know can see them too. Have you thought about adjusting your privacy settings? I just care about you staying safe."</p>
+                    </div>
+
+                    <div class="reflection-box">
+                        <h4>Reflection Questions:</h4>
+                        <ul>
+                            <li>How do you start a conversation about safety without seeming controlling?</li>
+                            <li>What tone and approach would be most effective?</li>
+                            <li>How can you share concerns while respecting their autonomy?</li>
+                            <li>What would you want a friend to do if you were in Taylor's position?</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div style="margin: 2rem 0;">
+                    <h3 style="color: var(--primary-color); margin-bottom: 1rem;">Perspective 2: Taylor (The Oversharer)</h3>
+                    <div class="character-card">
+                        <h4>Your Perspective:</h4>
+                        <p>You love sharing your life online because:</p>
+                        <ul>
+                            <li>You enjoy connecting with friends and family</li>
+                            <li>You didn't realize the potential risks</li>
+                            <li>Your privacy settings might not be what you think they are</li>
+                            <li>You trust your followers but haven't verified who can see your posts</li>
+                            <li>You're grateful when friends look out for you</li>
+                        </ul>
+                    </div>
+
+                    <div class="dialogue-box child">
+                        <div class="speaker-label">Taylor's Response:</div>
+                        <p>"Oh wow, I never really thought about it that way. I thought only my friends could see my posts, but you're right - I should check my privacy settings. Thanks for looking out for me! Can you help me review what I'm sharing and how to make it more private?"</p>
+                    </div>
+
+                    <div class="reflection-box">
+                        <h4>Reflection Questions:</h4>
+                        <ul>
+                            <li>What information is safe to share vs. risky to share?</li>
+                            <li>How can you balance sharing and safety?</li>
+                            <li>What privacy settings should you check regularly?</li>
+                            <li>How do you respond when someone raises safety concerns?</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div style="margin: 2rem 0;">
+                    <h3 style="color: var(--primary-color); margin-bottom: 1rem;">Perspective 3: Parent (Taylor's Parent)</h3>
+                    <div class="character-card">
+                        <h4>Your Role:</h4>
+                        <p>You discover your child has been oversharing online. You need to:</p>
+                        <ul>
+                            <li>Educate without punishing or overreacting</li>
+                            <li>Review and adjust privacy settings together</li>
+                            <li>Establish guidelines for safe sharing</li>
+                            <li>Explain real-world risks in age-appropriate ways</li>
+                            <li>Build trust so they come to you with concerns</li>
+                        </ul>
+                    </div>
+
+                    <div class="dialogue-box parent">
+                        <div class="speaker-label">Parent to Taylor:</div>
+                        <p>"I'm glad we can talk about this. I'm not angry, but I want to help you understand the risks. When we share our location or schedule, people with bad intentions could use that information. Let's go through your privacy settings together and create some guidelines for what's safe to share. What questions do you have?"</p>
+                    </div>
+
+                    <div class="reflection-box">
+                        <h4>Reflection Questions:</h4>
+                        <ul>
+                            <li>How can parents teach without creating fear or distrust?</li>
+                            <li>What are reasonable guidelines for sharing online?</li>
+                            <li>How do you balance supervision with privacy?</li>
+                            <li>What ongoing conversations should families have?</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="reflection-box">
+                    <h4><i class="fas fa-lightbulb"></i> Key Takeaways:</h4>
+                    <ul>
+                        <li><strong>Think Before You Post:</strong> Consider who can see it and how it could be misused.</li>
+                        <li><strong>Location Privacy:</strong> Never share real-time locations or when you'll be away from home.</li>
+                        <li><strong>Personal Details:</strong> Avoid sharing full names, addresses, phone numbers, school names, or schedules.</li>
+                        <li><strong>Privacy Settings:</strong> Review settings regularly and understand who can see your posts.</li>
+                        <li><strong>Friend Verification:</strong> Know who you're accepting as friends or followers.</li>
+                        <li><strong>Safe Sharing:</strong> Share experiences after they happen, not before or during.</li>
+                    </ul>
+                </div>
+
+                <div style="margin-top: 2rem; padding: 1.5rem; background: #dbeafe; border-radius: 8px;">
+                    <h4><i class="fas fa-shield-alt"></i> Privacy Checklist:</h4>
+                    <ul>
+                        <li>Review privacy settings on all social media accounts</li>
+                        <li>Turn off location services for social media apps</li>
+                        <li>Don't post vacation plans until after you return</li>
+                        <li>Use private accounts and approve followers carefully</li>
+                        <li>Avoid sharing financial information or expensive purchases</li>
+                    </ul>
                 </div>
             </div>
 
