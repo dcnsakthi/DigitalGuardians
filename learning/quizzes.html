@@ -395,7 +395,7 @@
 
     <script src="../js/main.js"></script>
     <script>
-        // Sample quiz data structure
+        // Quiz data structure with all quiz categories
         const quizzes = {
             'fake-news': {
                 title: 'Fake News Detective Quiz',
@@ -454,6 +454,658 @@
                         ],
                         correct: 2,
                         explanation: "Credible sources are transparent about their organization, have clear editorial standards, and provide contact information."
+                    },
+                    {
+                        question: "Why is it important to check the date of an article?",
+                        options: [
+                            "It's not important",
+                            "Old news might be shared as if it's current",
+                            "To see if the author is still working",
+                            "Newer articles are always more accurate"
+                        ],
+                        correct: 1,
+                        explanation: "Old articles are sometimes shared as breaking news, misleading people about current events."
+                    },
+                    {
+                        question: "What is 'clickbait'?",
+                        options: [
+                            "A type of computer virus",
+                            "Content designed to attract clicks through sensational headlines",
+                            "A legitimate news source",
+                            "A fact-checking tool"
+                        ],
+                        correct: 1,
+                        explanation: "Clickbait uses exaggerated or misleading headlines to get clicks, often leading to low-quality or false content."
+                    },
+                    {
+                        question: "If multiple sources report the same story, does that make it true?",
+                        options: [
+                            "Yes, always",
+                            "Not necessarily - they might all be copying the same false story",
+                            "Only if it's on social media",
+                            "Yes, if there are at least 5 sources"
+                        ],
+                        correct: 1,
+                        explanation: "Multiple sources can still be wrong, especially if they're all copying from the same incorrect source."
+                    },
+                    {
+                        question: "What is 'lateral reading'?",
+                        options: [
+                            "Reading while lying down",
+                            "Reading only the headlines",
+                            "Opening new tabs to verify information from multiple sources",
+                            "Reading comments sections"
+                        ],
+                        correct: 2,
+                        explanation: "Lateral reading means checking multiple independent sources to verify information, rather than just reading deeply on one site."
+                    },
+                    {
+                        question: "What should you do if you accidentally shared fake news?",
+                        options: [
+                            "Ignore it and hope no one noticed",
+                            "Delete it and post a correction",
+                            "Blame the original source",
+                            "Share more content to bury it"
+                        ],
+                        correct: 1,
+                        explanation: "If you shared misinformation, delete it and publicly correct your mistake to stop its spread."
+                    }
+                ]
+            },
+            'phishing': {
+                title: 'Phishing Challenge Quiz',
+                questions: [
+                    {
+                        question: "What is phishing?",
+                        options: [
+                            "A type of online fishing game",
+                            "A fraudulent attempt to obtain sensitive information by disguising as a trustworthy entity",
+                            "A legitimate email from your bank",
+                            "A social media feature"
+                        ],
+                        correct: 1,
+                        explanation: "Phishing is a cyber attack where criminals pretend to be legitimate organizations to steal your personal information."
+                    },
+                    {
+                        question: "Which of these is a common sign of a phishing email?",
+                        options: [
+                            "Professional logo and design",
+                            "Urgent language demanding immediate action",
+                            "Personalized greeting with your name",
+                            "Expected correspondence from a known contact"
+                        ],
+                        correct: 1,
+                        explanation: "Phishing emails often create urgency to pressure you into acting without thinking carefully."
+                    },
+                    {
+                        question: "You receive an email saying your account will be closed unless you click a link. What should you do?",
+                        options: [
+                            "Click the link immediately to save your account",
+                            "Contact the company directly using official contact information",
+                            "Reply to the email asking for more details",
+                            "Forward it to all your friends"
+                        ],
+                        correct: 1,
+                        explanation: "Never click links in suspicious emails. Always contact the company directly through their official website or phone number."
+                    },
+                    {
+                        question: "What is 'spear phishing'?",
+                        options: [
+                            "Phishing that targets fish",
+                            "Targeted phishing directed at specific individuals or companies",
+                            "A type of antivirus software",
+                            "Phishing that uses sharp weapons"
+                        ],
+                        correct: 1,
+                        explanation: "Spear phishing is highly targeted, using personal information to make the attack more convincing."
+                    },
+                    {
+                        question: "Which email address is most likely legitimate for Amazon?",
+                        options: [
+                            "amazon-support@gmail.com",
+                            "support@amazon.com",
+                            "amazon.verify@hotmail.com",
+                            "amazon-security@yahoo.com"
+                        ],
+                        correct: 1,
+                        explanation: "Legitimate companies use their own domain names. Be suspicious of emails from free email services like Gmail or Yahoo."
+                    },
+                    {
+                        question: "What is 'vishing'?",
+                        options: [
+                            "Video phishing",
+                            "Voice phishing conducted over the phone",
+                            "Virtual phishing",
+                            "Visible phishing"
+                        ],
+                        correct: 1,
+                        explanation: "Vishing (voice phishing) is when scammers call you pretending to be from legitimate organizations."
+                    },
+                    {
+                        question: "What should you check before entering login credentials on a website?",
+                        options: [
+                            "The website's color scheme",
+                            "The URL in the address bar and the security certificate (HTTPS)",
+                            "How many ads are on the page",
+                            "The font size"
+                        ],
+                        correct: 1,
+                        explanation: "Always verify the URL is correct and the site uses HTTPS (secure connection) before entering sensitive information."
+                    },
+                    {
+                        question: "Your boss sends an urgent email asking for confidential company data. What should you do?",
+                        options: [
+                            "Send it immediately",
+                            "Verify the request through another communication channel",
+                            "Reply asking why they need it",
+                            "Ignore the email"
+                        ],
+                        correct: 1,
+                        explanation: "Even if an email appears to be from your boss, verify unusual requests through phone or in-person."
+                    },
+                    {
+                        question: "What is a tell-tale sign of a phishing link?",
+                        options: [
+                            "It uses HTTPS",
+                            "The display text doesn't match the actual URL when you hover over it",
+                            "It's blue and underlined",
+                            "It's in an email"
+                        ],
+                        correct: 1,
+                        explanation: "Hover over links before clicking. If the actual URL doesn't match the display text, it's likely phishing."
+                    },
+                    {
+                        question: "What is 'smishing'?",
+                        options: [
+                            "Smiling while phishing",
+                            "Phishing through SMS text messages",
+                            "Social media phishing",
+                            "Smart phishing"
+                        ],
+                        correct: 1,
+                        explanation: "Smishing is phishing conducted through SMS text messages, often with malicious links."
+                    },
+                    {
+                        question: "If you've clicked on a phishing link, what should you do first?",
+                        options: [
+                            "Turn off your computer",
+                            "Change passwords immediately and report it to IT/security",
+                            "Delete the email",
+                            "Wait and see what happens"
+                        ],
+                        correct: 1,
+                        explanation: "Act quickly to change passwords and notify proper authorities to minimize potential damage."
+                    },
+                    {
+                        question: "Which of these is the safest way to access your bank account?",
+                        options: [
+                            "Click links in emails from the bank",
+                            "Type the bank's URL directly into your browser or use a bookmarked link",
+                            "Google the bank name and click the first ad",
+                            "Use links from text messages"
+                        ],
+                        correct: 1,
+                        explanation: "Always access sensitive sites by typing the URL directly or using saved bookmarks, never through email or message links."
+                    }
+                ]
+            },
+            'password': {
+                title: 'Password Security Quiz',
+                questions: [
+                    {
+                        question: "Which of these is the STRONGEST password?",
+                        options: [
+                            "password123",
+                            "MyDog2024",
+                            "Tr0pic@l#Sun$et_89!Moon",
+                            "12345678"
+                        ],
+                        correct: 2,
+                        explanation: "Strong passwords are long (12+ characters), use a mix of uppercase, lowercase, numbers, and special characters."
+                    },
+                    {
+                        question: "How often should you change your passwords?",
+                        options: [
+                            "Never",
+                            "Every day",
+                            "When there's a security breach or you suspect compromise",
+                            "Every hour"
+                        ],
+                        correct: 2,
+                        explanation: "Modern guidance suggests changing passwords only when necessary, not on a schedule. Focus on using strong, unique passwords."
+                    },
+                    {
+                        question: "What is two-factor authentication (2FA)?",
+                        options: [
+                            "Using two passwords",
+                            "An extra layer of security requiring two forms of verification",
+                            "A password with two words",
+                            "Having two email accounts"
+                        ],
+                        correct: 1,
+                        explanation: "2FA requires both something you know (password) and something you have (phone, security key) or are (biometric)."
+                    },
+                    {
+                        question: "Is it safe to use the same password for multiple accounts?",
+                        options: [
+                            "Yes, it's convenient",
+                            "Yes, if it's a strong password",
+                            "No, if one account is breached, all accounts are at risk",
+                            "Only for unimportant accounts"
+                        ],
+                        correct: 2,
+                        explanation: "Using unique passwords for each account prevents a breach in one service from compromising all your accounts."
+                    },
+                    {
+                        question: "What is a password manager?",
+                        options: [
+                            "A person who remembers passwords for you",
+                            "A secure application that stores and manages your passwords",
+                            "A notebook where you write passwords",
+                            "Your brain"
+                        ],
+                        correct: 1,
+                        explanation: "Password managers securely store all your passwords and can generate strong, unique passwords for each account."
+                    },
+                    {
+                        question: "Which information should you NEVER use in a password?",
+                        options: [
+                            "Random words",
+                            "Your name, birthday, or other personal information",
+                            "A mix of letters and numbers",
+                            "Special characters"
+                        ],
+                        correct: 1,
+                        explanation: "Personal information is easy to guess or find through social media and should never be used in passwords."
+                    },
+                    {
+                        question: "What is a 'passphrase'?",
+                        options: [
+                            "A short password",
+                            "A sequence of words or sentence used as a password",
+                            "A password hint",
+                            "A temporary password"
+                        ],
+                        correct: 1,
+                        explanation: "Passphrases are longer passwords made of multiple words, making them both strong and easier to remember."
+                    },
+                    {
+                        question: "If a website is breached, what should you do immediately?",
+                        options: [
+                            "Wait to see if your account was affected",
+                            "Change your password on that site and any other site where you used the same password",
+                            "Delete your account",
+                            "Nothing, the website will fix it"
+                        ],
+                        correct: 1,
+                        explanation: "Immediately change your password on the breached site and any other sites where you reused that password."
+                    }
+                ]
+            },
+            'privacy': {
+                title: 'Privacy Protection Quiz',
+                questions: [
+                    {
+                        question: "What does 'PII' stand for in privacy contexts?",
+                        options: [
+                            "Public Internet Information",
+                            "Personally Identifiable Information",
+                            "Private Internet Identity",
+                            "Personal Information Index"
+                        ],
+                        correct: 1,
+                        explanation: "PII refers to any data that can identify a specific individual, like name, address, SSN, or email."
+                    },
+                    {
+                        question: "Which of these is considered personal data?",
+                        options: [
+                            "Your favorite color",
+                            "The weather today",
+                            "Your IP address",
+                            "Public news headlines"
+                        ],
+                        correct: 2,
+                        explanation: "Your IP address can be used to identify you and track your online activities, making it personal data."
+                    },
+                    {
+                        question: "What should you check before downloading an app?",
+                        options: [
+                            "Only the app icon",
+                            "Permissions the app requests and privacy policy",
+                            "Number of downloads",
+                            "Size of the app"
+                        ],
+                        correct: 1,
+                        explanation: "Always review what data and device features an app requests access to and read its privacy policy."
+                    },
+                    {
+                        question: "What are cookies in web browsing?",
+                        options: [
+                            "Snacks you eat while browsing",
+                            "Small data files that websites store on your device to track information",
+                            "Browser security features",
+                            "Internet speed boosters"
+                        ],
+                        correct: 1,
+                        explanation: "Cookies are small files that track your browsing activity and preferences, which can impact your privacy."
+                    },
+                    {
+                        question: "What is 'incognito' or 'private' browsing mode?",
+                        options: [
+                            "Makes you completely anonymous online",
+                            "Prevents your browser from saving your browsing history locally",
+                            "Protects you from all tracking",
+                            "Makes you invisible to websites"
+                        ],
+                        correct: 1,
+                        explanation: "Private browsing only prevents local history storage. Your ISP, websites, and network admin can still see your activity."
+                    },
+                    {
+                        question: "What is a VPN used for?",
+                        options: [
+                            "Making your internet faster",
+                            "Encrypting your internet connection and hiding your IP address",
+                            "Downloading files",
+                            "Playing games online"
+                        ],
+                        correct: 1,
+                        explanation: "A VPN (Virtual Private Network) encrypts your internet traffic and masks your IP address for better privacy."
+                    },
+                    {
+                        question: "What should you do before posting on social media?",
+                        options: [
+                            "Post immediately",
+                            "Think about privacy implications and who might see it",
+                            "Make sure it has lots of hashtags",
+                            "Check the time"
+                        ],
+                        correct: 1,
+                        explanation: "Always consider privacy implications, future consequences, and your audience before posting anything online."
+                    },
+                    {
+                        question: "What is 'metadata' in photos?",
+                        options: [
+                            "The picture quality",
+                            "Hidden data like location, time, and camera details",
+                            "The file size",
+                            "Photo filters"
+                        ],
+                        correct: 1,
+                        explanation: "Metadata in photos can reveal your location, time the photo was taken, and camera information."
+                    },
+                    {
+                        question: "What are privacy settings on social media for?",
+                        options: [
+                            "Making your profile look better",
+                            "Controlling who can see your posts and personal information",
+                            "Increasing followers",
+                            "Changing your theme"
+                        ],
+                        correct: 1,
+                        explanation: "Privacy settings help you control your digital footprint by limiting who can access your information."
+                    },
+                    {
+                        question: "Why should you read a website's privacy policy?",
+                        options: [
+                            "It's entertaining",
+                            "To understand how your data is collected, used, and shared",
+                            "It's required by law to read it",
+                            "To find discount codes"
+                        ],
+                        correct: 1,
+                        explanation: "Privacy policies explain how companies handle your data, helping you make informed decisions about using their services."
+                    }
+                ]
+            },
+            'social-media': {
+                title: 'Social Media Safety Quiz',
+                questions: [
+                    {
+                        question: "What is the first rule of social media safety?",
+                        options: [
+                            "Post as much as possible",
+                            "Think before you share - once online, it's permanent",
+                            "Accept all friend requests",
+                            "Share your location always"
+                        ],
+                        correct: 1,
+                        explanation: "Always think carefully before posting. Content shared online can be screenshot, saved, and shared beyond your control."
+                    },
+                    {
+                        question: "What is 'oversharing' on social media?",
+                        options: [
+                            "Sharing too many photos",
+                            "Posting personal information that could compromise your safety or privacy",
+                            "Having too many friends",
+                            "Using too many hashtags"
+                        ],
+                        correct: 1,
+                        explanation: "Oversharing includes posting information like your address, phone number, travel plans, or daily routines."
+                    },
+                    {
+                        question: "Why shouldn't you share your vacation plans on social media in advance?",
+                        options: [
+                            "It makes others jealous",
+                            "It announces when your home will be empty, inviting theft",
+                            "You might change your plans",
+                            "It uses too much data"
+                        ],
+                        correct: 1,
+                        explanation: "Broadcasting when you'll be away from home can make you a target for burglars."
+                    },
+                    {
+                        question: "What should you do if someone you don't know sends you a friend request?",
+                        options: [
+                            "Accept it immediately to be polite",
+                            "Check their profile carefully and decline if suspicious",
+                            "Accept and then block them",
+                            "Report them immediately"
+                        ],
+                        correct: 1,
+                        explanation: "Be selective about who you connect with online. Verify the person's identity before accepting requests from strangers."
+                    },
+                    {
+                        question: "What is 'cyberbullying'?",
+                        options: [
+                            "Playing video games online",
+                            "Using digital technology to harass, threaten, or humiliate someone",
+                            "Learning about computers",
+                            "Posting funny memes"
+                        ],
+                        correct: 1,
+                        explanation: "Cyberbullying is harassment through digital means and can have serious emotional and psychological impacts."
+                    },
+                    {
+                        question: "If you witness cyberbullying, what should you do?",
+                        options: [
+                            "Join in",
+                            "Ignore it",
+                            "Report it to the platform and tell a trusted adult",
+                            "Share it with others"
+                        ],
+                        correct: 2,
+                        explanation: "Always report cyberbullying and get help from trusted adults. Supporting victims and not sharing harmful content helps stop the cycle."
+                    },
+                    {
+                        question: "What information should you NEVER share publicly on social media?",
+                        options: [
+                            "Your favorite movie",
+                            "Your full address and phone number",
+                            "Your hobbies",
+                            "Photos of your pet"
+                        ],
+                        correct: 1,
+                        explanation: "Never share sensitive personal information like your address, phone number, financial details, or passwords."
+                    },
+                    {
+                        question: "What is 'social engineering' in the context of social media?",
+                        options: [
+                            "Building social networks",
+                            "Manipulating people into sharing confidential information",
+                            "Creating social media posts",
+                            "Engineering software for social platforms"
+                        ],
+                        correct: 1,
+                        explanation: "Social engineering tricks people into revealing private information by exploiting trust and human psychology."
+                    },
+                    {
+                        question: "Why should you be careful about location tagging?",
+                        options: [
+                            "It uses battery",
+                            "It reveals where you are in real-time, posing safety risks",
+                            "It's not popular",
+                            "It makes posts load slower"
+                        ],
+                        correct: 1,
+                        explanation: "Location tags can reveal your patterns, current location, and when you're not home, creating safety risks."
+                    },
+                    {
+                        question: "What is a 'digital footprint'?",
+                        options: [
+                            "The size of your screen",
+                            "The trail of data you leave online through your activities",
+                            "Your social media profile picture",
+                            "Your internet speed"
+                        ],
+                        correct: 1,
+                        explanation: "Your digital footprint includes all the information about you online, affecting your reputation and future opportunities."
+                    }
+                ]
+            },
+            'deepfake': {
+                title: 'Deepfake Detection Quiz',
+                questions: [
+                    {
+                        question: "What is a 'deepfake'?",
+                        options: [
+                            "A very deep swimming pool",
+                            "Synthetic media created using AI to manipulate or generate visual/audio content",
+                            "A type of social media filter",
+                            "A photography technique"
+                        ],
+                        correct: 1,
+                        explanation: "Deepfakes use AI to create realistic but fake videos, images, or audio of people saying or doing things they never did."
+                    },
+                    {
+                        question: "What technology is primarily used to create deepfakes?",
+                        options: [
+                            "Photoshop",
+                            "Deep learning and neural networks (AI)",
+                            "Regular video editing software",
+                            "Smartphone cameras"
+                        ],
+                        correct: 1,
+                        explanation: "Deepfakes are created using advanced AI techniques, particularly deep learning algorithms that can learn and replicate patterns."
+                    },
+                    {
+                        question: "Which of these is a potential sign of a deepfake video?",
+                        options: [
+                            "High video quality",
+                            "Unnatural blinking patterns or facial movements",
+                            "Good audio quality",
+                            "Clear background"
+                        ],
+                        correct: 1,
+                        explanation: "Deepfakes often have inconsistent facial movements, unnatural blinking, or artifacts around the edges of the face."
+                    },
+                    {
+                        question: "Why are deepfakes concerning?",
+                        options: [
+                            "They're too expensive to make",
+                            "They can spread misinformation, damage reputations, and undermine trust",
+                            "They use too much computer power",
+                            "They're only used for entertainment"
+                        ],
+                        correct: 1,
+                        explanation: "Deepfakes can be used for fraud, political manipulation, harassment, and spreading false information."
+                    },
+                    {
+                        question: "What should you look for in the audio of a potential deepfake?",
+                        options: [
+                            "Volume level",
+                            "Unnatural pauses, weird lip-sync, or audio artifacts",
+                            "Background music",
+                            "Echo effects"
+                        ],
+                        correct: 1,
+                        explanation: "Audio deepfakes may have inconsistent timing with mouth movements, unnatural pauses, or digital artifacts."
+                    },
+                    {
+                        question: "How can lighting help you detect a deepfake?",
+                        options: [
+                            "Brightness of the video",
+                            "Inconsistent lighting on the face compared to the environment",
+                            "Time of day in the video",
+                            "Color saturation"
+                        ],
+                        correct: 1,
+                        explanation: "Deepfakes may show lighting inconsistencies where the face doesn't match the lighting of the surrounding environment."
+                    },
+                    {
+                        question: "What is 'synthetic media'?",
+                        options: [
+                            "Plastic products",
+                            "Media created or modified using AI",
+                            "Social media platforms",
+                            "Digital music"
+                        ],
+                        correct: 1,
+                        explanation: "Synthetic media includes any content generated or manipulated by AI, including deepfakes, AI-generated images, and more."
+                    },
+                    {
+                        question: "Can deepfakes be created of anyone?",
+                        options: [
+                            "No, only celebrities",
+                            "Yes, anyone with enough photos/videos online can be targeted",
+                            "Only politicians",
+                            "Only with permission"
+                        ],
+                        correct: 1,
+                        explanation: "Anyone with sufficient digital presence can be the subject of a deepfake, making everyone potentially vulnerable."
+                    },
+                    {
+                        question: "What should you check at the edges of a face in a suspected deepfake?",
+                        options: [
+                            "Hair color",
+                            "Blurring, distortion, or inconsistent boundaries where face meets background",
+                            "Skin tone",
+                            "Facial hair"
+                        ],
+                        correct: 1,
+                        explanation: "The boundary where the manipulated face meets the background often shows blurring or artifacts in deepfakes."
+                    },
+                    {
+                        question: "What is the best defense against falling for deepfakes?",
+                        options: [
+                            "Never watch videos online",
+                            "Verify information through multiple reliable sources and maintain healthy skepticism",
+                            "Only trust videos from friends",
+                            "Assume all videos are fake"
+                        ],
+                        correct: 1,
+                        explanation: "Critical thinking, source verification, and awareness of deepfake technology are key to avoiding manipulation."
+                    },
+                    {
+                        question: "Are there legitimate uses for deepfake technology?",
+                        options: [
+                            "No, it's only used for harmful purposes",
+                            "Yes, including entertainment, education, and accessibility features",
+                            "Only for government use",
+                            "Only for news organizations"
+                        ],
+                        correct: 1,
+                        explanation: "Deepfake technology has legitimate applications in film, education, accessibility, and other fields when used ethically."
+                    },
+                    {
+                        question: "If you encounter a suspected deepfake, what should you do?",
+                        options: [
+                            "Share it to warn others",
+                            "Verify through fact-checking organizations and report to the platform",
+                            "Comment that it's fake",
+                            "Ignore it"
+                        ],
+                        correct: 1,
+                        explanation: "Report suspected deepfakes to platforms and verify through fact-checkers rather than sharing, which could spread misinformation."
                     }
                 ]
             }
@@ -464,8 +1116,25 @@
         let userAnswers = [];
         let score = 0;
 
+        // Fisher-Yates shuffle algorithm to randomize array
+        function shuffleArray(array) {
+            const shuffled = [...array];
+            for (let i = shuffled.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+            }
+            return shuffled;
+        }
+
         function startQuiz(quizId) {
-            currentQuiz = quizzes[quizId] || quizzes['fake-news'];
+            const quizTemplate = quizzes[quizId] || quizzes['fake-news'];
+            
+            // Create a copy of the quiz with shuffled questions
+            currentQuiz = {
+                title: quizTemplate.title,
+                questions: shuffleArray(quizTemplate.questions)
+            };
+            
             currentQuestion = 0;
             userAnswers = [];
             score = 0;
