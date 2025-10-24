@@ -177,7 +177,7 @@
                             <span><i class="fas fa-signal"></i> Intermediate</span>
                             <span><i class="fas fa-trophy"></i> Badge Available</span>
                         </div>
-                        <button class="btn btn-primary" onclick="alert('Simulation coming soon!')">
+                        <button class="btn btn-primary" onclick="launchSimulation('social-engineering')">
                             <i class="fas fa-play"></i> Start Simulation
                         </button>
                     </div>
@@ -195,7 +195,7 @@
                             <span><i class="fas fa-signal"></i> Intermediate</span>
                             <span><i class="fas fa-trophy"></i> Badge Available</span>
                         </div>
-                        <button class="btn btn-primary" onclick="alert('Simulation coming soon!')">
+                        <button class="btn btn-primary" onclick="launchSimulation('malware')">
                             <i class="fas fa-play"></i> Start Simulation
                         </button>
                     </div>
@@ -213,7 +213,7 @@
                             <span><i class="fas fa-signal"></i> Advanced</span>
                             <span><i class="fas fa-trophy"></i> Badge Available</span>
                         </div>
-                        <button class="btn btn-primary" onclick="alert('Simulation coming soon!')">
+                        <button class="btn btn-primary" onclick="launchSimulation('privacy')">
                             <i class="fas fa-play"></i> Start Simulation
                         </button>
                     </div>
@@ -231,7 +231,7 @@
                             <span><i class="fas fa-signal"></i> Beginner</span>
                             <span><i class="fas fa-trophy"></i> Badge Available</span>
                         </div>
-                        <button class="btn btn-primary" onclick="alert('Simulation coming soon!')">
+                        <button class="btn btn-primary" onclick="launchSimulation('cyberbullying')">
                             <i class="fas fa-play"></i> Start Simulation
                         </button>
                     </div>
@@ -249,7 +249,7 @@
                             <span><i class="fas fa-signal"></i> Advanced</span>
                             <span><i class="fas fa-trophy"></i> Badge Available</span>
                         </div>
-                        <button class="btn btn-primary" onclick="alert('Simulation coming soon!')">
+                        <button class="btn btn-primary" onclick="launchSimulation('digital-footprint')">
                             <i class="fas fa-play"></i> Start Simulation
                         </button>
                     </div>
@@ -339,6 +339,443 @@
                         <li>Never click links in unexpected emails</li>
                         <li>Access accounts directly through official websites or apps</li>
                         <li>Report phishing attempts to the real company and your email provider</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Social Engineering Attack Simulation -->
+            <div class="simulation-launcher" id="social-engineering-sim">
+                <button class="btn btn-outline" onclick="closeSimulation()">
+                    <i class="fas fa-arrow-left"></i> Back to Simulations
+                </button>
+
+                <h2 style="margin: 1.5rem 0;">Social Engineering Attack Simulation</h2>
+                
+                <div class="scenario-box">
+                    <h4>Scenario:</h4>
+                    <p>You receive a phone call from someone claiming to be from your IT department:</p>
+                    
+                    <div style="background: white; padding: 1rem; border: 1px solid #ccc; margin-top: 1rem; font-family: monospace; font-size: 0.9rem;">
+                        <p><strong>Caller:</strong> "Hello, this is John from IT Support. We've detected suspicious activity on your company account. We need to verify your credentials immediately to prevent a security breach. Can you provide me with your username and password so I can fix this issue right away? This is urgent - your account will be locked in 10 minutes if we don't resolve this."</p>
+                    </div>
+                </div>
+
+                <div class="scenario-box">
+                    <h4>What should you do?</h4>
+                    <div class="choice-buttons">
+                        <button class="choice-btn" onclick="showFeedback('se-bad1')">
+                            Provide my credentials immediately since it's urgent
+                        </button>
+                        <button class="choice-btn" onclick="showFeedback('se-bad2')">
+                            Ask for their employee ID and then provide my information
+                        </button>
+                        <button class="choice-btn" onclick="showFeedback('se-good')">
+                            Hang up and contact IT through official channels to verify the call
+                        </button>
+                        <button class="choice-btn" onclick="showFeedback('se-bad3')">
+                            Ask them to fix it remotely and stay on the line
+                        </button>
+                    </div>
+                </div>
+
+                <div class="feedback-box bad" id="feedback-se-bad1">
+                    <h4><i class="fas fa-times-circle"></i> Dangerous choice!</h4>
+                    <p>Never provide your credentials to anyone over the phone, even if they claim to be from IT. Legitimate IT departments will never ask for your password. This is a classic social engineering attack designed to steal your credentials.</p>
+                    <p><strong>Tip:</strong> Urgency and pressure are common tactics used by attackers to bypass your better judgment.</p>
+                </div>
+
+                <div class="feedback-box bad" id="feedback-se-bad2">
+                    <h4><i class="fas fa-times-circle"></i> Still not safe!</h4>
+                    <p>Employee IDs can be easily faked or obtained through research. This doesn't verify the caller's legitimacy. Never share your password with anyone, regardless of what identification they provide.</p>
+                    <p><strong>Tip:</strong> Attackers often do research to make their calls more convincing with internal information.</p>
+                </div>
+
+                <div class="feedback-box good" id="feedback-se-good">
+                    <h4><i class="fas fa-check-circle"></i> Excellent choice!</h4>
+                    <p>This is the correct approach! Always verify unexpected requests through official channels, especially when they involve sensitive information.</p>
+                    <p><strong>Red flags in this scenario:</strong></p>
+                    <ul>
+                        <li>Unsolicited request for credentials</li>
+                        <li>Urgent, pressure-filled language</li>
+                        <li>Threats of account lockout or consequences</li>
+                        <li>Request to act immediately without verification</li>
+                        <li>Asking for password (IT never needs your password)</li>
+                    </ul>
+                    <p><strong>Next steps:</strong> Contact IT using the official support number from your company directory and report the suspicious call.</p>
+                </div>
+
+                <div class="feedback-box bad" id="feedback-se-bad3">
+                    <h4><i class="fas fa-exclamation-triangle"></i> Risky approach!</h4>
+                    <p>Allowing remote access to someone whose identity you haven't verified is extremely dangerous. They could install malware, steal data, or compromise your entire system.</p>
+                    <p><strong>Better approach:</strong> Always verify the caller's identity through official channels before allowing any access or providing information.</p>
+                </div>
+
+                <div style="margin-top: 2rem; padding: 1.5rem; background: #fef3c7; border-radius: 8px;">
+                    <h4><i class="fas fa-lightbulb"></i> Learning Points:</h4>
+                    <ul>
+                        <li>Never share passwords or credentials over the phone</li>
+                        <li>Verify the identity of callers through official channels</li>
+                        <li>Be wary of urgent, pressure-filled requests</li>
+                        <li>Real IT departments never ask for your password</li>
+                        <li>Attackers use fear and urgency to bypass critical thinking</li>
+                        <li>Always report suspicious calls to your security team</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Malware Defense Simulation -->
+            <div class="simulation-launcher" id="malware-sim">
+                <button class="btn btn-outline" onclick="closeSimulation()">
+                    <i class="fas fa-arrow-left"></i> Back to Simulations
+                </button>
+
+                <h2 style="margin: 1.5rem 0;">Malware Defense Simulation</h2>
+                
+                <div class="scenario-box">
+                    <h4>Scenario:</h4>
+                    <p>You're browsing the internet when suddenly a pop-up appears:</p>
+                    
+                    <div style="background: white; padding: 1.5rem; border: 3px solid red; margin-top: 1rem; text-align: center;">
+                        <h3 style="color: red; margin: 0;">⚠️ WARNING! ⚠️</h3>
+                        <p style="font-size: 1.2rem; color: red; font-weight: bold;">Your computer is infected with 5 viruses!</p>
+                        <p>Your system will be damaged if you don't act now!</p>
+                        <button style="background: red; color: white; padding: 1rem 2rem; border: none; border-radius: 5px; font-size: 1.1rem; cursor: pointer;">
+                            DOWNLOAD FREE ANTIVIRUS NOW
+                        </button>
+                        <p style="font-size: 0.8rem; margin-top: 1rem;">This message is from Windows Security Center</p>
+                    </div>
+                </div>
+
+                <div class="scenario-box">
+                    <h4>What should you do?</h4>
+                    <div class="choice-buttons">
+                        <button class="choice-btn" onclick="showFeedback('mal-bad1')">
+                            Click the button to download the antivirus immediately
+                        </button>
+                        <button class="choice-btn" onclick="showFeedback('mal-bad2')">
+                            Call the phone number shown in the pop-up for help
+                        </button>
+                        <button class="choice-btn" onclick="showFeedback('mal-good')">
+                            Close the browser tab/window without clicking anything and run my legitimate antivirus
+                        </button>
+                        <button class="choice-btn" onclick="showFeedback('mal-bad3')">
+                            Click anywhere on the pop-up to close it
+                        </button>
+                    </div>
+                </div>
+
+                <div class="feedback-box bad" id="feedback-mal-bad1">
+                    <h4><i class="fas fa-times-circle"></i> Dangerous choice!</h4>
+                    <p>This pop-up is fake malware - a type of scareware designed to trick you into downloading malicious software. Clicking the button would likely install actual malware on your computer!</p>
+                    <p><strong>Tip:</strong> Legitimate antivirus software doesn't advertise through random pop-ups.</p>
+                </div>
+
+                <div class="feedback-box bad" id="feedback-mal-bad2">
+                    <h4><i class="fas fa-times-circle"></i> Not recommended!</h4>
+                    <p>Phone numbers in fake pop-ups lead to scammers who will try to sell you fake services, steal your information, or convince you to give them remote access to your computer.</p>
+                    <p><strong>Tip:</strong> Windows Security Center doesn't provide phone support through pop-ups.</p>
+                </div>
+
+                <div class="feedback-box good" id="feedback-mal-good">
+                    <h4><i class="fas fa-check-circle"></i> Perfect response!</h4>
+                    <p>This is exactly the right approach! Close the browser without interacting with the pop-up, then use your trusted antivirus software to scan your system.</p>
+                    <p><strong>Red flags in this scenario:</strong></p>
+                    <ul>
+                        <li>Alarming, urgent language with threats</li>
+                        <li>Fake official branding (Windows Security Center)</li>
+                        <li>Pressure to download or act immediately</li>
+                        <li>Pop-up appears randomly while browsing</li>
+                        <li>Promises of "free" solutions to made-up problems</li>
+                    </ul>
+                    <p><strong>Next steps:</strong> Run a scan with your legitimate antivirus software and consider clearing your browser cache.</p>
+                </div>
+
+                <div class="feedback-box bad" id="feedback-mal-bad3">
+                    <h4><i class="fas fa-exclamation-triangle"></i> Risky move!</h4>
+                    <p>Clicking anywhere on a malicious pop-up can trigger downloads or redirect you to dangerous websites. Some pop-ups have fake "close" buttons that actually activate the malware.</p>
+                    <p><strong>Better approach:</strong> Use keyboard shortcuts (Alt+F4 or Ctrl+W) or close the entire browser from the taskbar.</p>
+                </div>
+
+                <div style="margin-top: 2rem; padding: 1.5rem; background: #fef3c7; border-radius: 8px;">
+                    <h4><i class="fas fa-lightbulb"></i> Learning Points:</h4>
+                    <ul>
+                        <li>Never click on suspicious pop-ups or warnings</li>
+                        <li>Real security warnings come from your installed antivirus</li>
+                        <li>Be skeptical of urgent, fear-inducing messages</li>
+                        <li>Close suspicious pop-ups using keyboard shortcuts or taskbar</li>
+                        <li>Keep your legitimate antivirus software updated</li>
+                        <li>Only download software from official sources</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Privacy Settings Challenge Simulation -->
+            <div class="simulation-launcher" id="privacy-sim">
+                <button class="btn btn-outline" onclick="closeSimulation()">
+                    <i class="fas fa-arrow-left"></i> Back to Simulations
+                </button>
+
+                <h2 style="margin: 1.5rem 0;">Privacy Settings Challenge Simulation</h2>
+                
+                <div class="scenario-box">
+                    <h4>Scenario:</h4>
+                    <p>You just created a new social media account. Before posting, you check the default privacy settings and find:</p>
+                    
+                    <div style="background: white; padding: 1rem; border: 1px solid #ccc; margin-top: 1rem;">
+                        <p><strong>Current Settings:</strong></p>
+                        <ul style="line-height: 1.8;">
+                            <li>✅ Profile is public (anyone can see your posts)</li>
+                            <li>✅ Location sharing is enabled on all posts</li>
+                            <li>✅ Photos can be tagged by anyone</li>
+                            <li>✅ Search engines can find your profile</li>
+                            <li>✅ Your friend list is visible to everyone</li>
+                            <li>✅ Apps can access your data for marketing</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="scenario-box">
+                    <h4>What should you do with these settings?</h4>
+                    <div class="choice-buttons">
+                        <button class="choice-btn" onclick="showFeedback('priv-bad1')">
+                            Leave all settings as default - they're set by experts
+                        </button>
+                        <button class="choice-btn" onclick="showFeedback('priv-bad2')">
+                            Only change the profile to private, keep everything else
+                        </button>
+                        <button class="choice-btn" onclick="showFeedback('priv-good')">
+                            Review and adjust each setting based on my comfort level and needs
+                        </button>
+                        <button class="choice-btn" onclick="showFeedback('priv-bad3')">
+                            Make everything private except my profile picture
+                        </button>
+                    </div>
+                </div>
+
+                <div class="feedback-box bad" id="feedback-priv-bad1">
+                    <h4><i class="fas fa-times-circle"></i> Not recommended!</h4>
+                    <p>Default settings are often designed to maximize data collection and engagement, not your privacy. Platforms benefit from more public data and may not prioritize your privacy by default.</p>
+                    <p><strong>Tip:</strong> Always review and customize privacy settings when creating a new account.</p>
+                </div>
+
+                <div class="feedback-box bad" id="feedback-priv-bad2">
+                    <h4><i class="fas fa-exclamation-triangle"></i> Incomplete protection!</h4>
+                    <p>While making your profile private is good, location sharing, tagging permissions, and data access for apps can still expose you to risks. Each setting serves a different privacy function.</p>
+                    <p><strong>Tip:</strong> Privacy is multi-layered - one setting change isn't enough to protect all aspects of your information.</p>
+                </div>
+
+                <div class="feedback-box good" id="feedback-priv-good">
+                    <h4><i class="fas fa-check-circle"></i> Excellent approach!</h4>
+                    <p>This is the best strategy! Every user has different privacy needs and comfort levels. Reviewing each setting allows you to make informed decisions.</p>
+                    <p><strong>Recommended adjustments:</strong></p>
+                    <ul>
+                        <li>Set profile to private (friends only) unless you have a specific reason to be public</li>
+                        <li>Disable automatic location sharing - add location manually only when needed</li>
+                        <li>Require approval for photo tags</li>
+                        <li>Opt out of search engine indexing for personal accounts</li>
+                        <li>Limit friend list visibility to friends only</li>
+                        <li>Disable data sharing with third-party apps or limit to essential apps only</li>
+                    </ul>
+                    <p><strong>Next steps:</strong> Schedule regular privacy check-ups (quarterly) as platforms update their settings.</p>
+                </div>
+
+                <div class="feedback-box bad" id="feedback-priv-bad3">
+                    <h4><i class="fas fa-exclamation-triangle"></i> Too restrictive!</h4>
+                    <p>While privacy is important, making everything completely private might limit your ability to use the platform effectively. A public profile picture is often useful for helping friends find you.</p>
+                    <p><strong>Better approach:</strong> Balance privacy with functionality - customize settings based on what you're comfortable sharing and what serves your purposes.</p>
+                </div>
+
+                <div style="margin-top: 2rem; padding: 1.5rem; background: #fef3c7; border-radius: 8px;">
+                    <h4><i class="fas fa-lightbulb"></i> Learning Points:</h4>
+                    <ul>
+                        <li>Always review default privacy settings on new accounts</li>
+                        <li>Consider each setting's purpose and your comfort level</li>
+                        <li>Disable location sharing unless specifically needed</li>
+                        <li>Control who can tag you in photos and posts</li>
+                        <li>Limit data sharing with third-party apps</li>
+                        <li>Review and update privacy settings regularly</li>
+                        <li>Different platforms require different privacy approaches</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Cyberbullying Response Simulation -->
+            <div class="simulation-launcher" id="cyberbullying-sim">
+                <button class="btn btn-outline" onclick="closeSimulation()">
+                    <i class="fas fa-arrow-left"></i> Back to Simulations
+                </button>
+
+                <h2 style="margin: 1.5rem 0;">Cyberbullying Response Simulation</h2>
+                
+                <div class="scenario-box">
+                    <h4>Scenario:</h4>
+                    <p>Your friend shows you their phone. Someone has been posting mean comments on all their social media posts for the past week:</p>
+                    
+                    <div style="background: white; padding: 1rem; border: 1px solid #ccc; margin-top: 1rem;">
+                        <p><strong>Examples of comments:</strong></p>
+                        <ul style="line-height: 1.8; color: #666;">
+                            <li>"Nobody likes you. Why do you even post?"</li>
+                            <li>"You look terrible in every photo"</li>
+                            <li>"Everyone thinks you're fake"</li>
+                            <li>"You should just delete your account"</li>
+                        </ul>
+                        <p style="margin-top: 1rem;"><em>Your friend seems upset and says they don't know what to do.</em></p>
+                    </div>
+                </div>
+
+                <div class="scenario-box">
+                    <h4>What's the best advice to give your friend?</h4>
+                    <div class="choice-buttons">
+                        <button class="choice-btn" onclick="showFeedback('cb-bad1')">
+                            Tell them to respond to the bully and defend themselves
+                        </button>
+                        <button class="choice-btn" onclick="showFeedback('cb-bad2')">
+                            Suggest they just ignore it and the bully will get bored
+                        </button>
+                        <button class="choice-btn" onclick="showFeedback('cb-good')">
+                            Help them document the harassment, block the user, and report to both the platform and a trusted adult
+                        </button>
+                        <button class="choice-btn" onclick="showFeedback('cb-bad3')">
+                            Encourage them to delete all their social media accounts
+                        </button>
+                    </div>
+                </div>
+
+                <div class="feedback-box bad" id="feedback-cb-bad1">
+                    <h4><i class="fas fa-times-circle"></i> Not the best approach!</h4>
+                    <p>Engaging with cyberbullies often escalates the situation. Bullies want a reaction, and responding gives them what they want. It can also make the situation worse and provide them with more content to use against your friend.</p>
+                    <p><strong>Tip:</strong> Direct engagement rarely stops cyberbullying and can increase the harassment.</p>
+                </div>
+
+                <div class="feedback-box bad" id="feedback-cb-bad2">
+                    <h4><i class="fas fa-exclamation-triangle"></i> Incomplete response!</h4>
+                    <p>While not engaging is part of the solution, simply ignoring cyberbullying isn't enough. It's important to document the behavior, report it, and seek support from adults. The bullying may continue or even escalate if not addressed properly.</p>
+                    <p><strong>Tip:</strong> Cyberbullying is serious and requires action beyond just ignoring it.</p>
+                </div>
+
+                <div class="feedback-box good" id="feedback-cb-good">
+                    <h4><i class="fas fa-check-circle"></i> Excellent advice!</h4>
+                    <p>This is the comprehensive and correct approach to handling cyberbullying!</p>
+                    <p><strong>Steps to take:</strong></p>
+                    <ul>
+                        <li><strong>Document:</strong> Take screenshots of all harassing messages with dates and times visible</li>
+                        <li><strong>Block:</strong> Prevent the bully from further contact on all platforms</li>
+                        <li><strong>Report:</strong> Use the platform's reporting features to report harassment</li>
+                        <li><strong>Tell an adult:</strong> Inform parents, teachers, or counselors who can provide support</li>
+                        <li><strong>Don't retaliate:</strong> Avoid responding or retaliating against the bully</li>
+                        <li><strong>Seek support:</strong> Talk to friends, counselors, or support hotlines if feeling distressed</li>
+                    </ul>
+                    <p><strong>For severe cases:</strong> If threats of violence occur or if the bullying doesn't stop, consider involving school authorities or law enforcement.</p>
+                </div>
+
+                <div class="feedback-box bad" id="feedback-cb-bad3">
+                    <h4><i class="fas fa-exclamation-triangle"></i> Too extreme!</h4>
+                    <p>Deleting all social media accounts is an extreme response that punishes the victim rather than addressing the problem. Your friend shouldn't have to give up their online presence because of a bully. There are better solutions.</p>
+                    <p><strong>Better approach:</strong> Take action to stop the bullying while maintaining your friend's right to participate in social media safely.</p>
+                </div>
+
+                <div style="margin-top: 2rem; padding: 1.5rem; background: #fef3c7; border-radius: 8px;">
+                    <h4><i class="fas fa-lightbulb"></i> Learning Points:</h4>
+                    <ul>
+                        <li>Document all instances of cyberbullying with screenshots</li>
+                        <li>Block users who engage in harassment</li>
+                        <li>Report cyberbullying using platform reporting tools</li>
+                        <li>Always inform a trusted adult about cyberbullying</li>
+                        <li>Don't respond or retaliate against bullies</li>
+                        <li>Seek emotional support from friends, family, or counselors</li>
+                        <li>Know that cyberbullying is serious and not the victim's fault</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Digital Footprint Audit Simulation -->
+            <div class="simulation-launcher" id="digital-footprint-sim">
+                <button class="btn btn-outline" onclick="closeSimulation()">
+                    <i class="fas fa-arrow-left"></i> Back to Simulations
+                </button>
+
+                <h2 style="margin: 1.5rem 0;">Digital Footprint Audit Simulation</h2>
+                
+                <div class="scenario-box">
+                    <h4>Scenario:</h4>
+                    <p>You're applying for your first job and the employer mentions they do online background checks. You decide to search for yourself online and find:</p>
+                    
+                    <div style="background: white; padding: 1rem; border: 1px solid #ccc; margin-top: 1rem;">
+                        <p><strong>What you discovered:</strong></p>
+                        <ul style="line-height: 1.8;">
+                            <li>Old social media posts from 3 years ago with inappropriate jokes</li>
+                            <li>Photos from parties tagged by friends showing risky behavior</li>
+                            <li>Comments on controversial topics using strong language</li>
+                            <li>Your full name, school, and age visible on multiple platforms</li>
+                            <li>A YouTube channel with videos from when you were younger</li>
+                            <li>Your email address and phone number on some public profiles</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="scenario-box">
+                    <h4>What should you do to manage your digital footprint?</h4>
+                    <div class="choice-buttons">
+                        <button class="choice-btn" onclick="showFeedback('df-bad1')">
+                            Do nothing - employers understand everyone has a past
+                        </button>
+                        <button class="choice-btn" onclick="showFeedback('df-bad2')">
+                            Delete all social media accounts immediately
+                        </button>
+                        <button class="choice-btn" onclick="showFeedback('df-good')">
+                            Systematically review and clean up content, adjust privacy settings, and remove personal information where possible
+                        </button>
+                        <button class="choice-btn" onclick="showFeedback('df-bad3')">
+                            Create new accounts with a different name to start fresh
+                        </button>
+                    </div>
+                </div>
+
+                <div class="feedback-box bad" id="feedback-df-bad1">
+                    <h4><i class="fas fa-times-circle"></i> Risky assumption!</h4>
+                    <p>While some employers may be understanding, many make hiring decisions based on online presence. Your digital footprint is often the first impression you make. Inappropriate content can cost you opportunities.</p>
+                    <p><strong>Tip:</strong> It's estimated that 70% of employers use social media to screen candidates. Taking control of your digital footprint is important.</p>
+                </div>
+
+                <div class="feedback-box bad" id="feedback-df-bad2">
+                    <h4><i class="fas fa-exclamation-triangle"></i> Too drastic!</h4>
+                    <p>Deleting all accounts is extreme and may raise red flags with employers who expect some online presence. Additionally, content may still exist in cached versions or on other people's accounts. A complete absence online can seem suspicious.</p>
+                    <p><strong>Tip:</strong> A professional, well-managed online presence is better than no presence at all.</p>
+                </div>
+
+                <div class="feedback-box good" id="feedback-df-good">
+                    <h4><i class="fas fa-check-circle"></i> Perfect strategy!</h4>
+                    <p>This is the comprehensive and mature approach to managing your digital footprint!</p>
+                    <p><strong>Action plan for digital footprint cleanup:</strong></p>
+                    <ul>
+                        <li><strong>Audit all accounts:</strong> Search your name in multiple search engines and review all results</li>
+                        <li><strong>Delete inappropriate content:</strong> Remove old posts, comments, and photos that don't reflect who you are now</li>
+                        <li><strong>Untag yourself:</strong> Request removal from inappropriate photos posted by others</li>
+                        <li><strong>Adjust privacy settings:</strong> Make personal accounts private and create professional public profiles</li>
+                        <li><strong>Remove personal information:</strong> Delete or hide phone numbers, addresses, and detailed personal data</li>
+                        <li><strong>Google yourself regularly:</strong> Set up Google Alerts for your name to monitor your online presence</li>
+                        <li><strong>Build positive content:</strong> Create professional profiles on LinkedIn, start a portfolio website, or blog about your interests</li>
+                    </ul>
+                    <p><strong>Remember:</strong> Your digital footprint is permanent. Always think before you post!</p>
+                </div>
+
+                <div class="feedback-box bad" id="feedback-df-bad3">
+                    <h4><i class="fas fa-exclamation-triangle"></i> Not a solution!</h4>
+                    <p>Creating fake accounts can backfire if discovered and raises ethical concerns. Employers may find this dishonest. Additionally, your original content will still exist online. It's better to address the actual content than try to hide behind a new identity.</p>
+                    <p><strong>Tip:</strong> Honesty and proactive management of your real identity is always the best policy.</p>
+                </div>
+
+                <div style="margin-top: 2rem; padding: 1.5rem; background: #fef3c7; border-radius: 8px;">
+                    <h4><i class="fas fa-lightbulb"></i> Learning Points:</h4>
+                    <ul>
+                        <li>Regularly Google yourself to see what others can find</li>
+                        <li>Delete or edit old posts that don't reflect your current values</li>
+                        <li>Request removal from inappropriate photos posted by others</li>
+                        <li>Keep personal and professional lives separate online</li>
+                        <li>Build a positive digital footprint with professional content</li>
+                        <li>Think before posting - everything online can be permanent</li>
+                        <li>Review privacy settings on all platforms regularly</li>
+                        <li>Consider your future self when posting today</li>
                     </ul>
                 </div>
             </div>
