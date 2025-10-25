@@ -342,7 +342,54 @@
 
         function downloadResource(resourceType) {
             const language = document.getElementById('selected-language').textContent;
-            alert(`Downloading ${resourceType} in ${language}...\n\nIn a production environment, this would download the PDF file.`);
+            
+            // Map resource types to their corresponding printable HTML files
+            const resourceMap = {
+                'safety-basics': 'internet-safety-basics.html',
+                'social-media': 'social-media-safety.html',
+                'cyberbullying': 'cyberbullying-prevention.html',
+                'family-checklist': 'checklists.html',
+                'conversations': 'conversations.html',
+                'emergency': 'emergency-response.html',
+                'privacy': 'privacy-protection.html',
+                'wellbeing': 'digital-wellbeing.html'
+            };
+            
+            const resourceTitles = {
+                'safety-basics': 'Internet Safety Basics Guide',
+                'social-media': 'Social Media Safety Guide',
+                'cyberbullying': 'Cyberbullying Prevention Guide',
+                'family-checklist': 'Family Safety Checklist',
+                'conversations': 'Conversation Starters',
+                'emergency': 'Emergency Response Guide',
+                'privacy': 'Privacy Protection Guide',
+                'wellbeing': 'Digital Wellbeing Guide'
+            };
+            
+            const fileName = resourceMap[resourceType];
+            
+            if (fileName) {
+                // For resources in printable directory
+                if (['safety-basics', 'social-media', 'cyberbullying', 'emergency', 'privacy', 'wellbeing'].includes(resourceType)) {
+                    // Open printable version with language parameter
+                    const url = `printable/${fileName}?lang=${encodeURIComponent(language)}`;
+                    const printWindow = window.open(url, '_blank');
+                    
+                    // Show a helpful message
+                    const title = resourceTitles[resourceType];
+                    console.log(`Opening ${title} in ${language}. Use browser's Print/Save as PDF to download.`);
+                } else {
+                    // For other toolkit resources (checklists, conversations)
+                    const url = `${fileName}?lang=${encodeURIComponent(language)}`;
+                    const printWindow = window.open(url, '_blank');
+                    
+                    // Show a helpful message
+                    const title = resourceTitles[resourceType];
+                    console.log(`Opening ${title} in ${language}. Use browser's Print/Save as PDF to download.`);
+                }
+            } else {
+                alert(`Resource ${resourceType} not found.`);
+            }
         }
     </script>
 </body>
