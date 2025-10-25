@@ -72,4 +72,34 @@ document.addEventListener('DOMContentLoaded', () => {
         card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
         observer.observe(card);
     });
+
+    // Initialize and update page view counter
+    initializePageViewCounter();
 });
+
+// Page View Counter functionality
+function initializePageViewCounter() {
+    const VIEW_COUNT_KEY = 'digitalGuardiansPageViews';
+    
+    // Get current count from localStorage
+    let viewCount = localStorage.getItem(VIEW_COUNT_KEY);
+    
+    // Initialize if first visit
+    if (viewCount === null) {
+        viewCount = 0;
+    } else {
+        viewCount = parseInt(viewCount, 10);
+    }
+    
+    // Increment the count
+    viewCount++;
+    
+    // Save back to localStorage
+    localStorage.setItem(VIEW_COUNT_KEY, viewCount);
+    
+    // Update the display
+    const viewCountElement = document.getElementById('viewCount');
+    if (viewCountElement) {
+        viewCountElement.textContent = viewCount.toLocaleString();
+    }
+}
