@@ -369,23 +369,29 @@
             const fileName = resourceMap[resourceType];
             
             if (fileName) {
+                const title = resourceTitles[resourceType];
+                
                 // For resources in printable directory
                 if (['safety-basics', 'social-media', 'cyberbullying', 'emergency', 'privacy', 'wellbeing'].includes(resourceType)) {
                     // Open printable version with language parameter
                     const url = `printable/${fileName}?lang=${encodeURIComponent(language)}`;
                     const printWindow = window.open(url, '_blank');
                     
-                    // Show a helpful message
-                    const title = resourceTitles[resourceType];
-                    console.log(`Opening ${title} in ${language}. Use browser's Print/Save as PDF to download.`);
+                    if (printWindow) {
+                        console.log(`Opening ${title} in ${language}. Use browser's Print/Save as PDF to download.`);
+                    } else {
+                        alert('Unable to open resource. Please check your popup blocker settings.');
+                    }
                 } else {
                     // For other toolkit resources (checklists, conversations)
                     const url = `${fileName}?lang=${encodeURIComponent(language)}`;
                     const printWindow = window.open(url, '_blank');
                     
-                    // Show a helpful message
-                    const title = resourceTitles[resourceType];
-                    console.log(`Opening ${title} in ${language}. Use browser's Print/Save as PDF to download.`);
+                    if (printWindow) {
+                        console.log(`Opening ${title} in ${language}. Use browser's Print/Save as PDF to download.`);
+                    } else {
+                        alert('Unable to open resource. Please check your popup blocker settings.');
+                    }
                 }
             } else {
                 alert(`Resource ${resourceType} not found.`);
