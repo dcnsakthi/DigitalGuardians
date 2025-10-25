@@ -81,15 +81,8 @@ document.addEventListener('DOMContentLoaded', () => {
 function initializePageViewCounter() {
     const VIEW_COUNT_KEY = 'digitalGuardiansPageViews';
     
-    // Get current count from localStorage
-    let viewCount = localStorage.getItem(VIEW_COUNT_KEY);
-    
-    // Initialize if first visit
-    if (viewCount === null) {
-        viewCount = 0;
-    } else {
-        viewCount = parseInt(viewCount, 10);
-    }
+    // Get current count from localStorage and parse, defaulting to 0 if null or NaN
+    let viewCount = parseInt(localStorage.getItem(VIEW_COUNT_KEY), 10) || 0;
     
     // Increment the count
     viewCount++;
