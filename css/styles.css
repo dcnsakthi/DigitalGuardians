@@ -555,6 +555,23 @@ footer {
     transform: translateY(-3px);
 }
 
+.page-views {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 1.5rem;
+    color: #94a3b8;
+    font-size: 0.95rem;
+}
+
+.page-views i {
+    color: var(--primary-color);
+}
+
+.page-views strong {
+    color: white;
+}
+
 .footer-bottom {
     text-align: center;
     padding-top: 2rem;
