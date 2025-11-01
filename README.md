@@ -110,7 +110,7 @@ Ready to become a Digital Guardian Ambassador?
 3. Complete the training modules (8-10 hours)
 4. Get certified and start making a difference!
 
-**Contact**: <ambassadors>@dg.kidsverve.com
+**Contact**: <contact>@dg.kidsverve.com
 
 ### Our Impact
 
@@ -131,7 +131,7 @@ Together, we can create a safer digital world for everyone!
 
 ---
 
-*For more information, visit our program resources or contact us at <info>@d@dg.kidsverve.com*
+*For more information, visit our program resources or contact us at <contact>@dg.kidsverve.com*
 # Digital Guardians 🛡️
 
 **Empowering Families for a Safer Online Future!**
