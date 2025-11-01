@@ -50,7 +50,7 @@ Thank you for your interest in contributing to Digital Guardians! This project a
 6. Submit a Pull Request with a detailed description
 
 #### For Non-GitHub Users
-1. Email your contribution to: digitalguardians@singapore.gov.sg
+1. Email your contribution to: <contact>@dg.kidsverve.com
 2. Include:
    - Your name and affiliation (optional)
    - Description of your contribution
@@ -129,7 +129,7 @@ Contributors will be recognized in the following ways:
 
 If you need assistance:
 - Open an issue with your question
-- Email: digitalguardians@singapore.gov.sg
+- Email: <contact>@dg.kidsverve.com
 - Join our community discussions
 - Attend contributor onboarding sessions (monthly)
 
@@ -147,4 +147,4 @@ Your contributions help create a safer digital environment for families across S
 
 ---
 
-**Questions?** Open an issue or email digitalguardians@singapore.gov.sg
+**Questions?** Open an issue or email <contact>@dg.kidsverve.com
