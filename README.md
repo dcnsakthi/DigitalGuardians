@@ -1,7 +1,7 @@
 # DigitalGuardians
 Digital Guardians: Empowering Families for a Safer Online Future!
 
-🌐 **Live Website**: [https://dcnsakthi.github.io/DigitalGuardians/](https://dcnsakthi.github.io/DigitalGuardians/)
+🌐 **Live Website**: [https://dg.kidsverve.com](https://dg.kidsverve.com)
 
 ## About Digital Guardians
 
@@ -110,7 +110,7 @@ Ready to become a Digital Guardian Ambassador?
 3. Complete the training modules (8-10 hours)
 4. Get certified and start making a difference!
 
-**Contact**: ambassadors@digitalguardians.org
+**Contact**: <ambassadors>@dg.kidsverve.com
 
 ### Our Impact
 
@@ -131,7 +131,7 @@ Together, we can create a safer digital world for everyone!
 
 ---
 
-*For more information, visit our program resources or contact us at info@digitalguardians.org*
+*For more information, visit our program resources or contact us at <info>@d@dg.kidsverve.com*
 # Digital Guardians 🛡️
 
 **Empowering Families for a Safer Online Future!**
