@@ -188,9 +188,9 @@ All ambassadors must:
 ## Contact and Support
 
 For questions about the Community Ambassadors Program:
-- Email: ambassadors@digitalguardians.org
-- Website: www.digitalguardians.org/ambassadors
-- Phone: 1-800-DIGI-SAFE
+- Email: <ambassadors>@dg.kidsverve.com
+- Website: [dg.kidsverve.com/ambassadors](https://dg.kidsverve.com/)
+- Phone: <1-800-DIGI-SAFE>
 
 ---
 
